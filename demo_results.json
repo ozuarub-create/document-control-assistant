@@ -1,0 +1,807 @@
+{
+  "documents_tested": 50,
+  "correct_classifications": 50,
+  "accuracy": 1.0,
+  "results": [
+    {
+      "filename": "sample_001_drawing.pdf",
+      "expected": "Drawing",
+      "predicted": "Drawing",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Ground Floor Architectural Drawing",
+        "revision_number": "R0",
+        "project_name": "Campus Innovation Building",
+        "contractor": "Gulf Build Contractors",
+        "consultant": "Pearl Engineering Consultants",
+        "submission_date": "2026-05-01",
+        "discipline": "Architectural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_003_drawing.pdf",
+      "expected": "Drawing",
+      "predicted": "Drawing",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "External Works Layout Drawing",
+        "revision_number": "R2",
+        "project_name": "Sustainable Site Infrastructure Project",
+        "contractor": "Modern Site Works LLC",
+        "consultant": "Nexus Project Consultants",
+        "submission_date": "2026-05-03",
+        "discipline": "QA/QC"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_005_drawing.pdf",
+      "expected": "Drawing",
+      "predicted": "Drawing",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Electrical Lighting Layout Drawing",
+        "revision_number": "R0",
+        "project_name": "Campus Innovation Building",
+        "contractor": "Gulf Build Contractors",
+        "consultant": "Pearl Engineering Consultants",
+        "submission_date": "2026-05-05",
+        "discipline": "Civil"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_007_specification.pdf",
+      "expected": "Specification",
+      "predicted": "Specification",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Concrete Works Specification",
+        "revision_number": "R0",
+        "project_name": "Sustainable Site Infrastructure Project",
+        "contractor": "Modern Site Works LLC",
+        "consultant": "Nexus Project Consultants",
+        "submission_date": "2026-05-07",
+        "discipline": "Architectural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_009_specification.pdf",
+      "expected": "Specification",
+      "predicted": "Specification",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "HVAC Equipment Specification",
+        "revision_number": "R2",
+        "project_name": "Campus Innovation Building",
+        "contractor": "Gulf Build Contractors",
+        "consultant": "Pearl Engineering Consultants",
+        "submission_date": "2026-05-09",
+        "discipline": "Electrical"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_011_specification.pdf",
+      "expected": "Specification",
+      "predicted": "Specification",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Waterproofing Specification",
+        "revision_number": "R0",
+        "project_name": "Sustainable Site Infrastructure Project",
+        "contractor": "Modern Site Works LLC",
+        "consultant": "Nexus Project Consultants",
+        "submission_date": "2026-05-11",
+        "discipline": "Structural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_013_method_statement.pdf",
+      "expected": "Method Statement",
+      "predicted": "Method Statement",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Concrete Pouring Method Statement",
+        "revision_number": "R0",
+        "project_name": "Campus Innovation Building",
+        "contractor": "Gulf Build Contractors",
+        "consultant": "Pearl Engineering Consultants",
+        "submission_date": "2026-05-13",
+        "discipline": "Contracts"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_015_method_statement.pdf",
+      "expected": "Method Statement",
+      "predicted": "Method Statement",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "HVAC Duct Installation Method Statement",
+        "revision_number": "R2",
+        "project_name": "Sustainable Site Infrastructure Project",
+        "contractor": "Modern Site Works LLC",
+        "consultant": "Nexus Project Consultants",
+        "submission_date": "2026-05-15",
+        "discipline": "Mechanical"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_017_method_statement.pdf",
+      "expected": "Method Statement",
+      "predicted": "Method Statement",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Waterproofing Application Method Statement",
+        "revision_number": "R0",
+        "project_name": "Campus Innovation Building",
+        "contractor": "Gulf Build Contractors",
+        "consultant": "Pearl Engineering Consultants",
+        "submission_date": "2026-05-17",
+        "discipline": "Architectural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_019_material_submittal.pdf",
+      "expected": "Material Submittal",
+      "predicted": "Material Submittal",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Ceramic Tile Material Submittal",
+        "revision_number": "R0",
+        "project_name": "Sustainable Site Infrastructure Project",
+        "contractor": "Modern Site Works LLC",
+        "consultant": "Nexus Project Consultants",
+        "submission_date": "2026-05-19",
+        "discipline": "QA/QC"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_021_material_submittal.pdf",
+      "expected": "Material Submittal",
+      "predicted": "Material Submittal",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Chiller Material Submittal",
+        "revision_number": "R2",
+        "project_name": "Campus Innovation Building",
+        "contractor": "Gulf Build Contractors",
+        "consultant": "Pearl Engineering Consultants",
+        "submission_date": "2026-05-21",
+        "discipline": "Civil"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_023_material_submittal.pdf",
+      "expected": "Material Submittal",
+      "predicted": "Material Submittal",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Waterproofing Membrane Material Submittal",
+        "revision_number": "R0",
+        "project_name": "Sustainable Site Infrastructure Project",
+        "contractor": "Modern Site Works LLC",
+        "consultant": "Nexus Project Consultants",
+        "submission_date": "2026-05-23",
+        "discipline": "Contracts"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_025_shop_drawing.pdf",
+      "expected": "Shop Drawing",
+      "predicted": "Shop Drawing",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Curtain Wall Shop Drawing",
+        "revision_number": "R0",
+        "project_name": "Campus Innovation Building",
+        "contractor": "Gulf Build Contractors",
+        "consultant": "Pearl Engineering Consultants",
+        "submission_date": "2026-05-25",
+        "discipline": "Architectural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_027_shop_drawing.pdf",
+      "expected": "Shop Drawing",
+      "predicted": "Shop Drawing",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Ductwork Shop Drawing",
+        "revision_number": "R2",
+        "project_name": "Sustainable Site Infrastructure Project",
+        "contractor": "Modern Site Works LLC",
+        "consultant": "Nexus Project Consultants",
+        "submission_date": "2026-05-27",
+        "discipline": "Structural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_029_shop_drawing.pdf",
+      "expected": "Shop Drawing",
+      "predicted": "Shop Drawing",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "False Ceiling Shop Drawing",
+        "revision_number": "R0",
+        "project_name": "Campus Innovation Building",
+        "contractor": "Gulf Build Contractors",
+        "consultant": "Pearl Engineering Consultants",
+        "submission_date": "2026-05-29",
+        "discipline": "QA/QC"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_031_inspection_report.pdf",
+      "expected": "Inspection Report",
+      "predicted": "Inspection Report",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Concrete Inspection Report",
+        "revision_number": "R0",
+        "project_name": "Sustainable Site Infrastructure Project",
+        "contractor": "Modern Site Works LLC",
+        "consultant": "Nexus Project Consultants",
+        "submission_date": "2026-05-31",
+        "discipline": "QA/QC"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_033_inspection_report.pdf",
+      "expected": "Inspection Report",
+      "predicted": "Inspection Report",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Duct Installation Inspection Report",
+        "revision_number": "R2",
+        "project_name": "Campus Innovation Building",
+        "contractor": "Gulf Build Contractors",
+        "consultant": "Pearl Engineering Consultants",
+        "submission_date": "2026-06-02",
+        "discipline": "QA/QC"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_035_inspection_report.pdf",
+      "expected": "Inspection Report",
+      "predicted": "Inspection Report",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Finishing Inspection Report",
+        "revision_number": "R0",
+        "project_name": "Sustainable Site Infrastructure Project",
+        "contractor": "Modern Site Works LLC",
+        "consultant": "Nexus Project Consultants",
+        "submission_date": "2026-06-04",
+        "discipline": "QA/QC"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_037_contract.pdf",
+      "expected": "Contract",
+      "predicted": "Contract",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Subcontract Agreement",
+        "revision_number": "R1",
+        "project_name": "Campus Innovation Building",
+        "contractor": "Gulf Build Contractors",
+        "consultant": "Pearl Engineering Consultants",
+        "submission_date": "2026-06-06",
+        "discipline": "Contracts"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_039_contract.pdf",
+      "expected": "Contract",
+      "predicted": "Contract",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "MEP Works Contract",
+        "revision_number": "R3",
+        "project_name": "Sustainable Site Infrastructure Project",
+        "contractor": "Modern Site Works LLC",
+        "consultant": "Nexus Project Consultants",
+        "submission_date": "2026-06-08",
+        "discipline": "Contracts"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_041_meeting_minutes.pdf",
+      "expected": "Meeting Minutes",
+      "predicted": "Meeting Minutes",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Weekly Progress Meeting Minutes",
+        "revision_number": "R0",
+        "project_name": "Campus Innovation Building",
+        "contractor": "Gulf Build Contractors",
+        "consultant": "Pearl Engineering Consultants",
+        "submission_date": "2026-06-10",
+        "discipline": "Contracts"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_043_meeting_minutes.pdf",
+      "expected": "Meeting Minutes",
+      "predicted": "Meeting Minutes",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Safety Meeting Minutes",
+        "revision_number": "R2",
+        "project_name": "Sustainable Site Infrastructure Project",
+        "contractor": "Modern Site Works LLC",
+        "consultant": "Nexus Project Consultants",
+        "submission_date": "2026-06-12",
+        "discipline": "Mechanical"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_045_meeting_minutes.pdf",
+      "expected": "Meeting Minutes",
+      "predicted": "Meeting Minutes",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Design Coordination Meeting Minutes",
+        "revision_number": "R0",
+        "project_name": "Campus Innovation Building",
+        "contractor": "Gulf Build Contractors",
+        "consultant": "Pearl Engineering Consultants",
+        "submission_date": "2026-06-14",
+        "discipline": "Architectural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_047_rfi.pdf",
+      "expected": "RFI",
+      "predicted": "RFI",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "RFI for Rebar Spacing Clarification",
+        "revision_number": "R1",
+        "project_name": "Sustainable Site Infrastructure Project",
+        "contractor": "Modern Site Works LLC",
+        "consultant": "Nexus Project Consultants",
+        "submission_date": "2026-06-16",
+        "discipline": "Contracts"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_049_rfi.pdf",
+      "expected": "RFI",
+      "predicted": "RFI",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "RFI for Lighting Control Detail",
+        "revision_number": "R3",
+        "project_name": "Campus Innovation Building",
+        "contractor": "Gulf Build Contractors",
+        "consultant": "Pearl Engineering Consultants",
+        "submission_date": "2026-06-18",
+        "discipline": "Mechanical"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_002_drawing.docx",
+      "expected": "Drawing",
+      "predicted": "Drawing",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Structural Column Layout Drawing",
+        "revision_number": "R1",
+        "project_name": "Al Ain Mixed Use Development",
+        "contractor": "Emirates Construction Group",
+        "consultant": "Urban Axis Consulting",
+        "submission_date": "2026-05-02",
+        "discipline": "Structural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_004_drawing.docx",
+      "expected": "Drawing",
+      "predicted": "Drawing",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Mechanical Plant Room Drawing",
+        "revision_number": "R3",
+        "project_name": "UAEU Smart Construction Training Project",
+        "contractor": "Al Noor Contracting LLC",
+        "consultant": "Future Design Consultants",
+        "submission_date": "2026-05-04",
+        "discipline": "Architectural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_006_drawing.docx",
+      "expected": "Drawing",
+      "predicted": "Drawing",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Road Alignment Drawing",
+        "revision_number": "R1",
+        "project_name": "Al Ain Mixed Use Development",
+        "contractor": "Emirates Construction Group",
+        "consultant": "Urban Axis Consulting",
+        "submission_date": "2026-05-06",
+        "discipline": "Electrical"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_008_specification.docx",
+      "expected": "Specification",
+      "predicted": "Specification",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Architectural Finishes Specification",
+        "revision_number": "R1",
+        "project_name": "UAEU Smart Construction Training Project",
+        "contractor": "Al Noor Contracting LLC",
+        "consultant": "Future Design Consultants",
+        "submission_date": "2026-05-08",
+        "discipline": "Civil"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_010_specification.docx",
+      "expected": "Specification",
+      "predicted": "Specification",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Electrical Cable Specification",
+        "revision_number": "R3",
+        "project_name": "Al Ain Mixed Use Development",
+        "contractor": "Emirates Construction Group",
+        "consultant": "Urban Axis Consulting",
+        "submission_date": "2026-05-10",
+        "discipline": "Contracts"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_012_specification.docx",
+      "expected": "Specification",
+      "predicted": "Specification",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Landscape Works Specification",
+        "revision_number": "R1",
+        "project_name": "UAEU Smart Construction Training Project",
+        "contractor": "Al Noor Contracting LLC",
+        "consultant": "Future Design Consultants",
+        "submission_date": "2026-05-12",
+        "discipline": "Mechanical"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_014_method_statement.docx",
+      "expected": "Method Statement",
+      "predicted": "Method Statement",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Blockwork Installation Method Statement",
+        "revision_number": "R1",
+        "project_name": "Al Ain Mixed Use Development",
+        "contractor": "Emirates Construction Group",
+        "consultant": "Urban Axis Consulting",
+        "submission_date": "2026-05-14",
+        "discipline": "Structural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_016_method_statement.docx",
+      "expected": "Method Statement",
+      "predicted": "Method Statement",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Cable Pulling Method Statement",
+        "revision_number": "R3",
+        "project_name": "UAEU Smart Construction Training Project",
+        "contractor": "Al Noor Contracting LLC",
+        "consultant": "Future Design Consultants",
+        "submission_date": "2026-05-16",
+        "discipline": "QA/QC"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_018_method_statement.docx",
+      "expected": "Method Statement",
+      "predicted": "Method Statement",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Excavation Works Method Statement",
+        "revision_number": "R1",
+        "project_name": "Al Ain Mixed Use Development",
+        "contractor": "Emirates Construction Group",
+        "consultant": "Urban Axis Consulting",
+        "submission_date": "2026-05-18",
+        "discipline": "Civil"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_020_material_submittal.docx",
+      "expected": "Material Submittal",
+      "predicted": "Material Submittal",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Rebar Material Submittal",
+        "revision_number": "R1",
+        "project_name": "UAEU Smart Construction Training Project",
+        "contractor": "Al Noor Contracting LLC",
+        "consultant": "Future Design Consultants",
+        "submission_date": "2026-05-20",
+        "discipline": "Architectural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_022_material_submittal.docx",
+      "expected": "Material Submittal",
+      "predicted": "Material Submittal",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Lighting Fixture Material Submittal",
+        "revision_number": "R3",
+        "project_name": "Al Ain Mixed Use Development",
+        "contractor": "Emirates Construction Group",
+        "consultant": "Urban Axis Consulting",
+        "submission_date": "2026-05-22",
+        "discipline": "Electrical"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_024_material_submittal.docx",
+      "expected": "Material Submittal",
+      "predicted": "Material Submittal",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Paint System Material Submittal",
+        "revision_number": "R1",
+        "project_name": "UAEU Smart Construction Training Project",
+        "contractor": "Al Noor Contracting LLC",
+        "consultant": "Future Design Consultants",
+        "submission_date": "2026-05-24",
+        "discipline": "Structural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_026_shop_drawing.docx",
+      "expected": "Shop Drawing",
+      "predicted": "Shop Drawing",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Rebar Bending Shop Drawing",
+        "revision_number": "R1",
+        "project_name": "Al Ain Mixed Use Development",
+        "contractor": "Emirates Construction Group",
+        "consultant": "Urban Axis Consulting",
+        "submission_date": "2026-05-26",
+        "discipline": "Structural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_028_shop_drawing.docx",
+      "expected": "Shop Drawing",
+      "predicted": "Shop Drawing",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Cable Tray Shop Drawing",
+        "revision_number": "R3",
+        "project_name": "UAEU Smart Construction Training Project",
+        "contractor": "Al Noor Contracting LLC",
+        "consultant": "Future Design Consultants",
+        "submission_date": "2026-05-28",
+        "discipline": "Mechanical"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_030_shop_drawing.docx",
+      "expected": "Shop Drawing",
+      "predicted": "Shop Drawing",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Door Schedule Shop Drawing",
+        "revision_number": "R1",
+        "project_name": "Al Ain Mixed Use Development",
+        "contractor": "Emirates Construction Group",
+        "consultant": "Urban Axis Consulting",
+        "submission_date": "2026-05-30",
+        "discipline": "Architectural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_032_inspection_report.docx",
+      "expected": "Inspection Report",
+      "predicted": "Inspection Report",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Blockwork Inspection Report",
+        "revision_number": "R1",
+        "project_name": "UAEU Smart Construction Training Project",
+        "contractor": "Al Noor Contracting LLC",
+        "consultant": "Future Design Consultants",
+        "submission_date": "2026-06-01",
+        "discipline": "QA/QC"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_034_inspection_report.docx",
+      "expected": "Inspection Report",
+      "predicted": "Inspection Report",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Cable Termination Inspection Report",
+        "revision_number": "R3",
+        "project_name": "Al Ain Mixed Use Development",
+        "contractor": "Emirates Construction Group",
+        "consultant": "Urban Axis Consulting",
+        "submission_date": "2026-06-03",
+        "discipline": "QA/QC"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_036_contract.docx",
+      "expected": "Contract",
+      "predicted": "Contract",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Main Works Contract",
+        "revision_number": "R0",
+        "project_name": "UAEU Smart Construction Training Project",
+        "contractor": "Al Noor Contracting LLC",
+        "consultant": "Future Design Consultants",
+        "submission_date": "2026-06-05",
+        "discipline": "Contracts"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_038_contract.docx",
+      "expected": "Contract",
+      "predicted": "Contract",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Consultancy Services Contract",
+        "revision_number": "R2",
+        "project_name": "Al Ain Mixed Use Development",
+        "contractor": "Emirates Construction Group",
+        "consultant": "Urban Axis Consulting",
+        "submission_date": "2026-06-07",
+        "discipline": "Contracts"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_040_contract.docx",
+      "expected": "Contract",
+      "predicted": "Contract",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Maintenance Contract",
+        "revision_number": "R0",
+        "project_name": "UAEU Smart Construction Training Project",
+        "contractor": "Al Noor Contracting LLC",
+        "consultant": "Future Design Consultants",
+        "submission_date": "2026-06-09",
+        "discipline": "Contracts"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_042_meeting_minutes.docx",
+      "expected": "Meeting Minutes",
+      "predicted": "Meeting Minutes",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Technical Coordination Meeting Minutes",
+        "revision_number": "R1",
+        "project_name": "Al Ain Mixed Use Development",
+        "contractor": "Emirates Construction Group",
+        "consultant": "Urban Axis Consulting",
+        "submission_date": "2026-06-11",
+        "discipline": "Structural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_044_meeting_minutes.docx",
+      "expected": "Meeting Minutes",
+      "predicted": "Meeting Minutes",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "Client Review Meeting Minutes",
+        "revision_number": "R3",
+        "project_name": "UAEU Smart Construction Training Project",
+        "contractor": "Al Noor Contracting LLC",
+        "consultant": "Future Design Consultants",
+        "submission_date": "2026-06-13",
+        "discipline": "QA/QC"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_046_rfi.docx",
+      "expected": "RFI",
+      "predicted": "RFI",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "RFI for Ceiling Height Clarification",
+        "revision_number": "R0",
+        "project_name": "Al Ain Mixed Use Development",
+        "contractor": "Emirates Construction Group",
+        "consultant": "Urban Axis Consulting",
+        "submission_date": "2026-06-15",
+        "discipline": "Electrical"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_048_rfi.docx",
+      "expected": "RFI",
+      "predicted": "RFI",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "RFI for Duct Route Clash",
+        "revision_number": "R2",
+        "project_name": "UAEU Smart Construction Training Project",
+        "contractor": "Al Noor Contracting LLC",
+        "consultant": "Future Design Consultants",
+        "submission_date": "2026-06-17",
+        "discipline": "Structural"
+      },
+      "correct": true
+    },
+    {
+      "filename": "sample_050_rfi.docx",
+      "expected": "RFI",
+      "predicted": "RFI",
+      "confidence_score": 0.99,
+      "metadata": {
+        "document_title": "RFI for Waterproofing Termination Detail",
+        "revision_number": "R0",
+        "project_name": "Al Ain Mixed Use Development",
+        "contractor": "Emirates Construction Group",
+        "consultant": "Urban Axis Consulting",
+        "submission_date": "2026-06-19",
+        "discipline": "QA/QC"
+      },
+      "correct": true
+    }
+  ]
+}

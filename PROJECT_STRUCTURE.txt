@@ -1,0 +1,11 @@
+document-control-assistant/
+├── app/
+│   ├── main.py                  FastAPI upload API
+│   ├── document_processor.py    PDF/DOCX text ingestion
+│   ├── classifier.py            Classification + confidence score
+│   └── metadata_extractor.py    Metadata extraction
+├── sample_documents/            50 sample PDF/DOCX files
+├── tests/                       Pytest tests
+├── demo.py                      Demonstration script
+├── requirements.txt
+└── README.md

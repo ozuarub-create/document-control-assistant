@@ -1,0 +1,702 @@
+[
+  {
+    "filename": "sample_001_drawing.pdf",
+    "expected_document_type": "Drawing",
+    "metadata": {
+      "Document Type": "Drawing",
+      "Document Title": "Ground Floor Architectural Drawing",
+      "Revision Number": "R0",
+      "Project Name": "Campus Innovation Building",
+      "Contractor": "Gulf Build Contractors",
+      "Consultant": "Pearl Engineering Consultants",
+      "Submission Date": "2026-05-01",
+      "Discipline": "Architectural"
+    }
+  },
+  {
+    "filename": "sample_002_drawing.docx",
+    "expected_document_type": "Drawing",
+    "metadata": {
+      "Document Type": "Drawing",
+      "Document Title": "Structural Column Layout Drawing",
+      "Revision Number": "R1",
+      "Project Name": "Al Ain Mixed Use Development",
+      "Contractor": "Emirates Construction Group",
+      "Consultant": "Urban Axis Consulting",
+      "Submission Date": "2026-05-02",
+      "Discipline": "Structural"
+    }
+  },
+  {
+    "filename": "sample_003_drawing.pdf",
+    "expected_document_type": "Drawing",
+    "metadata": {
+      "Document Type": "Drawing",
+      "Document Title": "External Works Layout Drawing",
+      "Revision Number": "R2",
+      "Project Name": "Sustainable Site Infrastructure Project",
+      "Contractor": "Modern Site Works LLC",
+      "Consultant": "Nexus Project Consultants",
+      "Submission Date": "2026-05-03",
+      "Discipline": "QA/QC"
+    }
+  },
+  {
+    "filename": "sample_004_drawing.docx",
+    "expected_document_type": "Drawing",
+    "metadata": {
+      "Document Type": "Drawing",
+      "Document Title": "Mechanical Plant Room Drawing",
+      "Revision Number": "R3",
+      "Project Name": "UAEU Smart Construction Training Project",
+      "Contractor": "Al Noor Contracting LLC",
+      "Consultant": "Future Design Consultants",
+      "Submission Date": "2026-05-04",
+      "Discipline": "Architectural"
+    }
+  },
+  {
+    "filename": "sample_005_drawing.pdf",
+    "expected_document_type": "Drawing",
+    "metadata": {
+      "Document Type": "Drawing",
+      "Document Title": "Electrical Lighting Layout Drawing",
+      "Revision Number": "R0",
+      "Project Name": "Campus Innovation Building",
+      "Contractor": "Gulf Build Contractors",
+      "Consultant": "Pearl Engineering Consultants",
+      "Submission Date": "2026-05-05",
+      "Discipline": "Civil"
+    }
+  },
+  {
+    "filename": "sample_006_drawing.docx",
+    "expected_document_type": "Drawing",
+    "metadata": {
+      "Document Type": "Drawing",
+      "Document Title": "Road Alignment Drawing",
+      "Revision Number": "R1",
+      "Project Name": "Al Ain Mixed Use Development",
+      "Contractor": "Emirates Construction Group",
+      "Consultant": "Urban Axis Consulting",
+      "Submission Date": "2026-05-06",
+      "Discipline": "Electrical"
+    }
+  },
+  {
+    "filename": "sample_007_specification.pdf",
+    "expected_document_type": "Specification",
+    "metadata": {
+      "Document Type": "Specification",
+      "Document Title": "Concrete Works Specification",
+      "Revision Number": "R0",
+      "Project Name": "Sustainable Site Infrastructure Project",
+      "Contractor": "Modern Site Works LLC",
+      "Consultant": "Nexus Project Consultants",
+      "Submission Date": "2026-05-07",
+      "Discipline": "Architectural"
+    }
+  },
+  {
+    "filename": "sample_008_specification.docx",
+    "expected_document_type": "Specification",
+    "metadata": {
+      "Document Type": "Specification",
+      "Document Title": "Architectural Finishes Specification",
+      "Revision Number": "R1",
+      "Project Name": "UAEU Smart Construction Training Project",
+      "Contractor": "Al Noor Contracting LLC",
+      "Consultant": "Future Design Consultants",
+      "Submission Date": "2026-05-08",
+      "Discipline": "Civil"
+    }
+  },
+  {
+    "filename": "sample_009_specification.pdf",
+    "expected_document_type": "Specification",
+    "metadata": {
+      "Document Type": "Specification",
+      "Document Title": "HVAC Equipment Specification",
+      "Revision Number": "R2",
+      "Project Name": "Campus Innovation Building",
+      "Contractor": "Gulf Build Contractors",
+      "Consultant": "Pearl Engineering Consultants",
+      "Submission Date": "2026-05-09",
+      "Discipline": "Electrical"
+    }
+  },
+  {
+    "filename": "sample_010_specification.docx",
+    "expected_document_type": "Specification",
+    "metadata": {
+      "Document Type": "Specification",
+      "Document Title": "Electrical Cable Specification",
+      "Revision Number": "R3",
+      "Project Name": "Al Ain Mixed Use Development",
+      "Contractor": "Emirates Construction Group",
+      "Consultant": "Urban Axis Consulting",
+      "Submission Date": "2026-05-10",
+      "Discipline": "Contracts"
+    }
+  },
+  {
+    "filename": "sample_011_specification.pdf",
+    "expected_document_type": "Specification",
+    "metadata": {
+      "Document Type": "Specification",
+      "Document Title": "Waterproofing Specification",
+      "Revision Number": "R0",
+      "Project Name": "Sustainable Site Infrastructure Project",
+      "Contractor": "Modern Site Works LLC",
+      "Consultant": "Nexus Project Consultants",
+      "Submission Date": "2026-05-11",
+      "Discipline": "Structural"
+    }
+  },
+  {
+    "filename": "sample_012_specification.docx",
+    "expected_document_type": "Specification",
+    "metadata": {
+      "Document Type": "Specification",
+      "Document Title": "Landscape Works Specification",
+      "Revision Number": "R1",
+      "Project Name": "UAEU Smart Construction Training Project",
+      "Contractor": "Al Noor Contracting LLC",
+      "Consultant": "Future Design Consultants",
+      "Submission Date": "2026-05-12",
+      "Discipline": "Mechanical"
+    }
+  },
+  {
+    "filename": "sample_013_method_statement.pdf",
+    "expected_document_type": "Method Statement",
+    "metadata": {
+      "Document Type": "Method Statement",
+      "Document Title": "Concrete Pouring Method Statement",
+      "Revision Number": "R0",
+      "Project Name": "Campus Innovation Building",
+      "Contractor": "Gulf Build Contractors",
+      "Consultant": "Pearl Engineering Consultants",
+      "Submission Date": "2026-05-13",
+      "Discipline": "Contracts"
+    }
+  },
+  {
+    "filename": "sample_014_method_statement.docx",
+    "expected_document_type": "Method Statement",
+    "metadata": {
+      "Document Type": "Method Statement",
+      "Document Title": "Blockwork Installation Method Statement",
+      "Revision Number": "R1",
+      "Project Name": "Al Ain Mixed Use Development",
+      "Contractor": "Emirates Construction Group",
+      "Consultant": "Urban Axis Consulting",
+      "Submission Date": "2026-05-14",
+      "Discipline": "Structural"
+    }
+  },
+  {
+    "filename": "sample_015_method_statement.pdf",
+    "expected_document_type": "Method Statement",
+    "metadata": {
+      "Document Type": "Method Statement",
+      "Document Title": "HVAC Duct Installation Method Statement",
+      "Revision Number": "R2",
+      "Project Name": "Sustainable Site Infrastructure Project",
+      "Contractor": "Modern Site Works LLC",
+      "Consultant": "Nexus Project Consultants",
+      "Submission Date": "2026-05-15",
+      "Discipline": "Mechanical"
+    }
+  },
+  {
+    "filename": "sample_016_method_statement.docx",
+    "expected_document_type": "Method Statement",
+    "metadata": {
+      "Document Type": "Method Statement",
+      "Document Title": "Cable Pulling Method Statement",
+      "Revision Number": "R3",
+      "Project Name": "UAEU Smart Construction Training Project",
+      "Contractor": "Al Noor Contracting LLC",
+      "Consultant": "Future Design Consultants",
+      "Submission Date": "2026-05-16",
+      "Discipline": "QA/QC"
+    }
+  },
+  {
+    "filename": "sample_017_method_statement.pdf",
+    "expected_document_type": "Method Statement",
+    "metadata": {
+      "Document Type": "Method Statement",
+      "Document Title": "Waterproofing Application Method Statement",
+      "Revision Number": "R0",
+      "Project Name": "Campus Innovation Building",
+      "Contractor": "Gulf Build Contractors",
+      "Consultant": "Pearl Engineering Consultants",
+      "Submission Date": "2026-05-17",
+      "Discipline": "Architectural"
+    }
+  },
+  {
+    "filename": "sample_018_method_statement.docx",
+    "expected_document_type": "Method Statement",
+    "metadata": {
+      "Document Type": "Method Statement",
+      "Document Title": "Excavation Works Method Statement",
+      "Revision Number": "R1",
+      "Project Name": "Al Ain Mixed Use Development",
+      "Contractor": "Emirates Construction Group",
+      "Consultant": "Urban Axis Consulting",
+      "Submission Date": "2026-05-18",
+      "Discipline": "Civil"
+    }
+  },
+  {
+    "filename": "sample_019_material_submittal.pdf",
+    "expected_document_type": "Material Submittal",
+    "metadata": {
+      "Document Type": "Material Submittal",
+      "Document Title": "Ceramic Tile Material Submittal",
+      "Revision Number": "R0",
+      "Project Name": "Sustainable Site Infrastructure Project",
+      "Contractor": "Modern Site Works LLC",
+      "Consultant": "Nexus Project Consultants",
+      "Submission Date": "2026-05-19",
+      "Discipline": "QA/QC"
+    }
+  },
+  {
+    "filename": "sample_020_material_submittal.docx",
+    "expected_document_type": "Material Submittal",
+    "metadata": {
+      "Document Type": "Material Submittal",
+      "Document Title": "Rebar Material Submittal",
+      "Revision Number": "R1",
+      "Project Name": "UAEU Smart Construction Training Project",
+      "Contractor": "Al Noor Contracting LLC",
+      "Consultant": "Future Design Consultants",
+      "Submission Date": "2026-05-20",
+      "Discipline": "Architectural"
+    }
+  },
+  {
+    "filename": "sample_021_material_submittal.pdf",
+    "expected_document_type": "Material Submittal",
+    "metadata": {
+      "Document Type": "Material Submittal",
+      "Document Title": "Chiller Material Submittal",
+      "Revision Number": "R2",
+      "Project Name": "Campus Innovation Building",
+      "Contractor": "Gulf Build Contractors",
+      "Consultant": "Pearl Engineering Consultants",
+      "Submission Date": "2026-05-21",
+      "Discipline": "Civil"
+    }
+  },
+  {
+    "filename": "sample_022_material_submittal.docx",
+    "expected_document_type": "Material Submittal",
+    "metadata": {
+      "Document Type": "Material Submittal",
+      "Document Title": "Lighting Fixture Material Submittal",
+      "Revision Number": "R3",
+      "Project Name": "Al Ain Mixed Use Development",
+      "Contractor": "Emirates Construction Group",
+      "Consultant": "Urban Axis Consulting",
+      "Submission Date": "2026-05-22",
+      "Discipline": "Electrical"
+    }
+  },
+  {
+    "filename": "sample_023_material_submittal.pdf",
+    "expected_document_type": "Material Submittal",
+    "metadata": {
+      "Document Type": "Material Submittal",
+      "Document Title": "Waterproofing Membrane Material Submittal",
+      "Revision Number": "R0",
+      "Project Name": "Sustainable Site Infrastructure Project",
+      "Contractor": "Modern Site Works LLC",
+      "Consultant": "Nexus Project Consultants",
+      "Submission Date": "2026-05-23",
+      "Discipline": "Contracts"
+    }
+  },
+  {
+    "filename": "sample_024_material_submittal.docx",
+    "expected_document_type": "Material Submittal",
+    "metadata": {
+      "Document Type": "Material Submittal",
+      "Document Title": "Paint System Material Submittal",
+      "Revision Number": "R1",
+      "Project Name": "UAEU Smart Construction Training Project",
+      "Contractor": "Al Noor Contracting LLC",
+      "Consultant": "Future Design Consultants",
+      "Submission Date": "2026-05-24",
+      "Discipline": "Structural"
+    }
+  },
+  {
+    "filename": "sample_025_shop_drawing.pdf",
+    "expected_document_type": "Shop Drawing",
+    "metadata": {
+      "Document Type": "Shop Drawing",
+      "Document Title": "Curtain Wall Shop Drawing",
+      "Revision Number": "R0",
+      "Project Name": "Campus Innovation Building",
+      "Contractor": "Gulf Build Contractors",
+      "Consultant": "Pearl Engineering Consultants",
+      "Submission Date": "2026-05-25",
+      "Discipline": "Architectural"
+    }
+  },
+  {
+    "filename": "sample_026_shop_drawing.docx",
+    "expected_document_type": "Shop Drawing",
+    "metadata": {
+      "Document Type": "Shop Drawing",
+      "Document Title": "Rebar Bending Shop Drawing",
+      "Revision Number": "R1",
+      "Project Name": "Al Ain Mixed Use Development",
+      "Contractor": "Emirates Construction Group",
+      "Consultant": "Urban Axis Consulting",
+      "Submission Date": "2026-05-26",
+      "Discipline": "Structural"
+    }
+  },
+  {
+    "filename": "sample_027_shop_drawing.pdf",
+    "expected_document_type": "Shop Drawing",
+    "metadata": {
+      "Document Type": "Shop Drawing",
+      "Document Title": "Ductwork Shop Drawing",
+      "Revision Number": "R2",
+      "Project Name": "Sustainable Site Infrastructure Project",
+      "Contractor": "Modern Site Works LLC",
+      "Consultant": "Nexus Project Consultants",
+      "Submission Date": "2026-05-27",
+      "Discipline": "Structural"
+    }
+  },
+  {
+    "filename": "sample_028_shop_drawing.docx",
+    "expected_document_type": "Shop Drawing",
+    "metadata": {
+      "Document Type": "Shop Drawing",
+      "Document Title": "Cable Tray Shop Drawing",
+      "Revision Number": "R3",
+      "Project Name": "UAEU Smart Construction Training Project",
+      "Contractor": "Al Noor Contracting LLC",
+      "Consultant": "Future Design Consultants",
+      "Submission Date": "2026-05-28",
+      "Discipline": "Mechanical"
+    }
+  },
+  {
+    "filename": "sample_029_shop_drawing.pdf",
+    "expected_document_type": "Shop Drawing",
+    "metadata": {
+      "Document Type": "Shop Drawing",
+      "Document Title": "False Ceiling Shop Drawing",
+      "Revision Number": "R0",
+      "Project Name": "Campus Innovation Building",
+      "Contractor": "Gulf Build Contractors",
+      "Consultant": "Pearl Engineering Consultants",
+      "Submission Date": "2026-05-29",
+      "Discipline": "QA/QC"
+    }
+  },
+  {
+    "filename": "sample_030_shop_drawing.docx",
+    "expected_document_type": "Shop Drawing",
+    "metadata": {
+      "Document Type": "Shop Drawing",
+      "Document Title": "Door Schedule Shop Drawing",
+      "Revision Number": "R1",
+      "Project Name": "Al Ain Mixed Use Development",
+      "Contractor": "Emirates Construction Group",
+      "Consultant": "Urban Axis Consulting",
+      "Submission Date": "2026-05-30",
+      "Discipline": "Architectural"
+    }
+  },
+  {
+    "filename": "sample_031_inspection_report.pdf",
+    "expected_document_type": "Inspection Report",
+    "metadata": {
+      "Document Type": "Inspection Report",
+      "Document Title": "Concrete Inspection Report",
+      "Revision Number": "R0",
+      "Project Name": "Sustainable Site Infrastructure Project",
+      "Contractor": "Modern Site Works LLC",
+      "Consultant": "Nexus Project Consultants",
+      "Submission Date": "2026-05-31",
+      "Discipline": "QA/QC"
+    }
+  },
+  {
+    "filename": "sample_032_inspection_report.docx",
+    "expected_document_type": "Inspection Report",
+    "metadata": {
+      "Document Type": "Inspection Report",
+      "Document Title": "Blockwork Inspection Report",
+      "Revision Number": "R1",
+      "Project Name": "UAEU Smart Construction Training Project",
+      "Contractor": "Al Noor Contracting LLC",
+      "Consultant": "Future Design Consultants",
+      "Submission Date": "2026-06-01",
+      "Discipline": "QA/QC"
+    }
+  },
+  {
+    "filename": "sample_033_inspection_report.pdf",
+    "expected_document_type": "Inspection Report",
+    "metadata": {
+      "Document Type": "Inspection Report",
+      "Document Title": "Duct Installation Inspection Report",
+      "Revision Number": "R2",
+      "Project Name": "Campus Innovation Building",
+      "Contractor": "Gulf Build Contractors",
+      "Consultant": "Pearl Engineering Consultants",
+      "Submission Date": "2026-06-02",
+      "Discipline": "QA/QC"
+    }
+  },
+  {
+    "filename": "sample_034_inspection_report.docx",
+    "expected_document_type": "Inspection Report",
+    "metadata": {
+      "Document Type": "Inspection Report",
+      "Document Title": "Cable Termination Inspection Report",
+      "Revision Number": "R3",
+      "Project Name": "Al Ain Mixed Use Development",
+      "Contractor": "Emirates Construction Group",
+      "Consultant": "Urban Axis Consulting",
+      "Submission Date": "2026-06-03",
+      "Discipline": "QA/QC"
+    }
+  },
+  {
+    "filename": "sample_035_inspection_report.pdf",
+    "expected_document_type": "Inspection Report",
+    "metadata": {
+      "Document Type": "Inspection Report",
+      "Document Title": "Finishing Inspection Report",
+      "Revision Number": "R0",
+      "Project Name": "Sustainable Site Infrastructure Project",
+      "Contractor": "Modern Site Works LLC",
+      "Consultant": "Nexus Project Consultants",
+      "Submission Date": "2026-06-04",
+      "Discipline": "QA/QC"
+    }
+  },
+  {
+    "filename": "sample_036_contract.docx",
+    "expected_document_type": "Contract",
+    "metadata": {
+      "Document Type": "Contract",
+      "Document Title": "Main Works Contract",
+      "Revision Number": "R0",
+      "Project Name": "UAEU Smart Construction Training Project",
+      "Contractor": "Al Noor Contracting LLC",
+      "Consultant": "Future Design Consultants",
+      "Submission Date": "2026-06-05",
+      "Discipline": "Contracts"
+    }
+  },
+  {
+    "filename": "sample_037_contract.pdf",
+    "expected_document_type": "Contract",
+    "metadata": {
+      "Document Type": "Contract",
+      "Document Title": "Subcontract Agreement",
+      "Revision Number": "R1",
+      "Project Name": "Campus Innovation Building",
+      "Contractor": "Gulf Build Contractors",
+      "Consultant": "Pearl Engineering Consultants",
+      "Submission Date": "2026-06-06",
+      "Discipline": "Contracts"
+    }
+  },
+  {
+    "filename": "sample_038_contract.docx",
+    "expected_document_type": "Contract",
+    "metadata": {
+      "Document Type": "Contract",
+      "Document Title": "Consultancy Services Contract",
+      "Revision Number": "R2",
+      "Project Name": "Al Ain Mixed Use Development",
+      "Contractor": "Emirates Construction Group",
+      "Consultant": "Urban Axis Consulting",
+      "Submission Date": "2026-06-07",
+      "Discipline": "Contracts"
+    }
+  },
+  {
+    "filename": "sample_039_contract.pdf",
+    "expected_document_type": "Contract",
+    "metadata": {
+      "Document Type": "Contract",
+      "Document Title": "MEP Works Contract",
+      "Revision Number": "R3",
+      "Project Name": "Sustainable Site Infrastructure Project",
+      "Contractor": "Modern Site Works LLC",
+      "Consultant": "Nexus Project Consultants",
+      "Submission Date": "2026-06-08",
+      "Discipline": "Contracts"
+    }
+  },
+  {
+    "filename": "sample_040_contract.docx",
+    "expected_document_type": "Contract",
+    "metadata": {
+      "Document Type": "Contract",
+      "Document Title": "Maintenance Contract",
+      "Revision Number": "R0",
+      "Project Name": "UAEU Smart Construction Training Project",
+      "Contractor": "Al Noor Contracting LLC",
+      "Consultant": "Future Design Consultants",
+      "Submission Date": "2026-06-09",
+      "Discipline": "Contracts"
+    }
+  },
+  {
+    "filename": "sample_041_meeting_minutes.pdf",
+    "expected_document_type": "Meeting Minutes",
+    "metadata": {
+      "Document Type": "Meeting Minutes",
+      "Document Title": "Weekly Progress Meeting Minutes",
+      "Revision Number": "R0",
+      "Project Name": "Campus Innovation Building",
+      "Contractor": "Gulf Build Contractors",
+      "Consultant": "Pearl Engineering Consultants",
+      "Submission Date": "2026-06-10",
+      "Discipline": "Contracts"
+    }
+  },
+  {
+    "filename": "sample_042_meeting_minutes.docx",
+    "expected_document_type": "Meeting Minutes",
+    "metadata": {
+      "Document Type": "Meeting Minutes",
+      "Document Title": "Technical Coordination Meeting Minutes",
+      "Revision Number": "R1",
+      "Project Name": "Al Ain Mixed Use Development",
+      "Contractor": "Emirates Construction Group",
+      "Consultant": "Urban Axis Consulting",
+      "Submission Date": "2026-06-11",
+      "Discipline": "Structural"
+    }
+  },
+  {
+    "filename": "sample_043_meeting_minutes.pdf",
+    "expected_document_type": "Meeting Minutes",
+    "metadata": {
+      "Document Type": "Meeting Minutes",
+      "Document Title": "Safety Meeting Minutes",
+      "Revision Number": "R2",
+      "Project Name": "Sustainable Site Infrastructure Project",
+      "Contractor": "Modern Site Works LLC",
+      "Consultant": "Nexus Project Consultants",
+      "Submission Date": "2026-06-12",
+      "Discipline": "Mechanical"
+    }
+  },
+  {
+    "filename": "sample_044_meeting_minutes.docx",
+    "expected_document_type": "Meeting Minutes",
+    "metadata": {
+      "Document Type": "Meeting Minutes",
+      "Document Title": "Client Review Meeting Minutes",
+      "Revision Number": "R3",
+      "Project Name": "UAEU Smart Construction Training Project",
+      "Contractor": "Al Noor Contracting LLC",
+      "Consultant": "Future Design Consultants",
+      "Submission Date": "2026-06-13",
+      "Discipline": "QA/QC"
+    }
+  },
+  {
+    "filename": "sample_045_meeting_minutes.pdf",
+    "expected_document_type": "Meeting Minutes",
+    "metadata": {
+      "Document Type": "Meeting Minutes",
+      "Document Title": "Design Coordination Meeting Minutes",
+      "Revision Number": "R0",
+      "Project Name": "Campus Innovation Building",
+      "Contractor": "Gulf Build Contractors",
+      "Consultant": "Pearl Engineering Consultants",
+      "Submission Date": "2026-06-14",
+      "Discipline": "Architectural"
+    }
+  },
+  {
+    "filename": "sample_046_rfi.docx",
+    "expected_document_type": "RFI",
+    "metadata": {
+      "Document Type": "RFI",
+      "Document Title": "RFI for Ceiling Height Clarification",
+      "Revision Number": "R0",
+      "Project Name": "Al Ain Mixed Use Development",
+      "Contractor": "Emirates Construction Group",
+      "Consultant": "Urban Axis Consulting",
+      "Submission Date": "2026-06-15",
+      "Discipline": "Electrical"
+    }
+  },
+  {
+    "filename": "sample_047_rfi.pdf",
+    "expected_document_type": "RFI",
+    "metadata": {
+      "Document Type": "RFI",
+      "Document Title": "RFI for Rebar Spacing Clarification",
+      "Revision Number": "R1",
+      "Project Name": "Sustainable Site Infrastructure Project",
+      "Contractor": "Modern Site Works LLC",
+      "Consultant": "Nexus Project Consultants",
+      "Submission Date": "2026-06-16",
+      "Discipline": "Contracts"
+    }
+  },
+  {
+    "filename": "sample_048_rfi.docx",
+    "expected_document_type": "RFI",
+    "metadata": {
+      "Document Type": "RFI",
+      "Document Title": "RFI for Duct Route Clash",
+      "Revision Number": "R2",
+      "Project Name": "UAEU Smart Construction Training Project",
+      "Contractor": "Al Noor Contracting LLC",
+      "Consultant": "Future Design Consultants",
+      "Submission Date": "2026-06-17",
+      "Discipline": "Structural"
+    }
+  },
+  {
+    "filename": "sample_049_rfi.pdf",
+    "expected_document_type": "RFI",
+    "metadata": {
+      "Document Type": "RFI",
+      "Document Title": "RFI for Lighting Control Detail",
+      "Revision Number": "R3",
+      "Project Name": "Campus Innovation Building",
+      "Contractor": "Gulf Build Contractors",
+      "Consultant": "Pearl Engineering Consultants",
+      "Submission Date": "2026-06-18",
+      "Discipline": "Mechanical"
+    }
+  },
+  {
+    "filename": "sample_050_rfi.docx",
+    "expected_document_type": "RFI",
+    "metadata": {
+      "Document Type": "RFI",
+      "Document Title": "RFI for Waterproofing Termination Detail",
+      "Revision Number": "R0",
+      "Project Name": "Al Ain Mixed Use Development",
+      "Contractor": "Emirates Construction Group",
+      "Consultant": "Urban Axis Consulting",
+      "Submission Date": "2026-06-19",
+      "Discipline": "QA/QC"
+    }
+  }
+]

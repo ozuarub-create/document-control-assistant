@@ -1,0 +1,59 @@
+AI Document Control Assistant - Demo
+==============================================================================
+File                                     Expected           Predicted          Conf.
+------------------------------------------------------------------------------
+sample_001_drawing.pdf                   Drawing            Drawing            0.99
+sample_003_drawing.pdf                   Drawing            Drawing            0.99
+sample_005_drawing.pdf                   Drawing            Drawing            0.99
+sample_007_specification.pdf             Specification      Specification      0.99
+sample_009_specification.pdf             Specification      Specification      0.99
+sample_011_specification.pdf             Specification      Specification      0.99
+sample_013_method_statement.pdf          Method Statement   Method Statement   0.99
+sample_015_method_statement.pdf          Method Statement   Method Statement   0.99
+sample_017_method_statement.pdf          Method Statement   Method Statement   0.99
+sample_019_material_submittal.pdf        Material Submitta  Material Submitta  0.99
+sample_021_material_submittal.pdf        Material Submitta  Material Submitta  0.99
+sample_023_material_submittal.pdf        Material Submitta  Material Submitta  0.99
+sample_025_shop_drawing.pdf              Shop Drawing       Shop Drawing       0.99
+sample_027_shop_drawing.pdf              Shop Drawing       Shop Drawing       0.99
+sample_029_shop_drawing.pdf              Shop Drawing       Shop Drawing       0.99
+sample_031_inspection_report.pdf         Inspection Report  Inspection Report  0.99
+sample_033_inspection_report.pdf         Inspection Report  Inspection Report  0.99
+sample_035_inspection_report.pdf         Inspection Report  Inspection Report  0.99
+sample_037_contract.pdf                  Contract           Contract           0.99
+sample_039_contract.pdf                  Contract           Contract           0.99
+sample_041_meeting_minutes.pdf           Meeting Minutes    Meeting Minutes    0.99
+sample_043_meeting_minutes.pdf           Meeting Minutes    Meeting Minutes    0.99
+sample_045_meeting_minutes.pdf           Meeting Minutes    Meeting Minutes    0.99
+sample_047_rfi.pdf                       RFI                RFI                0.99
+sample_049_rfi.pdf                       RFI                RFI                0.99
+sample_002_drawing.docx                  Drawing            Drawing            0.99
+sample_004_drawing.docx                  Drawing            Drawing            0.99
+sample_006_drawing.docx                  Drawing            Drawing            0.99
+sample_008_specification.docx            Specification      Specification      0.99
+sample_010_specification.docx            Specification      Specification      0.99
+sample_012_specification.docx            Specification      Specification      0.99
+sample_014_method_statement.docx         Method Statement   Method Statement   0.99
+sample_016_method_statement.docx         Method Statement   Method Statement   0.99
+sample_018_method_statement.docx         Method Statement   Method Statement   0.99
+sample_020_material_submittal.docx       Material Submitta  Material Submitta  0.99
+sample_022_material_submittal.docx       Material Submitta  Material Submitta  0.99
+sample_024_material_submittal.docx       Material Submitta  Material Submitta  0.99
+sample_026_shop_drawing.docx             Shop Drawing       Shop Drawing       0.99
+sample_028_shop_drawing.docx             Shop Drawing       Shop Drawing       0.99
+sample_030_shop_drawing.docx             Shop Drawing       Shop Drawing       0.99
+sample_032_inspection_report.docx        Inspection Report  Inspection Report  0.99
+sample_034_inspection_report.docx        Inspection Report  Inspection Report  0.99
+sample_036_contract.docx                 Contract           Contract           0.99
+sample_038_contract.docx                 Contract           Contract           0.99
+sample_040_contract.docx                 Contract           Contract           0.99
+sample_042_meeting_minutes.docx          Meeting Minutes    Meeting Minutes    0.99
+sample_044_meeting_minutes.docx          Meeting Minutes    Meeting Minutes    0.99
+sample_046_rfi.docx                      RFI                RFI                0.99
+sample_048_rfi.docx                      RFI                RFI                0.99
+sample_050_rfi.docx                      RFI                RFI                0.99
+------------------------------------------------------------------------------
+Documents tested: 50
+Correct classifications: 50
+Accuracy: 100%
+Results saved to: demo_results.json
