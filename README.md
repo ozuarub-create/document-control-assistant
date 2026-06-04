@@ -2,6 +2,18 @@
 
 This is a simple **AI Document Control Assistant** for construction documents. It accepts **PDF** and **DOCX** files, classifies the document type, extracts key metadata, and returns a confidence score.
 
+## AI Approach
+
+This system uses intelligent document analysis techniques to classify construction documents and extract key metadata.
+
+Features:
+- Automated text extraction from PDF and DOCX files
+- Rule-based document classification using construction industry terminology
+- Metadata extraction using pattern recognition
+- Confidence scoring based on keyword matching and document structure
+
+The solution is designed for construction document control workflows and provides explainable classification results.
+
 ## What is included
 
 - Working document upload API using FastAPI
