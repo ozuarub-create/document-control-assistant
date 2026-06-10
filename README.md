@@ -1,142 +1,194 @@
-# Week 15 - AI Document Classification & Metadata Extraction
+# AI Document Control Assistant
 
-This is a simple **AI Document Control Assistant** for construction documents. It accepts **PDF** and **DOCX** files, classifies the document type, extracts key metadata, and returns a confidence score.
+This repository contains a complete AI-powered document control system for construction project documents. The system supports document upload, classification, metadata extraction, document registration, version tracking, traditional search, semantic search, and natural language document queries.
 
-## AI Approach
+## Week 15 – Document Classification & Metadata Extraction
 
-This system uses intelligent document analysis techniques to classify construction documents and extract key metadata.
+### Features
 
-Features:
-- Automated text extraction from PDF and DOCX files
-- Rule-based document classification using construction industry terminology
-- Metadata extraction using pattern recognition
-- Confidence scoring based on keyword matching and document structure
+* PDF and DOCX document upload
+* Automatic document classification
+* Metadata extraction
+* Confidence score generation
+* Construction document processing
 
-The solution is designed for construction document control workflows and provides explainable classification results.
+### Supported Document Types
 
-## What is included
+* Drawing
+* Specification
+* Method Statement
+* Material Submittal
+* Shop Drawing
+* Inspection Report
+* Contract
+* Meeting Minutes
+* RFI
 
-- Working document upload API using FastAPI
-- Classification engine for:
-  - Drawing
-  - Specification
-  - Method Statement
-  - Material Submittal
-  - Shop Drawing
-  - Inspection Report
-  - Contract
-  - Meeting Minutes
-  - RFI
-- Metadata extraction engine for:
-  - Document Title
-  - Revision Number
-  - Project Name
-  - Contractor
-  - Consultant
-  - Submission Date
-  - Discipline
-- Confidence score for every classification
-- 50 sample PDF/DOCX documents in `sample_documents/`
-- Demo script and automated tests
+### Extracted Metadata
 
-## How to run on MacBook using VS Code
+* Document Title
+* Revision Number
+* Project Name
+* Contractor
+* Consultant
+* Submission Date
+* Discipline
 
-### 1. Open the project
+---
 
-Open this folder in Visual Studio Code.
+## Week 16 – Intelligent Document Register & Search
 
-### 2. Create a virtual environment
+### Features
 
-In the VS Code terminal, run:
+* Document database schema
+* Metadata repository
+* Document version tracking
+* Traditional metadata search
+* Semantic search using embeddings
+* Natural language document queries
+* Search API endpoints
+
+### Search Capabilities
+
+#### Traditional Search
+
+Search documents using:
+
+* Document Type
+* Project Name
+* Contractor
+* Consultant
+* Discipline
+* Revision Number
+
+#### Semantic Search
+
+Find relevant documents using meaning-based search queries.
+
+Example:
+
+```text
+layout plans and architectural drawings
+```
+
+#### Natural Language Queries
+
+Example:
+
+```text
+Show me the latest architectural drawings
+```
+
+---
+
+## API Endpoints
+
+### Document Processing
+
+* POST `/upload`
+
+### Document Register
+
+* POST `/documents/rebuild-sample-register`
+* GET `/documents`
+* GET `/documents/{document_id}`
+* GET `/documents/{document_id}/versions`
+
+### Search API
+
+* GET `/documents/search`
+* POST `/documents/semantic-search`
+* POST `/documents/query`
+
+---
+
+## Project Structure
+
+```text
+app/
+tests/
+sample_documents/
+
+database.py
+document_repository.py
+search_engine.py
+embeddings.py
+
+demo.py
+demo_week16.py
+
+document_register.db
+
+README.md
+requirements.txt
+```
+
+---
+
+## Demonstration Results
+
+### Week 15
+
+* 50 sample documents processed
+* Classification successful
+* Metadata extraction successful
+* Confidence scoring implemented
+
+### Week 16
+
+* Metadata repository created
+* Version tracking implemented
+* Traditional search implemented
+* Semantic search implemented
+* Natural language queries implemented
+
+---
+
+## Testing
+
+Run all tests:
+
+```bash
+pytest
+```
+
+Expected result:
+
+```text
+4 passed
+```
+
+---
+
+## Run the Application
+
+Create and activate a virtual environment:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-### 3. Install the required packages
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Run the API
+Run the API:
 
 ```bash
-uvicorn app.main:app --reload
+python -m uvicorn app.main:app --reload
 ```
 
-Open this link in your browser:
+Open:
 
 ```text
 http://127.0.0.1:8000/docs
 ```
 
-Use the `/upload` endpoint, click **Try it out**, upload any PDF or DOCX from `sample_documents/`, and click **Execute**.
+---
 
-## Run the demo
+## Author
 
-```bash
-python demo.py
-```
-
-The demo processes all 50 sample documents and creates `demo_results.json`.
-
-## Run the tests
-
-```bash
-pytest
-```
-
-## Example API response
-
-```json
-{
-  "filename": "sample_001_drawing.pdf",
-  "file_type": "pdf",
-  "classification": {
-    "document_type": "Drawing",
-    "confidence_score": 0.99,
-    "matched_keywords": ["declared type: Drawing", "drawing", "layout", "plan"],
-    "scores": {
-      "Drawing": 45,
-      "Specification": 0,
-      "Method Statement": 0,
-      "Material Submittal": 0,
-      "Shop Drawing": 0,
-      "Inspection Report": 0,
-      "Contract": 0,
-      "Meeting Minutes": 0,
-      "RFI": 0
-    }
-  },
-  "metadata": {
-    "document_title": "Ground Floor Architectural Drawing",
-    "revision_number": "R1",
-    "project_name": "UAEU Smart Construction Training Project",
-    "contractor": "Al Noor Contracting LLC",
-    "consultant": "Future Design Consultants",
-    "submission_date": "2026-05-01",
-    "discipline": "Architectural"
-  }
-}
-```
-
-## GitHub submission steps
-
-Create a new repository on GitHub, then run these commands inside this project folder:
-
-```bash
-git init
-git add .
-git commit -m "Week 15 document classification assignment"
-git branch -M main
-git remote add origin https://github.com/ozuarub-create/YOUR-REPOSITORY-NAME.git
-git push -u origin main
-```
-
-Replace `YOUR-REPOSITORY-NAME` with the repository name you create on GitHub.
-
-## Notes
-
-This project uses a simple keyword-based classification method so it is easy to run locally and submit. It does not require an OpenAI API key or any paid service.
+Omar Zuarub
