@@ -51,7 +51,7 @@ def extract_text(file_path: str | Path, filename: str | None = None) -> str:
     raise ValueError(f"Unsupported file type: {suffix}. Only PDF and DOCX are supported.")
 
 
-def process_file(file_path: str | Path, filename: str | None = None) -> dict[str, Any]:
+def process_file(file_path: str | Path, filename: str | None = None, include_text: bool = False) -> dict[str, Any]:
     """Run ingestion, classification, metadata extraction, and confidence scoring."""
     path = Path(file_path)
     original_name = filename or path.name
@@ -63,10 +63,13 @@ def process_file(file_path: str | Path, filename: str | None = None) -> dict[str
     classification = classify_document(text, original_name)
     metadata = extract_metadata(text, original_name)
 
-    return {
+    result = {
         "filename": original_name,
         "file_type": suffix.replace(".", ""),
         "classification": classification.to_dict(),
         "metadata": metadata,
         "text_preview": text[:500],
     }
+    if include_text:
+        result["content_text"] = text
+    return result
