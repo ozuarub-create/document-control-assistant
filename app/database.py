@@ -1,4 +1,4 @@
-"""SQLite database setup for the intelligent document register."""
+"""SQLite database setup for the intelligent document register and review reports."""
 
 from __future__ import annotations
 
@@ -34,6 +34,20 @@ CREATE TABLE IF NOT EXISTS documents (
     created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS document_reviews (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    document_id INTEGER,
+    filename TEXT NOT NULL,
+    document_key TEXT,
+    review_status TEXT NOT NULL,
+    quality_score INTEGER NOT NULL,
+    duplicate_status TEXT NOT NULL,
+    summary TEXT,
+    report_json TEXT NOT NULL,
+    created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY(document_id) REFERENCES documents(id)
+);
+
 CREATE INDEX IF NOT EXISTS idx_documents_type ON documents(document_type);
 CREATE INDEX IF NOT EXISTS idx_documents_project ON documents(project_name);
 CREATE INDEX IF NOT EXISTS idx_documents_contractor ON documents(contractor);
@@ -41,6 +55,9 @@ CREATE INDEX IF NOT EXISTS idx_documents_consultant ON documents(consultant);
 CREATE INDEX IF NOT EXISTS idx_documents_discipline ON documents(discipline);
 CREATE INDEX IF NOT EXISTS idx_documents_key ON documents(document_key);
 CREATE INDEX IF NOT EXISTS idx_documents_latest ON documents(is_latest);
+CREATE INDEX IF NOT EXISTS idx_reviews_document_id ON document_reviews(document_id);
+CREATE INDEX IF NOT EXISTS idx_reviews_status ON document_reviews(review_status);
+CREATE INDEX IF NOT EXISTS idx_reviews_key ON document_reviews(document_key);
 """
 
 
@@ -60,6 +77,7 @@ def initialize_database(db_path: str | Path = DATABASE_PATH) -> None:
 
 def reset_database(db_path: str | Path = DATABASE_PATH) -> None:
     with get_connection(db_path) as connection:
+        connection.execute("DROP TABLE IF EXISTS document_reviews")
         connection.execute("DROP TABLE IF EXISTS documents")
         connection.commit()
     initialize_database(db_path)

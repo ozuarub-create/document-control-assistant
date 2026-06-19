@@ -1,0 +1,369 @@
+{
+  "valid_document_review": {
+    "review_id": "b46f52ef4ee2",
+    "filename": "sample_001_drawing.pdf",
+    "document_type": "Drawing",
+    "confidence_score": 0.99,
+    "metadata": {
+      "document_title": "Ground Floor Architectural Drawing",
+      "revision_number": "R0",
+      "project_name": "Campus Innovation Building",
+      "contractor": "Gulf Build Contractors",
+      "consultant": "Pearl Engineering Consultants",
+      "submission_date": "2026-05-01",
+      "discipline": "Architectural"
+    },
+    "validation_status": "Pass",
+    "quality_score": 100,
+    "summary": {
+      "summary_text": "Ground Floor Architectural Drawing is classified as Drawing for Campus Innovation Building. It is related to the Architectural discipline, revision R0, submitted on 2026-05-01 by Gulf Build Contractors to Pearl Engineering Consultants. Key extracted content: Ground Floor Architectural Drawing Document Type Drawing Document Title Ground Floor Architectural Drawing Revision Number R0 Project Name Campus Innovation Building Contractor Gulf Build Contractors Consultant Pearl Engineering Consultants Submission Date 2026-05-01 Discipline Architectural Document Content This drawing shows the layout plan, grid",
+      "key_points": [
+        "Document Type: Drawing",
+        "Project: Campus Innovation Building",
+        "Revision: R0",
+        "Discipline: Architectural",
+        "Classification evidence: declared type: Drawing, drawing, layout, plan, elevation"
+      ]
+    },
+    "missing_information": [],
+    "warnings": [],
+    "recommendations": [],
+    "validation_rules_checked": [
+      {
+        "rule": "Required metadata: Document Title",
+        "passed": true,
+        "severity": "high"
+      },
+      {
+        "rule": "Required metadata: Revision Number",
+        "passed": true,
+        "severity": "high"
+      },
+      {
+        "rule": "Required metadata: Project Name",
+        "passed": true,
+        "severity": "high"
+      },
+      {
+        "rule": "Required metadata: Contractor",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "Required metadata: Consultant",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "Required metadata: Submission Date",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "Required metadata: Discipline",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "Document type classification",
+        "passed": true,
+        "severity": "high"
+      },
+      {
+        "rule": "Classification confidence >= 0.70",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "Readable text length",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "Drawing: drawing reference",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "Drawing: scale or layout information",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "Drawing: revision information",
+        "passed": true,
+        "severity": "medium"
+      }
+    ],
+    "duplicate_check": {
+      "status": "No Duplicate Found",
+      "is_duplicate": false,
+      "document_key": "campus-innovation-building::ground-floor-architectural-drawing",
+      "candidates": [],
+      "recommendation": "No matching registered document was found."
+    },
+    "created_at": "2026-06-19T17:40:25+00:00"
+  },
+  "duplicate_detection_review": {
+    "review_id": "373b4ad0538b",
+    "filename": "sample_047_rfi.pdf",
+    "document_type": "RFI",
+    "confidence_score": 0.99,
+    "metadata": {
+      "document_title": "RFI for Rebar Spacing Clarification",
+      "revision_number": "R1",
+      "project_name": "Sustainable Site Infrastructure Project",
+      "contractor": "Modern Site Works LLC",
+      "consultant": "Nexus Project Consultants",
+      "submission_date": "2026-06-16",
+      "discipline": "Contracts"
+    },
+    "validation_status": "Fail",
+    "quality_score": 70,
+    "summary": {
+      "summary_text": "RFI for Rebar Spacing Clarification is classified as RFI for Sustainable Site Infrastructure Project. It is related to the Contracts discipline, revision R1, submitted on 2026-06-16 by Modern Site Works LLC to Nexus Project Consultants. Key extracted content: RFI for Rebar Spacing Clarification Document Type RFI Document Title RFI for Rebar Spacing Clarification Revision Number R1 Project Name Sustainable Site Infrastructure Project Contractor Modern Site Works LLC Consultant Nexus Project Consultants Submission Date 2026-06-16 Discipline Contracts Document Content This RFI is a request for information ",
+      "key_points": [
+        "Document Type: RFI",
+        "Project: Sustainable Site Infrastructure Project",
+        "Revision: R1",
+        "Discipline: Contracts",
+        "Classification evidence: declared type: RFI, rfi, request for information, clarification, query"
+      ]
+    },
+    "missing_information": [],
+    "warnings": [
+      "Duplicate check result: Exact Duplicate Found."
+    ],
+    "recommendations": [
+      "Do not submit again. Use the existing registered document or upload a new revision."
+    ],
+    "validation_rules_checked": [
+      {
+        "rule": "Required metadata: Document Title",
+        "passed": true,
+        "severity": "high"
+      },
+      {
+        "rule": "Required metadata: Revision Number",
+        "passed": true,
+        "severity": "high"
+      },
+      {
+        "rule": "Required metadata: Project Name",
+        "passed": true,
+        "severity": "high"
+      },
+      {
+        "rule": "Required metadata: Contractor",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "Required metadata: Consultant",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "Required metadata: Submission Date",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "Required metadata: Discipline",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "Document type classification",
+        "passed": true,
+        "severity": "high"
+      },
+      {
+        "rule": "Classification confidence >= 0.70",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "Readable text length",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "RFI: request for information",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "RFI: question or query",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "RFI: response requirement",
+        "passed": true,
+        "severity": "medium"
+      }
+    ],
+    "duplicate_check": {
+      "status": "Exact Duplicate Found",
+      "is_duplicate": true,
+      "document_key": "sustainable-site-infrastructure-project::rfi-for-rebar-spacing-clarification",
+      "candidates": [
+        {
+          "document_id": 24,
+          "filename": "sample_047_rfi.pdf",
+          "document_title": "RFI for Rebar Spacing Clarification",
+          "revision_number": "R1",
+          "version": 1,
+          "is_latest": true,
+          "match_type": "Exact Duplicate",
+          "duplicate_score": 1.0,
+          "semantic_similarity": 0.9809
+        }
+      ],
+      "recommendation": "Do not submit again. Use the existing registered document or upload a new revision."
+    },
+    "created_at": "2026-06-19T17:40:26+00:00"
+  },
+  "missing_information_review": {
+    "review_id": "57b66c23cfec",
+    "filename": "incomplete_rfi.docx",
+    "document_type": "RFI",
+    "confidence_score": 0.99,
+    "metadata": {
+      "document_title": "Incomplete RFI Submission",
+      "revision_number": null,
+      "project_name": null,
+      "contractor": null,
+      "consultant": null,
+      "submission_date": null,
+      "discipline": "Contracts"
+    },
+    "validation_status": "Fail",
+    "quality_score": 36,
+    "summary": {
+      "summary_text": "Incomplete RFI Submission is classified as RFI for Not found. It is related to the Contracts discipline, revision Not found, submitted on Not found by Not found to Not found. Key extracted content: Incomplete RFI Submission Document Type: RFI Question: Please confirm the ceiling access panel location. This file is intentionally missing project, revision, contractor, consultant, date, and discipline metadata.",
+      "key_points": [
+        "Document Type: RFI",
+        "Project: Not found",
+        "Revision: Not found",
+        "Discipline: Contracts",
+        "Classification evidence: declared type: RFI, rfi, question"
+      ]
+    },
+    "missing_information": [
+      {
+        "field": "revision_number",
+        "label": "Revision Number"
+      },
+      {
+        "field": "project_name",
+        "label": "Project Name"
+      },
+      {
+        "field": "contractor",
+        "label": "Contractor"
+      },
+      {
+        "field": "consultant",
+        "label": "Consultant"
+      },
+      {
+        "field": "submission_date",
+        "label": "Submission Date"
+      }
+    ],
+    "warnings": [
+      "Missing required metadata: Revision Number.",
+      "Missing required metadata: Project Name.",
+      "Missing required metadata: Contractor.",
+      "Missing required metadata: Consultant.",
+      "Missing required metadata: Submission Date.",
+      "Missing expected RFI information: response requirement."
+    ],
+    "recommendations": [
+      "Add Revision Number before submitting the document.",
+      "Add Project Name before submitting the document.",
+      "Add Contractor before submitting the document.",
+      "Add Consultant before submitting the document.",
+      "Add Submission Date before submitting the document.",
+      "Add or clarify response requirement for this RFI document."
+    ],
+    "validation_rules_checked": [
+      {
+        "rule": "Required metadata: Document Title",
+        "passed": true,
+        "severity": "high"
+      },
+      {
+        "rule": "Required metadata: Revision Number",
+        "passed": false,
+        "severity": "high"
+      },
+      {
+        "rule": "Required metadata: Project Name",
+        "passed": false,
+        "severity": "high"
+      },
+      {
+        "rule": "Required metadata: Contractor",
+        "passed": false,
+        "severity": "medium"
+      },
+      {
+        "rule": "Required metadata: Consultant",
+        "passed": false,
+        "severity": "medium"
+      },
+      {
+        "rule": "Required metadata: Submission Date",
+        "passed": false,
+        "severity": "medium"
+      },
+      {
+        "rule": "Required metadata: Discipline",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "Document type classification",
+        "passed": true,
+        "severity": "high"
+      },
+      {
+        "rule": "Classification confidence >= 0.70",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "Readable text length",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "RFI: request for information",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "RFI: question or query",
+        "passed": true,
+        "severity": "medium"
+      },
+      {
+        "rule": "RFI: response requirement",
+        "passed": false,
+        "severity": "medium"
+      }
+    ],
+    "duplicate_check": {
+      "status": "No Duplicate Found",
+      "is_duplicate": false,
+      "document_key": "unknown::incomplete-rfi-submission",
+      "candidates": [],
+      "recommendation": "No matching registered document was found."
+    },
+    "created_at": "2026-06-19T17:40:26+00:00"
+  },
+  "stored_review_id": 1
+}

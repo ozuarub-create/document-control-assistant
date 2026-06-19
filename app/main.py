@@ -1,4 +1,4 @@
-"""FastAPI API for the Document Control Assistant and Document Register."""
+"""FastAPI API for the Document Control Assistant, Register, Search, and Review."""
 
 from __future__ import annotations
 
@@ -18,6 +18,8 @@ from app.repository import (
     save_processed_document,
     search_documents,
 )
+from app.review_engine import review_document
+from app.review_repository import get_latest_review_for_document, list_review_reports, save_review_report
 from app.search_engine import natural_language_search, semantic_search
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -25,8 +27,11 @@ SAMPLE_DOCUMENTS_DIR = ROOT_DIR / "sample_documents"
 
 app = FastAPI(
     title="AI Document Control Assistant",
-    description="Upload, register, classify, version, and search PDF/DOCX construction documents.",
-    version="2.0.0",
+    description=(
+        "Upload, register, classify, version, search, and review PDF/DOCX "
+        "construction documents."
+    ),
+    version="3.0.0",
 )
 
 
@@ -41,10 +46,39 @@ class NaturalLanguageQueryRequest(BaseModel):
     limit: int = Field(10, ge=1, le=50)
 
 
+async def _process_uploaded_file(file: UploadFile) -> tuple[dict[str, Any], str | None]:
+    suffix = Path(file.filename or "").suffix.lower()
+    if suffix not in SUPPORTED_EXTENSIONS:
+        raise HTTPException(status_code=400, detail="Only PDF and DOCX files are supported.")
+
+    content = await file.read()
+    if not content:
+        raise HTTPException(status_code=400, detail="Uploaded file is empty.")
+
+    temp_path = None
+    with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as temp_file:
+        temp_file.write(content)
+        temp_path = temp_file.name
+
+    try:
+        processed = process_file(temp_path, file.filename, include_text=True)
+        return processed, temp_path
+    except Exception:
+        if temp_path:
+            Path(temp_path).unlink(missing_ok=True)
+        raise
+
+
+def _remove_long_text(processed: dict[str, Any]) -> dict[str, Any]:
+    cleaned = dict(processed)
+    cleaned.pop("content_text", None)
+    return cleaned
+
+
 @app.get("/")
 def home() -> dict[str, str]:
     return {
-        "message": "AI Document Control Assistant and Document Register is running.",
+        "message": "AI Document Control Assistant is running.",
         "docs": "Open /docs to test the APIs.",
     }
 
@@ -56,31 +90,63 @@ def health() -> dict[str, str]:
 
 @app.post("/upload")
 async def upload_document(file: UploadFile = File(...)) -> dict[str, Any]:
-    """Upload one document, classify it, extract metadata, and store it in the register."""
-    suffix = Path(file.filename or "").suffix.lower()
-    if suffix not in SUPPORTED_EXTENSIONS:
-        raise HTTPException(status_code=400, detail="Only PDF and DOCX files are supported.")
-
-    content = await file.read()
-    if not content:
-        raise HTTPException(status_code=400, detail="Uploaded file is empty.")
-
+    """Upload one document, classify it, extract metadata, review it, and store it."""
     temp_path = None
     try:
-        with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as temp_file:
-            temp_file.write(content)
-            temp_path = temp_file.name
-
-        processed = process_file(temp_path, file.filename, include_text=True)
+        processed, temp_path = await _process_uploaded_file(file)
+        review_report = review_document(processed)
         saved = save_processed_document(processed)
-        processed.pop("content_text", None)
-        processed["register"] = {
+        saved_review = save_review_report(review_report, document_id=saved["id"])
+
+        response = _remove_long_text(processed)
+        response["register"] = {
             "document_id": saved["id"],
             "version": saved["version"],
             "is_latest": saved["is_latest"],
             "document_key": saved["document_key"],
         }
-        return processed
+        response["review_report"] = review_report
+        response["review_report"]["stored_review_id"] = saved_review["id"]
+        return response
+    except HTTPException:
+        raise
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc)) from exc
+    finally:
+        if temp_path:
+            Path(temp_path).unlink(missing_ok=True)
+
+
+@app.post("/documents/review-upload")
+async def review_uploaded_document(
+    file: UploadFile = File(...),
+    save_to_register: bool = False,
+) -> dict[str, Any]:
+    """Review an uploaded document before submission.
+
+    Set save_to_register=true if you also want to store it in the document register.
+    """
+    temp_path = None
+    try:
+        processed, temp_path = await _process_uploaded_file(file)
+        review_report = review_document(processed)
+        response = _remove_long_text(processed)
+        response["review_report"] = review_report
+
+        if save_to_register:
+            saved = save_processed_document(processed)
+            saved_review = save_review_report(review_report, document_id=saved["id"])
+            response["register"] = {
+                "document_id": saved["id"],
+                "version": saved["version"],
+                "is_latest": saved["is_latest"],
+                "document_key": saved["document_key"],
+            }
+            response["review_report"]["stored_review_id"] = saved_review["id"]
+
+        return response
+    except HTTPException:
+        raise
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc)) from exc
     finally:
@@ -151,12 +217,27 @@ def natural_language_query(request: NaturalLanguageQueryRequest) -> dict[str, An
     return natural_language_search(request.question, limit=request.limit)
 
 
+@app.get("/documents/reviews")
+def review_reports(limit: int = Query(50, ge=1, le=200)) -> dict[str, Any]:
+    """List stored document review reports."""
+    reports = list_review_reports(limit=limit)
+    return {"count": len(reports), "results": reports}
+
+
 @app.get("/documents/{document_id}/versions")
 def document_versions(document_id: int) -> dict[str, Any]:
     results = get_version_history(document_id)
     if not results:
         raise HTTPException(status_code=404, detail="Document not found.")
     return {"document_id": document_id, "versions": results}
+
+
+@app.get("/documents/{document_id}/review")
+def document_review(document_id: int) -> dict[str, Any]:
+    report = get_latest_review_for_document(document_id)
+    if not report:
+        raise HTTPException(status_code=404, detail="Review report not found for this document.")
+    return report
 
 
 @app.get("/documents/{document_id}")
