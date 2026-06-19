@@ -189,6 +189,27 @@ http://127.0.0.1:8000/docs
 
 ---
 
+## Week 17 – AI Document Review & Validation Assistant
+
+### Features
+- Validation rules for common document types
+- Missing information detection
+- Duplicate submission detection
+- AI-generated document summaries
+- Warnings and recommendations
+- Review report generation
+
+### API Endpoints
+- POST /documents/review-upload
+- GET /documents/reviews
+- GET /documents/{document_id}/review
+
+### Demonstration Results
+- Validation engine working
+- Duplicate detection working
+- AI summary generation working
+- Review report generation working
+- Automated tests passed
 ## Author
 
 Omar Zuarub
