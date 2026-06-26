@@ -48,8 +48,9 @@ def save_processed_document(
     processed: dict[str, Any],
     file_path: str | Path | None = None,
     db_path: str | Path = DATABASE_PATH,
+    workflow_state: str = "registered",
 ) -> dict[str, Any]:
-    """Save classification, metadata, text, embedding, and version data."""
+    """Save classification, metadata, text, embedding, version, and workflow data."""
     initialize_database(db_path)
 
     metadata = processed["metadata"]
@@ -93,9 +94,10 @@ def save_processed_document(
                 confidence_score, matched_keywords_json, scores_json,
                 document_title, revision_number, project_name, contractor,
                 consultant, submission_date, discipline, version, is_latest,
-                content_text, text_preview, embedding_json
+                content_text, text_preview, embedding_json, workflow_state,
+                last_workflow_action, updated_at
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
             """,
             (
                 document_key,
@@ -117,6 +119,8 @@ def save_processed_document(
                 content_text,
                 processed.get("text_preview", ""),
                 json.dumps(embedding),
+                workflow_state,
+                "document_registered",
             ),
         )
         connection.commit()
@@ -182,6 +186,7 @@ def search_documents(
     consultant: str | None = None,
     discipline: str | None = None,
     revision_number: str | None = None,
+    workflow_state: str | None = None,
     q: str | None = None,
     latest_only: bool = True,
     limit: int = 20,
@@ -202,6 +207,9 @@ def search_documents(
     if document_type:
         where.append("LOWER(document_type) = ?")
         params.append(document_type.lower())
+    if workflow_state:
+        where.append("LOWER(workflow_state) = ?")
+        params.append(workflow_state.lower())
     add_like("project_name", project_name)
     add_like("contractor", contractor)
     add_like("consultant", consultant)
@@ -212,15 +220,15 @@ def search_documents(
 
     if q:
         where.append(
-            "(" 
+            "("
             "LOWER(filename) LIKE ? OR LOWER(document_title) LIKE ? OR "
             "LOWER(project_name) LIKE ? OR LOWER(contractor) LIKE ? OR "
             "LOWER(consultant) LIKE ? OR LOWER(discipline) LIKE ? OR "
-            "LOWER(content_text) LIKE ?"
+            "LOWER(content_text) LIKE ? OR LOWER(workflow_state) LIKE ?"
             ")"
         )
         like_value = f"%{q.lower()}%"
-        params.extend([like_value] * 7)
+        params.extend([like_value] * 8)
 
     query = "SELECT * FROM documents"
     if where:

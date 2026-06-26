@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <style>
+      .box{fill:#f8fafc;stroke:#2563eb;stroke-width:2;rx:12;}
+      .db{fill:#fff7ed;stroke:#ea580c;stroke-width:2;}
+      .title{font-family:Arial, sans-serif;font-size:26px;font-weight:bold;fill:#111827;}
+      .text{font-family:Arial, sans-serif;font-size:16px;fill:#111827;}
+      .small{font-family:Arial, sans-serif;font-size:13px;fill:#374151;}
+      .arrow{stroke:#111827;stroke-width:2;fill:none;marker-end:url(#arrow);}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#111827" />
+    </marker>
+  </defs>
+
+  <text x="40" y="45" class="title">AI Document Control Assistant - Week 18 Architecture</text>
+
+  <rect x="40" y="90" width="210" height="80" class="box"/>
+  <text x="70" y="122" class="text">User / Document</text>
+  <text x="90" y="145" class="text">Controller</text>
+
+  <rect x="330" y="70" width="230" height="90" class="box"/>
+  <text x="365" y="105" class="text">Web Dashboard</text>
+  <text x="360" y="130" class="small">/dashboard</text>
+
+  <rect x="330" y="190" width="230" height="90" class="box"/>
+  <text x="390" y="225" class="text">FastAPI</text>
+  <text x="365" y="250" class="small">/docs API endpoints</text>
+
+  <rect x="650" y="60" width="220" height="78" class="box"/>
+  <text x="690" y="92" class="text">Upload Service</text>
+  <text x="680" y="116" class="small">PDF / DOCX ingestion</text>
+
+  <rect x="650" y="160" width="220" height="78" class="box"/>
+  <text x="685" y="193" class="text">Classification</text>
+  <text x="690" y="216" class="small">Document type + confidence</text>
+
+  <rect x="650" y="260" width="220" height="78" class="box"/>
+  <text x="675" y="293" class="text">Metadata Extraction</text>
+  <text x="690" y="316" class="small">Title, revision, project</text>
+
+  <rect x="650" y="360" width="220" height="78" class="box"/>
+  <text x="705" y="393" class="text">Review Engine</text>
+  <text x="685" y="416" class="small">Validation + duplicates</text>
+
+  <rect x="650" y="460" width="220" height="78" class="box"/>
+  <text x="690" y="493" class="text">Workflow Engine</text>
+  <text x="680" y="516" class="small">Lifecycle states</text>
+
+  <rect x="650" y="560" width="220" height="78" class="box"/>
+  <text x="682" y="593" class="text">Analytics Reports</text>
+  <text x="700" y="616" class="small">KPIs + performance</text>
+
+  <ellipse cx="1010" cy="330" rx="120" ry="65" class="db"/>
+  <text x="945" y="320" class="text">SQLite Register</text>
+  <text x="930" y="345" class="small">documents, reviews, workflow</text>
+
+  <rect x="940" y="520" width="200" height="80" class="box"/>
+  <text x="980" y="553" class="text">Search Engine</text>
+  <text x="960" y="577" class="small">metadata + semantic + NLQ</text>
+
+  <path d="M250,130 L330,115" class="arrow"/>
+  <path d="M250,130 L330,235" class="arrow"/>
+  <path d="M560,235 L650,99" class="arrow"/>
+  <path d="M760,138 L760,160" class="arrow"/>
+  <path d="M760,238 L760,260" class="arrow"/>
+  <path d="M760,338 L760,360" class="arrow"/>
+  <path d="M760,438 L760,460" class="arrow"/>
+  <path d="M760,538 L760,560" class="arrow"/>
+  <path d="M870,299 L910,315" class="arrow"/>
+  <path d="M870,399 L910,345" class="arrow"/>
+  <path d="M870,499 L930,380" class="arrow"/>
+  <path d="M870,599 L950,390" class="arrow"/>
+  <path d="M1010,395 L1035,520" class="arrow"/>
+  <path d="M940,560 L560,115" class="arrow"/>
+  <path d="M650,599 L560,115" class="arrow"/>
+</svg>

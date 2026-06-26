@@ -1,0 +1,307 @@
+{
+  "registered_documents": 50,
+  "correct_classifications": 50,
+  "traditional_search_count": 2,
+  "semantic_search_count": 3,
+  "natural_language_query_count": 2,
+  "new_document_id": 51,
+  "review_status": "Pass",
+  "quality_score": 100,
+  "duplicate_status": "Exact Duplicate Found",
+  "workflow_state_after_review": "approved",
+  "workflow_state_final": "archived",
+  "workflow_history_events": 3,
+  "analytics": {
+    "document_totals": {
+      "total_records": 51,
+      "latest_documents": 51,
+      "older_versions": 0
+    },
+    "classification": {
+      "by_document_type": {
+        "Drawing": 7,
+        "Specification": 6,
+        "Method Statement": 6,
+        "Material Submittal": 6,
+        "Shop Drawing": 6,
+        "Inspection Report": 5,
+        "Contract": 5,
+        "Meeting Minutes": 5,
+        "RFI": 5
+      },
+      "by_discipline": {
+        "Architectural": 9,
+        "QA/QC": 11,
+        "Civil": 4,
+        "Electrical": 4,
+        "Structural": 8,
+        "Contracts": 10,
+        "Mechanical": 5
+      },
+      "average_confidence_score": 0.99
+    },
+    "workflow": {
+      "by_state": {
+        "registered": 50,
+        "under_review": 0,
+        "needs_revision": 0,
+        "approved": 0,
+        "rejected": 0,
+        "archived": 1
+      }
+    },
+    "review_quality": {
+      "total_reviews": 1,
+      "by_review_status": {
+        "Pass": 1
+      },
+      "average_quality_score": 100,
+      "duplicate_reviews": 0,
+      "top_warnings": {},
+      "top_recommendations": {}
+    },
+    "latest_documents_preview": [
+      {
+        "id": 51,
+        "filename": "week18_architectural_drawing.docx",
+        "document_type": "Drawing",
+        "document_title": "Week 18 Architectural Drawing Review",
+        "project_name": "Digital Campus Control Center",
+        "workflow_state": "archived",
+        "created_at": "2026-06-26 12:19:54"
+      },
+      {
+        "id": 50,
+        "filename": "sample_050_rfi.docx",
+        "document_type": "RFI",
+        "document_title": "RFI for Waterproofing Termination Detail",
+        "project_name": "Al Ain Mixed Use Development",
+        "workflow_state": "registered",
+        "created_at": "2026-06-26 12:19:54"
+      },
+      {
+        "id": 49,
+        "filename": "sample_048_rfi.docx",
+        "document_type": "RFI",
+        "document_title": "RFI for Duct Route Clash",
+        "project_name": "UAEU Smart Construction Training Project",
+        "workflow_state": "registered",
+        "created_at": "2026-06-26 12:19:54"
+      },
+      {
+        "id": 48,
+        "filename": "sample_046_rfi.docx",
+        "document_type": "RFI",
+        "document_title": "RFI for Ceiling Height Clarification",
+        "project_name": "Al Ain Mixed Use Development",
+        "workflow_state": "registered",
+        "created_at": "2026-06-26 12:19:54"
+      },
+      {
+        "id": 47,
+        "filename": "sample_044_meeting_minutes.docx",
+        "document_type": "Meeting Minutes",
+        "document_title": "Client Review Meeting Minutes",
+        "project_name": "UAEU Smart Construction Training Project",
+        "workflow_state": "registered",
+        "created_at": "2026-06-26 12:19:54"
+      },
+      {
+        "id": 46,
+        "filename": "sample_042_meeting_minutes.docx",
+        "document_type": "Meeting Minutes",
+        "document_title": "Technical Coordination Meeting Minutes",
+        "project_name": "Al Ain Mixed Use Development",
+        "workflow_state": "registered",
+        "created_at": "2026-06-26 12:19:54"
+      },
+      {
+        "id": 45,
+        "filename": "sample_040_contract.docx",
+        "document_type": "Contract",
+        "document_title": "Maintenance Contract",
+        "project_name": "UAEU Smart Construction Training Project",
+        "workflow_state": "registered",
+        "created_at": "2026-06-26 12:19:54"
+      },
+      {
+        "id": 44,
+        "filename": "sample_038_contract.docx",
+        "document_type": "Contract",
+        "document_title": "Consultancy Services Contract",
+        "project_name": "Al Ain Mixed Use Development",
+        "workflow_state": "registered",
+        "created_at": "2026-06-26 12:19:54"
+      },
+      {
+        "id": 43,
+        "filename": "sample_036_contract.docx",
+        "document_type": "Contract",
+        "document_title": "Main Works Contract",
+        "project_name": "UAEU Smart Construction Training Project",
+        "workflow_state": "registered",
+        "created_at": "2026-06-26 12:19:54"
+      },
+      {
+        "id": 42,
+        "filename": "sample_034_inspection_report.docx",
+        "document_type": "Inspection Report",
+        "document_title": "Cable Termination Inspection Report",
+        "project_name": "Al Ain Mixed Use Development",
+        "workflow_state": "registered",
+        "created_at": "2026-06-26 12:19:54"
+      }
+    ]
+  },
+  "performance_report": {
+    "processed_documents": 50,
+    "correct_classifications": 50,
+    "classification_accuracy": 1.0,
+    "classification_accuracy_percent": 100.0,
+    "total_processing_seconds": 0.206,
+    "average_seconds_per_document": 0.0041,
+    "documents_per_second": 242.76,
+    "analytics_snapshot": {
+      "document_totals": {
+        "total_records": 51,
+        "latest_documents": 51,
+        "older_versions": 0
+      },
+      "classification": {
+        "by_document_type": {
+          "Drawing": 7,
+          "Specification": 6,
+          "Method Statement": 6,
+          "Material Submittal": 6,
+          "Shop Drawing": 6,
+          "Inspection Report": 5,
+          "Contract": 5,
+          "Meeting Minutes": 5,
+          "RFI": 5
+        },
+        "by_discipline": {
+          "Architectural": 9,
+          "QA/QC": 11,
+          "Civil": 4,
+          "Electrical": 4,
+          "Structural": 8,
+          "Contracts": 10,
+          "Mechanical": 5
+        },
+        "average_confidence_score": 0.99
+      },
+      "workflow": {
+        "by_state": {
+          "registered": 50,
+          "under_review": 0,
+          "needs_revision": 0,
+          "approved": 0,
+          "rejected": 0,
+          "archived": 1
+        }
+      },
+      "review_quality": {
+        "total_reviews": 1,
+        "by_review_status": {
+          "Pass": 1
+        },
+        "average_quality_score": 100,
+        "duplicate_reviews": 0,
+        "top_warnings": {},
+        "top_recommendations": {}
+      },
+      "latest_documents_preview": [
+        {
+          "id": 51,
+          "filename": "week18_architectural_drawing.docx",
+          "document_type": "Drawing",
+          "document_title": "Week 18 Architectural Drawing Review",
+          "project_name": "Digital Campus Control Center",
+          "workflow_state": "archived",
+          "created_at": "2026-06-26 12:19:54"
+        },
+        {
+          "id": 50,
+          "filename": "sample_050_rfi.docx",
+          "document_type": "RFI",
+          "document_title": "RFI for Waterproofing Termination Detail",
+          "project_name": "Al Ain Mixed Use Development",
+          "workflow_state": "registered",
+          "created_at": "2026-06-26 12:19:54"
+        },
+        {
+          "id": 49,
+          "filename": "sample_048_rfi.docx",
+          "document_type": "RFI",
+          "document_title": "RFI for Duct Route Clash",
+          "project_name": "UAEU Smart Construction Training Project",
+          "workflow_state": "registered",
+          "created_at": "2026-06-26 12:19:54"
+        },
+        {
+          "id": 48,
+          "filename": "sample_046_rfi.docx",
+          "document_type": "RFI",
+          "document_title": "RFI for Ceiling Height Clarification",
+          "project_name": "Al Ain Mixed Use Development",
+          "workflow_state": "registered",
+          "created_at": "2026-06-26 12:19:54"
+        },
+        {
+          "id": 47,
+          "filename": "sample_044_meeting_minutes.docx",
+          "document_type": "Meeting Minutes",
+          "document_title": "Client Review Meeting Minutes",
+          "project_name": "UAEU Smart Construction Training Project",
+          "workflow_state": "registered",
+          "created_at": "2026-06-26 12:19:54"
+        },
+        {
+          "id": 46,
+          "filename": "sample_042_meeting_minutes.docx",
+          "document_type": "Meeting Minutes",
+          "document_title": "Technical Coordination Meeting Minutes",
+          "project_name": "Al Ain Mixed Use Development",
+          "workflow_state": "registered",
+          "created_at": "2026-06-26 12:19:54"
+        },
+        {
+          "id": 45,
+          "filename": "sample_040_contract.docx",
+          "document_type": "Contract",
+          "document_title": "Maintenance Contract",
+          "project_name": "UAEU Smart Construction Training Project",
+          "workflow_state": "registered",
+          "created_at": "2026-06-26 12:19:54"
+        },
+        {
+          "id": 44,
+          "filename": "sample_038_contract.docx",
+          "document_type": "Contract",
+          "document_title": "Consultancy Services Contract",
+          "project_name": "Al Ain Mixed Use Development",
+          "workflow_state": "registered",
+          "created_at": "2026-06-26 12:19:54"
+        },
+        {
+          "id": 43,
+          "filename": "sample_036_contract.docx",
+          "document_type": "Contract",
+          "document_title": "Main Works Contract",
+          "project_name": "UAEU Smart Construction Training Project",
+          "workflow_state": "registered",
+          "created_at": "2026-06-26 12:19:54"
+        },
+        {
+          "id": 42,
+          "filename": "sample_034_inspection_report.docx",
+          "document_type": "Inspection Report",
+          "document_title": "Cable Termination Inspection Report",
+          "project_name": "Al Ain Mixed Use Development",
+          "workflow_state": "registered",
+          "created_at": "2026-06-26 12:19:54"
+        }
+      ]
+    }
+  }
+}
