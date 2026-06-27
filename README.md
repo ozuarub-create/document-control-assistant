@@ -1,152 +1,92 @@
-# AI Document Control Assistant
+# Week 18 – AI Document Control Assistant Platform
 
-This repository contains a complete AI-powered document control system for construction project documents. The system supports document upload, classification, metadata extraction, document registration, version tracking, traditional search, semantic search, and natural language document queries.
+## Overview
 
-## Week 15 – Document Classification & Metadata Extraction
+This project is a complete AI-powered Document Control Assistant for construction projects. It manages documents throughout their lifecycle by integrating document classification, metadata extraction, document registration, search, review, validation, analytics, and reporting into a single platform.
 
-### Features
+## Features
 
 * PDF and DOCX document upload
 * Automatic document classification
 * Metadata extraction
-* Confidence score generation
-* Construction document processing
-
-### Supported Document Types
-
-* Drawing
-* Specification
-* Method Statement
-* Material Submittal
-* Shop Drawing
-* Inspection Report
-* Contract
-* Meeting Minutes
-* RFI
-
-### Extracted Metadata
-
-* Document Title
-* Revision Number
-* Project Name
-* Contractor
-* Consultant
-* Submission Date
-* Discipline
-
----
-
-## Week 16 – Intelligent Document Register & Search
-
-### Features
-
-* Document database schema
-* Metadata repository
-* Document version tracking
+* Document register
+* Version tracking
 * Traditional metadata search
-* Semantic search using embeddings
+* Semantic search
 * Natural language document queries
-* Search API endpoints
+* Document validation
+* Missing information detection
+* Duplicate submission detection
+* AI-generated document summaries
+* Warnings and recommendations
+* Review report generation
+* Document workflow management
+* Analytics and reporting dashboard
 
-### Search Capabilities
+## Document Workflow
 
-#### Traditional Search
+Documents move through the following workflow:
 
-Search documents using:
-
-* Document Type
-* Project Name
-* Contractor
-* Consultant
-* Discipline
-* Revision Number
-
-#### Semantic Search
-
-Find relevant documents using meaning-based search queries.
-
-Example:
-
-```text
-layout plans and architectural drawings
-```
-
-#### Natural Language Queries
-
-Example:
-
-```text
-Show me the latest architectural drawings
-```
-
----
+1. Upload
+2. Classification
+3. Metadata Extraction
+4. Validation
+5. Review
+6. Approval
+7. Archive
 
 ## API Endpoints
 
-### Document Processing
+### Document Management
 
 * POST `/upload`
-
-### Document Register
-
-* POST `/documents/rebuild-sample-register`
 * GET `/documents`
 * GET `/documents/{document_id}`
-* GET `/documents/{document_id}/versions`
 
-### Search API
+### Search
 
 * GET `/documents/search`
 * POST `/documents/semantic-search`
 * POST `/documents/query`
 
----
+### Review & Validation
+
+* POST `/documents/review-upload`
+* GET `/documents/reviews`
+* GET `/documents/{document_id}/review`
+
+### Workflow
+
+* GET `/documents/{document_id}/versions`
 
 ## Project Structure
 
 ```text
 app/
+docs/
 tests/
-sample_documents/
-
-database.py
-document_repository.py
-search_engine.py
-embeddings.py
 
 demo.py
-demo_week16.py
-
-document_register.db
+demo_week18.py
 
 README.md
 requirements.txt
 ```
 
----
+## Demonstration
 
-## Demonstration Results
+The project demonstrates:
 
-### Week 15
-
-* 50 sample documents processed
-* Classification successful
-* Metadata extraction successful
-* Confidence scoring implemented
-
-### Week 16
-
-* Metadata repository created
-* Version tracking implemented
-* Traditional search implemented
-* Semantic search implemented
-* Natural language queries implemented
-
----
+* Complete document lifecycle
+* AI document classification
+* Intelligent document search
+* Document review and validation
+* Workflow management
+* Analytics and reporting
 
 ## Testing
 
-Run all tests:
+Run:
 
 ```bash
 pytest
@@ -155,14 +95,12 @@ pytest
 Expected result:
 
 ```text
-4 passed
+All tests passed
 ```
-
----
 
 ## Run the Application
 
-Create and activate a virtual environment:
+Create a virtual environment:
 
 ```bash
 python3 -m venv .venv
@@ -175,7 +113,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Run the API:
+Run the application:
 
 ```bash
 python -m uvicorn app.main:app --reload
@@ -187,29 +125,18 @@ Open:
 http://127.0.0.1:8000/docs
 ```
 
----
+## Deliverables
 
-## Week 17 – AI Document Review & Validation Assistant
+* Fully integrated AI Document Control Assistant
+* Web interface / dashboard
+* Document workflow management
+* Architecture documentation
+* Analytics and reporting
+* Technical documentation
+* Demo presentation
 
-### Features
-- Validation rules for common document types
-- Missing information detection
-- Duplicate submission detection
-- AI-generated document summaries
-- Warnings and recommendations
-- Review report generation
-
-### API Endpoints
-- POST /documents/review-upload
-- GET /documents/reviews
-- GET /documents/{document_id}/review
-
-### Demonstration Results
-- Validation engine working
-- Duplicate detection working
-- AI summary generation working
-- Review report generation working
-- Automated tests passed
 ## Author
 
 Omar Zuarub
+
+United Arab Emirates University
