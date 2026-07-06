@@ -1,88 +1,84 @@
-# Week 18 – AI Document Control Assistant Platform
+# Week 19 – AI Document Compliance Checker
 
 ## Overview
 
-This project is a complete AI-powered Document Control Assistant for construction projects. It manages documents throughout their lifecycle by integrating document classification, metadata extraction, document registration, search, review, validation, analytics, and reporting into a single platform.
+This project is an AI-powered Document Compliance Checker for construction documents. It automatically reviews uploaded documents against predefined compliance requirements and highlights missing or inconsistent information before submission.
 
 ## Features
 
-* PDF and DOCX document upload
-* Automatic document classification
-* Metadata extraction
-* Document register
-* Version tracking
-* Traditional metadata search
-* Semantic search
-* Natural language document queries
-* Document validation
-* Missing information detection
-* Duplicate submission detection
-* AI-generated document summaries
-* Warnings and recommendations
-* Review report generation
-* Document workflow management
-* Analytics and reporting dashboard
+* Configurable validation rules
+* Metadata validation
+* Mandatory section checking
+* Missing signature detection
+* Missing revision detection
+* Missing approval detection
+* Missing date detection
+* Missing document number detection
+* Compliance scoring
+* Detailed findings
+* JSON compliance reports
+* PDF compliance reports
 
-## Document Workflow
+## Compliance Checks
 
-Documents move through the following workflow:
+The system validates:
 
-1. Upload
-2. Classification
-3. Metadata Extraction
-4. Validation
-5. Review
-6. Approval
-7. Archive
+* Document metadata
+* Document number
+* Revision number
+* Approval information
+* Signature blocks
+* Submission date
+* Mandatory sections
+* Required construction document fields
 
-## API Endpoints
+## Compliance Score
 
-### Document Management
+Each document receives:
 
-* POST `/upload`
-* GET `/documents`
-* GET `/documents/{document_id}`
+* Compliance status
+* Compliance score
+* Validation findings
+* Warnings
+* Recommendations
 
-### Search
+## Reports
 
-* GET `/documents/search`
-* POST `/documents/semantic-search`
-* POST `/documents/query`
+The system automatically generates:
 
-### Review & Validation
+* JSON validation report
+* PDF validation report
 
-* POST `/documents/review-upload`
-* GET `/documents/reviews`
-* GET `/documents/{document_id}/review`
-
-### Workflow
-
-* GET `/documents/{document_id}/versions`
-
-## Project Structure
+Reports are saved in:
 
 ```text
-app/
-docs/
-tests/
-
-demo.py
-demo_week18.py
-
-README.md
-requirements.txt
+compliance_reports/
 ```
 
 ## Demonstration
 
-The project demonstrates:
+The demonstration includes multiple construction document types including:
 
-* Complete document lifecycle
-* AI document classification
-* Intelligent document search
-* Document review and validation
-* Workflow management
-* Analytics and reporting
+* Drawing
+* Method Statement
+* RFI
+
+The demo shows:
+
+* Compliance checking
+* Validation results
+* Missing information detection
+* Compliance scoring
+* JSON report generation
+* PDF report generation
+
+## API
+
+Main endpoints:
+
+* POST `/documents/compliance-check`
+* GET `/documents/compliance-report`
+* GET `/documents/compliance-history`
 
 ## Testing
 
@@ -95,25 +91,10 @@ pytest
 Expected result:
 
 ```text
-All tests passed
+15 passed
 ```
 
-## Run the Application
-
-Create a virtual environment:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the application:
+## Run
 
 ```bash
 python -m uvicorn app.main:app --reload
@@ -127,16 +108,11 @@ http://127.0.0.1:8000/docs
 
 ## Deliverables
 
-* Fully integrated AI Document Control Assistant
-* Web interface / dashboard
-* Document workflow management
-* Architecture documentation
-* Analytics and reporting
-* Technical documentation
-* Demo presentation
+* Compliance checking engine
+* Validation report (JSON)
+* Validation report (PDF)
+* Demonstration using multiple document types
 
 ## Author
 
 Omar Zuarub
-
-United Arab Emirates University
