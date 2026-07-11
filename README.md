@@ -1,84 +1,59 @@
-# Week 19 – AI Document Compliance Checker
+# Week 20 – AI Document Relationships & Knowledge Graph
 
 ## Overview
 
-This project is an AI-powered Document Compliance Checker for construction documents. It automatically reviews uploaded documents against predefined compliance requirements and highlights missing or inconsistent information before submission.
+This project is an AI-powered Document Relationships & Knowledge Graph system for construction documents. It identifies relationships between project documents and builds a document knowledge graph to help users understand how documents are connected.
 
 ## Features
 
-* Configurable validation rules
-* Metadata validation
-* Mandatory section checking
-* Missing signature detection
-* Missing revision detection
-* Missing approval detection
-* Missing date detection
-* Missing document number detection
-* Compliance scoring
-* Detailed findings
-* JSON compliance reports
-* PDF compliance reports
+- Automatic document relationship detection
+- RFI to Drawing linking
+- RFI to Specification linking
+- Meeting Minutes to Action Items linking
+- Meeting Minutes to referenced documents linking
+- Document relationship graph generation
+- Knowledge graph visualization
+- Related document retrieval API
+- Interactive relationship viewer
 
-## Compliance Checks
+## Relationship Types
 
-The system validates:
+The system detects relationships including:
 
-* Document metadata
-* Document number
-* Revision number
-* Approval information
-* Signature blocks
-* Submission date
-* Mandatory sections
-* Required construction document fields
+- RFI → Drawing
+- RFI → Specification
+- Meeting Minutes → Action Items
+- Meeting Minutes → Referenced Documents
+- Drawing → Specification
+- Cross-document references
 
-## Compliance Score
+## Knowledge Graph
 
-Each document receives:
+The knowledge graph includes:
 
-* Compliance status
-* Compliance score
-* Validation findings
-* Warnings
-* Recommendations
+- Document nodes
+- Relationship edges
+- Reference mapping
+- Interactive graph viewer
+- SVG graph export
 
-## Reports
+## API Endpoints
 
-The system automatically generates:
-
-* JSON validation report
-* PDF validation report
-
-Reports are saved in:
-
-```text
-compliance_reports/
-```
+- GET `/relationships`
+- GET `/relationships/{document_id}`
+- GET `/relationships/viewer`
+- GET `/documents/related/{document_id}`
 
 ## Demonstration
 
-The demonstration includes multiple construction document types including:
+The demo includes:
 
-* Drawing
-* Method Statement
-* RFI
-
-The demo shows:
-
-* Compliance checking
-* Validation results
-* Missing information detection
-* Compliance scoring
-* JSON report generation
-* PDF report generation
-
-## API
-
-Main endpoints:
-
-* POST `/documents/compliance-check`
-* GET `/documents/compliance-report`
-* GET `/documents/compliance-history`
+- Document relationship discovery
+- RFI reference detection
+- Meeting minutes relationship detection
+- Knowledge graph creation
+- Related document retrieval
+- Graph visualization
 
 ## Testing
 
@@ -88,13 +63,13 @@ Run:
 pytest
 ```
 
-Expected result:
+Expected output:
 
 ```text
-15 passed
+19 passed
 ```
 
-## Run
+## Run the Application
 
 ```bash
 python -m uvicorn app.main:app --reload
@@ -102,16 +77,24 @@ python -m uvicorn app.main:app --reload
 
 Open:
 
-```text
+```
 http://127.0.0.1:8000/docs
+```
+
+Relationship Viewer:
+
+```
+http://127.0.0.1:8000/relationships/viewer
 ```
 
 ## Deliverables
 
-* Compliance checking engine
-* Validation report (JSON)
-* Validation report (PDF)
-* Demonstration using multiple document types
+- Document relationship engine
+- Knowledge graph generation
+- Graph visualization
+- Relationship viewer
+- Related document API
+- Demonstration using multiple document types
 
 ## Author
 
