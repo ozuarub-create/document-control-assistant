@@ -1,0 +1,111 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1384 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(Week 19 Compliance Validation Report) Tj
+T*
+(============================================) Tj
+T*
+(Filename: sample_013_method_statement.pdf) Tj
+T*
+(Document Type: Method Statement) Tj
+T*
+(Compliance Status: Compliant) Tj
+T*
+(Compliance Score: 93) Tj
+T*
+(Generated At: 2026-07-06T03:00:57.863164+00:00) Tj
+T*
+() Tj
+T*
+(Summary) Tj
+T*
+(--------------------) Tj
+T*
+(Total Rules Checked: 16) Tj
+T*
+(Passed Rules: 15) Tj
+T*
+(Failed Rules: 1) Tj
+T*
+(Missing Items Count: 1) Tj
+T*
+() Tj
+T*
+(Metadata) Tj
+T*
+(--------------------) Tj
+T*
+(Document Title: Concrete Pouring Method Statement) Tj
+T*
+(Revision Number: R0) Tj
+T*
+(Project Name: Campus Innovation Building) Tj
+T*
+(Contractor: Gulf Build Contractors) Tj
+T*
+(Consultant: Pearl Engineering Consultants) Tj
+T*
+(Submission Date: 2026-05-13) Tj
+T*
+(Discipline: Contracts) Tj
+T*
+() Tj
+T*
+(Failed Findings) Tj
+T*
+(--------------------) Tj
+T*
+([MEDIUM] Missing signature or prepared/checked/approved by information.) Tj
+T*
+(Recommendation: Add signature block or prepared/checked/approved by information.) Tj
+T*
+() Tj
+T*
+(Structured Review) Tj
+T*
+(--------------------) Tj
+T*
+(Metadata Complete: True) Tj
+T*
+(Mandatory Sections Complete: True) Tj
+T*
+(Signature Present: False) Tj
+T*
+(Revision Present: True) Tj
+T*
+(Approval Present: True) Tj
+T*
+(Date Present: True) Tj
+T*
+(Document Number Present: True) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 5
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000296 00000 n 
+trailer
+<< /Size 5 /Root 1 0 R >>
+startxref
+1732
+%%EOF

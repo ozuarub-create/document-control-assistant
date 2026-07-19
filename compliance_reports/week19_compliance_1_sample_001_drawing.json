@@ -1,0 +1,189 @@
+{
+  "report_type": "Week 19 Compliance Validation Report",
+  "generated_at": "2026-07-06T03:00:57.858517+00:00",
+  "filename": "sample_001_drawing.pdf",
+  "document_type": "Drawing",
+  "classification_confidence": 0.99,
+  "metadata": {
+    "document_title": "Ground Floor Architectural Drawing",
+    "revision_number": "R0",
+    "project_name": "Campus Innovation Building",
+    "contractor": "Gulf Build Contractors",
+    "consultant": "Pearl Engineering Consultants",
+    "submission_date": "2026-05-01",
+    "discipline": "Architectural"
+  },
+  "compliance_status": "Needs Revision",
+  "compliance_score": 81,
+  "summary": {
+    "total_rules_checked": 16,
+    "passed_rules": 14,
+    "failed_rules": 2,
+    "missing_items_count": 2
+  },
+  "findings": [
+    {
+      "rule_id": "metadata_document_title",
+      "category": "required_metadata",
+      "severity": "high",
+      "passed": true,
+      "message": "Document Title is present.",
+      "recommendation": "No action required."
+    },
+    {
+      "rule_id": "metadata_revision_number",
+      "category": "required_metadata",
+      "severity": "high",
+      "passed": true,
+      "message": "Revision Number is present.",
+      "recommendation": "No action required."
+    },
+    {
+      "rule_id": "metadata_project_name",
+      "category": "required_metadata",
+      "severity": "high",
+      "passed": true,
+      "message": "Project Name is present.",
+      "recommendation": "No action required."
+    },
+    {
+      "rule_id": "metadata_contractor",
+      "category": "required_metadata",
+      "severity": "medium",
+      "passed": true,
+      "message": "Contractor is present.",
+      "recommendation": "No action required."
+    },
+    {
+      "rule_id": "metadata_consultant",
+      "category": "required_metadata",
+      "severity": "medium",
+      "passed": true,
+      "message": "Consultant is present.",
+      "recommendation": "No action required."
+    },
+    {
+      "rule_id": "metadata_submission_date",
+      "category": "required_metadata",
+      "severity": "medium",
+      "passed": true,
+      "message": "Submission Date is present.",
+      "recommendation": "No action required."
+    },
+    {
+      "rule_id": "metadata_discipline",
+      "category": "required_metadata",
+      "severity": "medium",
+      "passed": true,
+      "message": "Discipline is present.",
+      "recommendation": "No action required."
+    },
+    {
+      "rule_id": "revision_check",
+      "category": "revision",
+      "severity": "high",
+      "passed": true,
+      "message": "Revision information is present.",
+      "recommendation": "No action required."
+    },
+    {
+      "rule_id": "date_check",
+      "category": "date",
+      "severity": "high",
+      "passed": true,
+      "message": "Submission date or document date is present.",
+      "recommendation": "No action required."
+    },
+    {
+      "rule_id": "document_number_check",
+      "category": "document_number",
+      "severity": "high",
+      "passed": false,
+      "message": "Missing document number or reference number.",
+      "recommendation": "Add a clear document number/reference number."
+    },
+    {
+      "rule_id": "signature_check",
+      "category": "signature",
+      "severity": "medium",
+      "passed": false,
+      "message": "Missing signature or prepared/checked/approved by information.",
+      "recommendation": "Add signature block or prepared/checked/approved by information."
+    },
+    {
+      "rule_id": "approval_check",
+      "category": "approval",
+      "severity": "medium",
+      "passed": true,
+      "message": "Approval/acceptance information is present.",
+      "recommendation": "No action required."
+    },
+    {
+      "rule_id": "section_1_drawing_reference",
+      "category": "mandatory_section",
+      "severity": "medium",
+      "passed": true,
+      "message": "Mandatory section found: drawing reference.",
+      "recommendation": "No action required."
+    },
+    {
+      "rule_id": "section_2_revision_history",
+      "category": "mandatory_section",
+      "severity": "medium",
+      "passed": true,
+      "message": "Mandatory section found: revision history.",
+      "recommendation": "No action required."
+    },
+    {
+      "rule_id": "section_3_scale_or_grid_reference",
+      "category": "mandatory_section",
+      "severity": "medium",
+      "passed": true,
+      "message": "Mandatory section found: scale or grid reference.",
+      "recommendation": "No action required."
+    },
+    {
+      "rule_id": "title_type_consistency",
+      "category": "inconsistency",
+      "severity": "low",
+      "passed": true,
+      "message": "Document title is consistent with classification.",
+      "recommendation": "No action required."
+    }
+  ],
+  "missing_items": [
+    {
+      "rule_id": "document_number_check",
+      "category": "document_number",
+      "severity": "high",
+      "passed": false,
+      "message": "Missing document number or reference number.",
+      "recommendation": "Add a clear document number/reference number."
+    },
+    {
+      "rule_id": "signature_check",
+      "category": "signature",
+      "severity": "medium",
+      "passed": false,
+      "message": "Missing signature or prepared/checked/approved by information.",
+      "recommendation": "Add signature block or prepared/checked/approved by information."
+    }
+  ],
+  "warnings": [
+    "Missing document number or reference number.",
+    "Missing signature or prepared/checked/approved by information."
+  ],
+  "recommendations": [
+    "Add a clear document number/reference number.",
+    "Add signature block or prepared/checked/approved by information."
+  ],
+  "structured_review": {
+    "metadata_complete": true,
+    "mandatory_sections_complete": true,
+    "signature_present": false,
+    "revision_present": true,
+    "approval_present": true,
+    "date_present": true,
+    "document_number_present": false
+  }
+}

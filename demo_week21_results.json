@@ -1,0 +1,185 @@
+{
+  "relationship_summary": {
+    "message": "Document relationships built successfully.",
+    "documents_scanned": 4,
+    "relationships_created": 4,
+    "explicit_relationships": 4,
+    "inferred_relationships": 0,
+    "action_items_created": 1,
+    "latest_only": true
+  },
+  "multi_document_question": {
+    "session_id": "0c14031a-c7a6-4c78-b220-7816ad9d8916",
+    "question": "What documents does RFI-015 reference and what are they about?",
+    "contextualized_question": "What documents does RFI-015 reference and what are they about?",
+    "answer": "RFI for Ground Floor Concrete Detail is linked to Concrete Works Specification (Specification) [S2]; Ground Floor Layout Drawing (Drawing) [S3] [S1].",
+    "status": "answered",
+    "insufficient_information": false,
+    "citations": [
+      {
+        "citation_id": "S1",
+        "document_id": 3,
+        "filename": "rfi_015.pdf",
+        "document_title": "RFI for Ground Floor Concrete Detail",
+        "document_type": "RFI",
+        "project_name": "Campus Innovation Building",
+        "revision_number": "R1",
+        "source_excerpt": "Document Number: RFI-015 Referenced Documents: DWG-A-101 and SPEC-03-30-00. Clarification is requested for the concrete wall detail at grid A-5. Document Number: RFI-015",
+        "relevance_score": 0.92,
+        "retrieval_reasons": {
+          "semantic": 0.3789,
+          "lexical": 0.5625,
+          "exact_reference": true,
+          "conversation_context": false,
+          "document_type_match": true
+        }
+      },
+      {
+        "citation_id": "S2",
+        "document_id": 2,
+        "filename": "spec_033000.pdf",
+        "document_title": "Concrete Works Specification",
+        "document_type": "Specification",
+        "project_name": "Campus Innovation Building",
+        "revision_number": "R1",
+        "source_excerpt": "The specification defines concrete materials, testing frequency, workmanship, curing, and acceptance requirements.",
+        "relevance_score": 0.98,
+        "retrieval_reasons": {
+          "relationship_type": "rfi_references_specification"
+        }
+      },
+      {
+        "citation_id": "S3",
+        "document_id": 1,
+        "filename": "drawing_a101.pdf",
+        "document_title": "Ground Floor Layout Drawing",
+        "document_type": "Drawing",
+        "project_name": "Campus Innovation Building",
+        "revision_number": "R1",
+        "source_excerpt": "The drawing shows the architectural ground floor layout, grid lines, concrete wall locations, and coordination notes.",
+        "relevance_score": 0.98,
+        "retrieval_reasons": {
+          "relationship_type": "rfi_references_drawing"
+        }
+      }
+    ],
+    "retrieval": {
+      "method": "hybrid_metadata_semantic_relationship_context",
+      "documents_considered": 4,
+      "documents_retrieved": 4,
+      "sources_cited": 3,
+      "top_relevance_score": 0.92,
+      "evidence_support_ratio": 0.6667,
+      "follow_up_detected": false,
+      "context_document_ids": []
+    },
+    "history_used": false
+  },
+  "meeting_question": {
+    "session_id": "4e927121-277c-40e5-b17c-16579fa68d77",
+    "question": "What action item is recorded in MOM-007?",
+    "contextualized_question": "What action item is recorded in MOM-007?",
+    "answer": "The action is \u201cUpdate drawing DWG-A-101 following the RFI response\u201d; owner: Gulf Build Contractors; due: 2026-07-15; status: Open [S1].",
+    "status": "answered",
+    "insufficient_information": false,
+    "citations": [
+      {
+        "citation_id": "S1",
+        "document_id": 4,
+        "filename": "mom_007.pdf",
+        "document_title": "Weekly Coordination Meeting Minutes",
+        "document_type": "Meeting Minutes",
+        "project_name": "Campus Innovation Building",
+        "revision_number": "R1",
+        "source_excerpt": "Update drawing DWG-A-101 following the RFI response | Owner: Gulf Build Contractors | Due Date: 2026-07-15 | Status: Open",
+        "relevance_score": 0.92,
+        "retrieval_reasons": {
+          "semantic": 0.203,
+          "lexical": 0.8594,
+          "exact_reference": true,
+          "conversation_context": false,
+          "document_type_match": false
+        }
+      }
+    ],
+    "retrieval": {
+      "method": "hybrid_metadata_semantic_relationship_context",
+      "documents_considered": 4,
+      "documents_retrieved": 4,
+      "sources_cited": 1,
+      "top_relevance_score": 0.92,
+      "evidence_support_ratio": 0.75,
+      "follow_up_detected": false,
+      "context_document_ids": []
+    },
+    "history_used": false
+  },
+  "follow_up_question": {
+    "session_id": "4e927121-277c-40e5-b17c-16579fa68d77",
+    "question": "Who owns it and when is it due?",
+    "contextualized_question": "Previous question: What action item is recorded in MOM-007?\nFollow-up question: Who owns it and when is it due?",
+    "answer": "The action is \u201cUpdate drawing DWG-A-101 following the RFI response\u201d; owner: Gulf Build Contractors; due: 2026-07-15; status: Open [S1].",
+    "status": "answered",
+    "insufficient_information": false,
+    "citations": [
+      {
+        "citation_id": "S1",
+        "document_id": 4,
+        "filename": "mom_007.pdf",
+        "document_title": "Weekly Coordination Meeting Minutes",
+        "document_type": "Meeting Minutes",
+        "project_name": "Campus Innovation Building",
+        "revision_number": "R1",
+        "source_excerpt": "Update drawing DWG-A-101 following the RFI response | Owner: Gulf Build Contractors | Due Date: 2026-07-15 | Status: Open",
+        "relevance_score": 0.92,
+        "retrieval_reasons": {
+          "semantic": 0.1384,
+          "lexical": 0.5921,
+          "exact_reference": true,
+          "conversation_context": true,
+          "document_type_match": false
+        }
+      }
+    ],
+    "retrieval": {
+      "method": "hybrid_metadata_semantic_relationship_context",
+      "documents_considered": 4,
+      "documents_retrieved": 3,
+      "sources_cited": 1,
+      "top_relevance_score": 0.92,
+      "evidence_support_ratio": 0.5556,
+      "follow_up_detected": true,
+      "context_document_ids": [
+        4
+      ]
+    },
+    "history_used": true
+  },
+  "insufficient_information_question": {
+    "session_id": "0badd6db-babf-4363-946b-e5c86eb1bd29",
+    "question": "What is the approved project budget and final payment amount?",
+    "contextualized_question": "What is the approved project budget and final payment amount?",
+    "answer": "I could not find enough information in the registered project documents to answer that question. Try mentioning a document number, title, project, discipline, or document type.",
+    "status": "insufficient_information",
+    "insufficient_information": true,
+    "citations": [],
+    "retrieval": {
+      "method": "hybrid_metadata_semantic_relationship_context",
+      "documents_considered": 4,
+      "documents_retrieved": 4,
+      "sources_cited": 0,
+      "top_relevance_score": 0.2092,
+      "evidence_support_ratio": 0.0,
+      "follow_up_detected": false,
+      "context_document_ids": []
+    },
+    "history_used": false
+  },
+  "checks": {
+    "conversational_api_engine": "working",
+    "multi_document_retrieval": "working",
+    "conversation_history": "working",
+    "source_citations": "working",
+    "insufficient_information_handling": "working"
+  }
+}

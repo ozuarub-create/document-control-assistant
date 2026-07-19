@@ -20,13 +20,21 @@ def _count_by(rows: list[Any], field: str) -> dict[str, int]:
     return dict(counter)
 
 
+def _safe_fetch_all(connection: Any, query: str) -> list[Any]:
+    try:
+        return connection.execute(query).fetchall()
+    except Exception:
+        return []
+
+
 def generate_platform_analytics(db_path: str | Path = DATABASE_PATH) -> dict[str, Any]:
-    """Return document, workflow, review, and quality metrics."""
+    """Return document, workflow, review, compliance, and quality metrics."""
     initialize_database(db_path)
     with get_connection(db_path) as connection:
         documents = connection.execute("SELECT * FROM documents").fetchall()
         latest_documents = connection.execute("SELECT * FROM documents WHERE is_latest = 1").fetchall()
         reviews = connection.execute("SELECT * FROM document_reviews").fetchall()
+        compliance_reports = _safe_fetch_all(connection, "SELECT * FROM document_compliance_reports")
         latest_preview = connection.execute(
             """
             SELECT id, filename, document_type, document_title, project_name, workflow_state, created_at
@@ -39,6 +47,7 @@ def generate_platform_analytics(db_path: str | Path = DATABASE_PATH) -> dict[str
 
     confidence_values = [float(row["confidence_score"] or 0) for row in latest_documents]
     quality_values = [int(row["quality_score"] or 0) for row in reviews]
+    compliance_values = [int(row["compliance_score"] or 0) for row in compliance_reports]
     duplicate_reviews = [row for row in reviews if row["duplicate_status"] != "No Duplicate Found"]
 
     review_status_counts: Counter[str] = Counter()
@@ -54,6 +63,18 @@ def generate_platform_analytics(db_path: str | Path = DATABASE_PATH) -> dict[str
             warning_counter[str(warning)] += 1
         for recommendation in report.get("recommendations", []) or []:
             recommendation_counter[str(recommendation)] += 1
+
+    compliance_status_counts: Counter[str] = Counter()
+    compliance_finding_counter: Counter[str] = Counter()
+    for row in compliance_reports:
+        compliance_status_counts[row["compliance_status"] or "Unknown"] += 1
+        try:
+            report = json.loads(row["report_json"])
+        except Exception:
+            report = {}
+        for finding in report.get("findings", []) or []:
+            if not finding.get("passed"):
+                compliance_finding_counter[str(finding.get("message"))] += 1
 
     return {
         "document_totals": {
@@ -76,6 +97,12 @@ def generate_platform_analytics(db_path: str | Path = DATABASE_PATH) -> dict[str
             "duplicate_reviews": len(duplicate_reviews),
             "top_warnings": dict(warning_counter.most_common(5)),
             "top_recommendations": dict(recommendation_counter.most_common(5)),
+        },
+        "compliance": {
+            "total_reports": len(compliance_reports),
+            "by_status": dict(compliance_status_counts),
+            "average_compliance_score": round(mean(compliance_values), 2) if compliance_values else 0,
+            "top_failed_findings": dict(compliance_finding_counter.most_common(5)),
         },
         "latest_documents_preview": [dict(row) for row in latest_preview],
     }

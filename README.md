@@ -1,75 +1,71 @@
-# Week 20 – AI Document Relationships & Knowledge Graph
+# Week 21 – Conversational Document Assistant with Citations
 
 ## Overview
 
-This project is an AI-powered Document Relationships & Knowledge Graph system for construction documents. It identifies relationships between project documents and builds a document knowledge graph to help users understand how documents are connected.
+This project adds a conversational assistant to the AI Document Control platform. It answers questions about registered construction documents and always returns structured source citations when the documents support an answer.
 
 ## Features
 
-- Automatic document relationship detection
-- RFI to Drawing linking
-- RFI to Specification linking
-- Meeting Minutes to Action Items linking
-- Meeting Minutes to referenced documents linking
-- Document relationship graph generation
-- Knowledge graph visualization
-- Related document retrieval API
-- Interactive relationship viewer
+- Improved hybrid retrieval quality
+- Multi-document question answering
+- Persistent conversation history
+- Follow-up question support
+- Structured source citations
+- Inline citation markers such as `[S1]`
+- Graceful insufficient-information handling
+- No fabricated answers when evidence is missing
 
-## Relationship Types
+## Conversational API
 
-The system detects relationships including:
+- `POST /conversation/ask`
+- `GET /conversation/capabilities`
+- `GET /conversation/sessions`
+- `GET /conversation/{session_id}`
+- `DELETE /conversation/{session_id}`
 
-- RFI → Drawing
-- RFI → Specification
-- Meeting Minutes → Action Items
-- Meeting Minutes → Referenced Documents
-- Drawing → Specification
-- Cross-document references
+## Example Request
 
-## Knowledge Graph
+```json
+{
+  "question": "What documents does RFI-015 reference and what are they about?",
+  "session_id": null,
+  "limit": 6,
+  "latest_only": true
+}
+```
 
-The knowledge graph includes:
+## Citation Support
 
-- Document nodes
-- Relationship edges
-- Reference mapping
-- Interactive graph viewer
-- SVG graph export
+Every supported answer includes:
 
-## API Endpoints
+- Document ID
+- Filename
+- Document title and type
+- Project and revision
+- Relevant source excerpt
+- Relevance score
+- Retrieval reason
 
-- GET `/relationships`
-- GET `/relationships/{document_id}`
-- GET `/relationships/viewer`
-- GET `/documents/related/{document_id}`
+## Demonstration Scenarios
 
-## Demonstration
-
-The demo includes:
-
-- Document relationship discovery
-- RFI reference detection
-- Meeting minutes relationship detection
-- Knowledge graph creation
-- Related document retrieval
-- Graph visualization
-
-## Testing
+- Multi-document RFI question
+- Meeting-minutes action-item question
+- Follow-up question using history
+- Insufficient-information question
 
 Run:
+
+```bash
+python demo_week21.py
+```
+
+## Testing
 
 ```bash
 pytest
 ```
 
-Expected output:
-
-```text
-19 passed
-```
-
-## Run the Application
+## Run the API
 
 ```bash
 python -m uvicorn app.main:app --reload
@@ -77,25 +73,18 @@ python -m uvicorn app.main:app --reload
 
 Open:
 
-```
+```text
 http://127.0.0.1:8000/docs
-```
-
-Relationship Viewer:
-
-```
-http://127.0.0.1:8000/relationships/viewer
 ```
 
 ## Deliverables
 
-- Document relationship engine
-- Knowledge graph generation
-- Graph visualization
-- Relationship viewer
-- Related document API
-- Demonstration using multiple document types
+- Conversational API
+- Source citation support
+- Realistic project scenario demonstration
 
 ## Author
 
 Omar Zuarub
+
+United Arab Emirates University
