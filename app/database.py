@@ -2,11 +2,12 @@
 
 from __future__ import annotations
 
+import os
 import sqlite3
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
-DATABASE_PATH = ROOT_DIR / "document_register.db"
+DATABASE_PATH = Path(os.getenv("DOCUMENT_DB_PATH", str(ROOT_DIR / "document_register.db")))
 
 SCHEMA_SQL = """
 CREATE TABLE IF NOT EXISTS documents (
@@ -128,8 +129,44 @@ CREATE TABLE IF NOT EXISTS conversation_messages (
     FOREIGN KEY(session_id) REFERENCES conversation_sessions(id)
 );
 
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL UNIQUE,
+    full_name TEXT NOT NULL,
+    password_hash TEXT NOT NULL,
+    role TEXT NOT NULL DEFAULT 'user',
+    is_active INTEGER NOT NULL DEFAULT 1,
+    created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS auth_sessions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    token_hash TEXT NOT NULL UNIQUE,
+    expires_at TEXT NOT NULL,
+    created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    revoked_at TEXT,
+    FOREIGN KEY(user_id) REFERENCES users(id)
+);
+
+CREATE TABLE IF NOT EXISTS audit_events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER,
+    action TEXT NOT NULL,
+    details_json TEXT NOT NULL DEFAULT '{}',
+    created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY(user_id) REFERENCES users(id)
+);
+
 CREATE INDEX IF NOT EXISTS idx_conversation_messages_session ON conversation_messages(session_id);
 CREATE INDEX IF NOT EXISTS idx_conversation_sessions_updated ON conversation_sessions(updated_at);
+CREATE INDEX IF NOT EXISTS idx_users_username ON users(username);
+CREATE INDEX IF NOT EXISTS idx_users_role ON users(role);
+CREATE INDEX IF NOT EXISTS idx_auth_sessions_token ON auth_sessions(token_hash);
+CREATE INDEX IF NOT EXISTS idx_auth_sessions_user ON auth_sessions(user_id);
+CREATE INDEX IF NOT EXISTS idx_audit_events_user ON audit_events(user_id);
+CREATE INDEX IF NOT EXISTS idx_audit_events_action ON audit_events(action);
 CREATE INDEX IF NOT EXISTS idx_documents_type ON documents(document_type);
 CREATE INDEX IF NOT EXISTS idx_documents_project ON documents(project_name);
 CREATE INDEX IF NOT EXISTS idx_documents_contractor ON documents(contractor);
@@ -167,6 +204,7 @@ def get_connection(db_path: str | Path = DATABASE_PATH) -> sqlite3.Connection:
     path.parent.mkdir(parents=True, exist_ok=True)
     connection = sqlite3.connect(path)
     connection.row_factory = sqlite3.Row
+    connection.execute("PRAGMA foreign_keys = ON")
     return connection
 
 
@@ -179,6 +217,13 @@ def _ensure_document_columns(connection: sqlite3.Connection) -> None:
 
 def initialize_database(db_path: str | Path = DATABASE_PATH) -> None:
     with get_connection(db_path) as connection:
+        # Older project databases may not yet contain workflow columns, while
+        # SCHEMA_SQL creates indexes that use them. Migrate existing tables first.
+        documents_exists = connection.execute(
+            "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'documents'"
+        ).fetchone()
+        if documents_exists:
+            _ensure_document_columns(connection)
         connection.executescript(SCHEMA_SQL)
         _ensure_document_columns(connection)
         connection.commit()
@@ -186,6 +231,9 @@ def initialize_database(db_path: str | Path = DATABASE_PATH) -> None:
 
 def reset_database(db_path: str | Path = DATABASE_PATH) -> None:
     with get_connection(db_path) as connection:
+        connection.execute("DROP TABLE IF EXISTS audit_events")
+        connection.execute("DROP TABLE IF EXISTS auth_sessions")
+        connection.execute("DROP TABLE IF EXISTS users")
         connection.execute("DROP TABLE IF EXISTS conversation_messages")
         connection.execute("DROP TABLE IF EXISTS conversation_sessions")
         connection.execute("DROP TABLE IF EXISTS document_action_items")

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eef2ff"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.15"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker>
+  </defs>
+  <rect width="1400" height="850" fill="url(#bg)"/>
+  <text x="700" y="58" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#0f172a">Week 22 Final Application Architecture</text>
+  <text x="700" y="92" text-anchor="middle" font-family="Arial" font-size="18" fill="#475569">Production-ready AI Document Control Assistant</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="145" width="1260" height="105" rx="18" fill="#1d4ed8"/>
+    <text x="700" y="180" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="white">Presentation Layer</text>
+    <text x="700" y="215" text-anchor="middle" font-family="Arial" font-size="18" fill="#dbeafe">Dashboard • Swagger API • Login Page • Relationship Viewer • Final Demo</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="305" width="300" height="250" rx="18" fill="#ffffff" stroke="#93c5fd" stroke-width="3"/>
+    <text x="220" y="345" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#1e3a8a">Security</text>
+    <text x="100" y="390" font-family="Arial" font-size="17" fill="#334155">• Authentication API</text>
+    <text x="100" y="425" font-family="Arial" font-size="17" fill="#334155">• PBKDF2 passwords</text>
+    <text x="100" y="460" font-family="Arial" font-size="17" fill="#334155">• Bearer sessions</text>
+    <text x="100" y="495" font-family="Arial" font-size="17" fill="#334155">• Roles &amp; audit events</text>
+    <text x="100" y="530" font-family="Arial" font-size="17" fill="#334155">• Optional global protection</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="410" y="305" width="580" height="250" rx="18" fill="#ffffff" stroke="#a7f3d0" stroke-width="3"/>
+    <text x="700" y="345" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#065f46">Application Services</text>
+    <text x="450" y="390" font-family="Arial" font-size="17" fill="#334155">• Ingestion, classification, metadata</text>
+    <text x="450" y="425" font-family="Arial" font-size="17" fill="#334155">• Register, versions, workflow, search</text>
+    <text x="450" y="460" font-family="Arial" font-size="17" fill="#334155">• Review, validation, compliance</text>
+    <text x="450" y="495" font-family="Arial" font-size="17" fill="#334155">• Relationships, knowledge graph, conversation</text>
+    <text x="450" y="530" font-family="Arial" font-size="17" fill="#334155">• Analytics and production readiness</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1030" y="305" width="300" height="250" rx="18" fill="#ffffff" stroke="#fcd34d" stroke-width="3"/>
+    <text x="1180" y="345" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#92400e">Repositories</text>
+    <text x="1060" y="390" font-family="Arial" font-size="17" fill="#334155">• Documents &amp; versions</text>
+    <text x="1060" y="425" font-family="Arial" font-size="17" fill="#334155">• Reviews &amp; compliance</text>
+    <text x="1060" y="460" font-family="Arial" font-size="17" fill="#334155">• Relationships &amp; chats</text>
+    <text x="1060" y="495" font-family="Arial" font-size="17" fill="#334155">• Users &amp; sessions</text>
+    <text x="1060" y="530" font-family="Arial" font-size="17" fill="#334155">• Audit events</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="155" y="650" width="480" height="120" rx="18" fill="#0f172a"/>
+    <text x="395" y="690" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="white">Persistent Data</text>
+    <text x="395" y="728" text-anchor="middle" font-family="Arial" font-size="17" fill="#cbd5e1">SQLite • Compliance Reports • Project Documents</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="765" y="650" width="480" height="120" rx="18" fill="#0f766e"/>
+    <text x="1005" y="690" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="white">Deployment</text>
+    <text x="1005" y="728" text-anchor="middle" font-family="Arial" font-size="17" fill="#ccfbf1">Docker • Environment Variables • Volumes • Health Check</text>
+  </g>
+
+  <line x1="700" y1="250" x2="700" y2="300" stroke="#475569" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="220" y1="555" x2="330" y2="645" stroke="#475569" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="700" y1="555" x2="520" y2="645" stroke="#475569" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1180" y1="555" x2="1070" y2="645" stroke="#475569" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="700" y1="555" x2="900" y2="645" stroke="#475569" stroke-width="4" marker-end="url(#arrow)"/>
+</svg>

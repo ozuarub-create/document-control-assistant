@@ -10,6 +10,13 @@ from fastapi import FastAPI, File, HTTPException, Query, UploadFile
 from fastapi.responses import FileResponse, HTMLResponse
 from pydantic import BaseModel, Field
 
+from app.auth_api import router as auth_router
+from app.auth_middleware import AuthenticationMiddleware
+from app.auth_service import ensure_default_admin
+from app.config import get_settings
+from app.database import initialize_database
+from app.production import production_manifest, production_readiness
+
 from app.analytics import generate_platform_analytics
 
 from app.compliance_engine import check_document_compliance, get_compliance_rules
@@ -57,14 +64,21 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 SAMPLE_DOCUMENTS_DIR = ROOT_DIR / "sample_documents"
 COMPLIANCE_REPORTS_DIR = ROOT_DIR / "compliance_reports"
 
+settings = get_settings()
+initialize_database()
+ensure_default_admin()
+
 app = FastAPI(
-    title="AI Document Control Assistant",
+    title=settings.app_name,
     description=(
-        "Upload, register, classify, version, search, review, route, and report "
-        "PDF/DOCX construction documents with compliance checking, relationship mapping, and cited conversations."
+        "Production-ready standalone AI Document Control Assistant with document ingestion, "
+        "classification, search, validation, compliance, relationships, cited conversations, "
+        "authentication, user management, analytics, and Docker deployment."
     ),
-    version="7.0.0",
+    version=settings.app_version,
 )
+app.add_middleware(AuthenticationMiddleware)
+app.include_router(auth_router)
 
 
 class SemanticSearchRequest(BaseModel):
@@ -179,8 +193,8 @@ def _dashboard_html() -> str:
     </head>
     <body>
         <h1>AI Document Control Assistant</h1>
-        <div class="subtitle">Integrated AI document lifecycle platform with Week 20 relationship mapping</div>
-        <div class="links"><a href="/docs">API Docs</a><a href="/documents">Documents JSON</a><a href="/documents/analytics">Analytics JSON</a><a href="/relationships/viewer">Relationship Viewer</a></div>
+        <div class="subtitle">Week 22 final production-ready document lifecycle platform</div>
+        <div class="links"><a href="/auth/login-page">Login</a><a href="/docs">API Docs</a><a href="/documents">Documents JSON</a><a href="/documents/analytics">Analytics JSON</a><a href="/relationships/viewer">Relationship Viewer</a><a href="/production/readiness">Readiness</a></div>
         <h2>Platform Metrics</h2>
         <div class="grid">
             {cards(totals)}
@@ -212,11 +226,14 @@ def _dashboard_html() -> str:
 @app.get("/")
 def home() -> dict[str, str]:
     return {
-        "message": "AI Document Control Assistant with cited conversational search is running.",
+        "message": "Week 22 production-ready AI Document Control Assistant is running.",
+        "version": settings.app_version,
+        "environment": settings.environment,
+        "authentication_required": str(settings.auth_required).lower(),
         "dashboard": "Open /dashboard for the web interface.",
+        "login": "Open /auth/login-page or POST credentials to /auth/login.",
         "docs": "Open /docs to test the APIs.",
-        "relationships": "Open /relationships/viewer for the document graph.",
-        "conversation": "POST questions to /conversation/ask and reuse the returned session_id.",
+        "readiness": "Open /production/readiness for deployment checks.",
     }
 
 
@@ -228,7 +245,19 @@ def dashboard() -> str:
 
 @app.get("/health")
 def health() -> dict[str, str]:
-    return {"status": "ok"}
+    return {"status": "ok", "version": settings.app_version, "environment": settings.environment}
+
+
+@app.get("/production/readiness")
+def readiness() -> dict[str, Any]:
+    """Return database, security, Docker, and documentation readiness checks."""
+    return production_readiness()
+
+
+@app.get("/production/manifest")
+def manifest() -> dict[str, Any]:
+    """Return the final release modules, deployment commands, and documentation set."""
+    return production_manifest()
 
 
 @app.post("/upload")
