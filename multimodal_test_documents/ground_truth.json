@@ -1,0 +1,2242 @@
+{
+  "W23-001": {
+    "filename": "sample_01_drawing.pdf",
+    "hybrid_text_layer": false,
+    "pages": [
+      {
+        "page_summary": "Visual drawing page for Campus Innovation Building containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Architectural Drawing - Zone 1",
+          "document_type": "Drawing",
+          "document_number": "W23-DRA-001",
+          "revision": "R0",
+          "project_name": "Campus Innovation Building",
+          "discipline": "Architectural",
+          "date": "2026-08-01",
+          "status": "Approved",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R0",
+                "2026-08-01",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all architectural work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R0 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "APPROVED",
+            "status": "approved",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R0",
+            "date": "2026-08-01",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R0",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "APPROVED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R0",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-002": {
+    "filename": "sample_02_specification.pdf",
+    "hybrid_text_layer": false,
+    "pages": [
+      {
+        "page_summary": "Visual specification page for Sustainable Site Infrastructure containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Civil Specification - Zone 2",
+          "document_type": "Specification",
+          "document_number": "W23-SPE-002",
+          "revision": "R1",
+          "project_name": "Sustainable Site Infrastructure",
+          "discipline": "Civil",
+          "date": "2026-08-02",
+          "status": "Reviewed",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R1",
+                "2026-08-02",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all civil work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R1 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "REVIEWED",
+            "status": "reviewed",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R1",
+            "date": "2026-08-02",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R1",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "REVIEWED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R1",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-003": {
+    "filename": "sample_03_rfi.pdf",
+    "hybrid_text_layer": false,
+    "pages": [
+      {
+        "page_summary": "Visual rfi page for UAEU Smart Facility containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Structural RFI - Zone 3",
+          "document_type": "RFI",
+          "document_number": "W23-RFI-003",
+          "revision": "R2",
+          "project_name": "UAEU Smart Facility",
+          "discipline": "Structural",
+          "date": "2026-08-03",
+          "status": "For Construction",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R2",
+                "2026-08-03",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all structural work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R2 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "FOR CONSTRUCTION",
+            "status": "for_construction",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R2",
+            "date": "2026-08-03",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R2",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "FOR CONSTRUCTION",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R2",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-004": {
+    "filename": "sample_04_meeting_minutes.pdf",
+    "hybrid_text_layer": false,
+    "pages": [
+      {
+        "page_summary": "Visual meeting minutes page for Campus Innovation Building containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Mechanical Meeting Minutes - Zone 4",
+          "document_type": "Meeting Minutes",
+          "document_number": "W23-MEE-004",
+          "revision": "R3",
+          "project_name": "Campus Innovation Building",
+          "discipline": "Mechanical",
+          "date": "2026-08-04",
+          "status": "Revised",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R3",
+                "2026-08-04",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all mechanical work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R3 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "REVISED",
+            "status": "revised",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R3",
+            "date": "2026-08-04",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R3",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "REVISED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R3",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-005": {
+    "filename": "sample_05_inspection_report.pdf",
+    "hybrid_text_layer": false,
+    "pages": [
+      {
+        "page_summary": "Visual inspection report page for Sustainable Site Infrastructure containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Electrical Inspection Report - Zone 5",
+          "document_type": "Inspection Report",
+          "document_number": "W23-INS-005",
+          "revision": "R0",
+          "project_name": "Sustainable Site Infrastructure",
+          "discipline": "Electrical",
+          "date": "2026-08-05",
+          "status": "Accepted",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R0",
+                "2026-08-05",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all electrical work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R0 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "ACCEPTED",
+            "status": "accepted",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R0",
+            "date": "2026-08-05",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R0",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "ACCEPTED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R0",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-006": {
+    "filename": "sample_06_drawing.pdf",
+    "hybrid_text_layer": false,
+    "pages": [
+      {
+        "page_summary": "Visual drawing page for UAEU Smart Facility containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Architectural Drawing - Zone 1",
+          "document_type": "Drawing",
+          "document_number": "W23-DRA-006",
+          "revision": "R1",
+          "project_name": "UAEU Smart Facility",
+          "discipline": "Architectural",
+          "date": "2026-08-06",
+          "status": "Approved",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R1",
+                "2026-08-06",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all architectural work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R1 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "APPROVED",
+            "status": "approved",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R1",
+            "date": "2026-08-06",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R1",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "APPROVED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R1",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-007": {
+    "filename": "sample_07_specification.pdf",
+    "hybrid_text_layer": false,
+    "pages": [
+      {
+        "page_summary": "Visual specification page for Campus Innovation Building containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Civil Specification - Zone 2",
+          "document_type": "Specification",
+          "document_number": "W23-SPE-007",
+          "revision": "R2",
+          "project_name": "Campus Innovation Building",
+          "discipline": "Civil",
+          "date": "2026-08-07",
+          "status": "Reviewed",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R2",
+                "2026-08-07",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all civil work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R2 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "REVIEWED",
+            "status": "reviewed",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R2",
+            "date": "2026-08-07",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R2",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "REVIEWED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R2",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-008": {
+    "filename": "sample_08_rfi.pdf",
+    "hybrid_text_layer": false,
+    "pages": [
+      {
+        "page_summary": "Visual rfi page for Sustainable Site Infrastructure containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Structural RFI - Zone 3",
+          "document_type": "RFI",
+          "document_number": "W23-RFI-008",
+          "revision": "R3",
+          "project_name": "Sustainable Site Infrastructure",
+          "discipline": "Structural",
+          "date": "2026-08-08",
+          "status": "For Construction",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R3",
+                "2026-08-08",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all structural work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R3 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "FOR CONSTRUCTION",
+            "status": "for_construction",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R3",
+            "date": "2026-08-08",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R3",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "FOR CONSTRUCTION",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R3",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-009": {
+    "filename": "sample_09_meeting_minutes.pdf",
+    "hybrid_text_layer": false,
+    "pages": [
+      {
+        "page_summary": "Visual meeting minutes page for UAEU Smart Facility containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Mechanical Meeting Minutes - Zone 4",
+          "document_type": "Meeting Minutes",
+          "document_number": "W23-MEE-009",
+          "revision": "R0",
+          "project_name": "UAEU Smart Facility",
+          "discipline": "Mechanical",
+          "date": "2026-08-09",
+          "status": "Revised",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R0",
+                "2026-08-09",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all mechanical work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R0 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "REVISED",
+            "status": "revised",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R0",
+            "date": "2026-08-09",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R0",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "REVISED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R0",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-010": {
+    "filename": "sample_10_inspection_report.pdf",
+    "hybrid_text_layer": false,
+    "pages": [
+      {
+        "page_summary": "Visual inspection report page for Campus Innovation Building containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Electrical Inspection Report - Zone 5",
+          "document_type": "Inspection Report",
+          "document_number": "W23-INS-010",
+          "revision": "R1",
+          "project_name": "Campus Innovation Building",
+          "discipline": "Electrical",
+          "date": "2026-08-10",
+          "status": "Accepted",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R1",
+                "2026-08-10",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all electrical work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R1 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "ACCEPTED",
+            "status": "accepted",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R1",
+            "date": "2026-08-10",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R1",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "ACCEPTED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R1",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-011": {
+    "filename": "sample_11_drawing.pdf",
+    "hybrid_text_layer": true,
+    "pages": [
+      {
+        "page_summary": "Visual drawing page for Sustainable Site Infrastructure containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Architectural Drawing - Zone 1",
+          "document_type": "Drawing",
+          "document_number": "W23-DRA-011",
+          "revision": "R2",
+          "project_name": "Sustainable Site Infrastructure",
+          "discipline": "Architectural",
+          "date": "2026-08-11",
+          "status": "Approved",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R2",
+                "2026-08-11",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all architectural work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R2 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "APPROVED",
+            "status": "approved",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R2",
+            "date": "2026-08-11",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R2",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "APPROVED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R2",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-012": {
+    "filename": "sample_12_specification.pdf",
+    "hybrid_text_layer": true,
+    "pages": [
+      {
+        "page_summary": "Visual specification page for UAEU Smart Facility containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Civil Specification - Zone 2",
+          "document_type": "Specification",
+          "document_number": "W23-SPE-012",
+          "revision": "R3",
+          "project_name": "UAEU Smart Facility",
+          "discipline": "Civil",
+          "date": "2026-08-12",
+          "status": "Reviewed",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R3",
+                "2026-08-12",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all civil work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R3 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "REVIEWED",
+            "status": "reviewed",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R3",
+            "date": "2026-08-12",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R3",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "REVIEWED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R3",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-013": {
+    "filename": "sample_13_rfi.pdf",
+    "hybrid_text_layer": true,
+    "pages": [
+      {
+        "page_summary": "Visual rfi page for Campus Innovation Building containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Structural RFI - Zone 3",
+          "document_type": "RFI",
+          "document_number": "W23-RFI-013",
+          "revision": "R0",
+          "project_name": "Campus Innovation Building",
+          "discipline": "Structural",
+          "date": "2026-08-13",
+          "status": "For Construction",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R0",
+                "2026-08-13",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all structural work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R0 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "FOR CONSTRUCTION",
+            "status": "for_construction",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R0",
+            "date": "2026-08-13",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R0",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "FOR CONSTRUCTION",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R0",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-014": {
+    "filename": "sample_14_meeting_minutes.pdf",
+    "hybrid_text_layer": true,
+    "pages": [
+      {
+        "page_summary": "Visual meeting minutes page for Sustainable Site Infrastructure containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Mechanical Meeting Minutes - Zone 4",
+          "document_type": "Meeting Minutes",
+          "document_number": "W23-MEE-014",
+          "revision": "R1",
+          "project_name": "Sustainable Site Infrastructure",
+          "discipline": "Mechanical",
+          "date": "2026-08-14",
+          "status": "Revised",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R1",
+                "2026-08-14",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all mechanical work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R1 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "REVISED",
+            "status": "revised",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R1",
+            "date": "2026-08-14",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R1",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "REVISED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R1",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-015": {
+    "filename": "sample_15_inspection_report.pdf",
+    "hybrid_text_layer": true,
+    "pages": [
+      {
+        "page_summary": "Visual inspection report page for UAEU Smart Facility containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Electrical Inspection Report - Zone 5",
+          "document_type": "Inspection Report",
+          "document_number": "W23-INS-015",
+          "revision": "R2",
+          "project_name": "UAEU Smart Facility",
+          "discipline": "Electrical",
+          "date": "2026-08-15",
+          "status": "Accepted",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R2",
+                "2026-08-15",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all electrical work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R2 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "ACCEPTED",
+            "status": "accepted",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R2",
+            "date": "2026-08-15",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R2",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "ACCEPTED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R2",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-016": {
+    "filename": "sample_16_drawing.pdf",
+    "hybrid_text_layer": true,
+    "pages": [
+      {
+        "page_summary": "Visual drawing page for Campus Innovation Building containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Architectural Drawing - Zone 1",
+          "document_type": "Drawing",
+          "document_number": "W23-DRA-016",
+          "revision": "R3",
+          "project_name": "Campus Innovation Building",
+          "discipline": "Architectural",
+          "date": "2026-08-16",
+          "status": "Approved",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R3",
+                "2026-08-16",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all architectural work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R3 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "APPROVED",
+            "status": "approved",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R3",
+            "date": "2026-08-16",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R3",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "APPROVED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R3",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-017": {
+    "filename": "sample_17_specification.pdf",
+    "hybrid_text_layer": true,
+    "pages": [
+      {
+        "page_summary": "Visual specification page for Sustainable Site Infrastructure containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Civil Specification - Zone 2",
+          "document_type": "Specification",
+          "document_number": "W23-SPE-017",
+          "revision": "R0",
+          "project_name": "Sustainable Site Infrastructure",
+          "discipline": "Civil",
+          "date": "2026-08-17",
+          "status": "Reviewed",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R0",
+                "2026-08-17",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all civil work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R0 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "REVIEWED",
+            "status": "reviewed",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R0",
+            "date": "2026-08-17",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R0",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "REVIEWED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R0",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-018": {
+    "filename": "sample_18_rfi.pdf",
+    "hybrid_text_layer": true,
+    "pages": [
+      {
+        "page_summary": "Visual rfi page for UAEU Smart Facility containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Structural RFI - Zone 3",
+          "document_type": "RFI",
+          "document_number": "W23-RFI-018",
+          "revision": "R1",
+          "project_name": "UAEU Smart Facility",
+          "discipline": "Structural",
+          "date": "2026-08-18",
+          "status": "For Construction",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R1",
+                "2026-08-18",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all structural work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R1 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "FOR CONSTRUCTION",
+            "status": "for_construction",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R1",
+            "date": "2026-08-18",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R1",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "FOR CONSTRUCTION",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R1",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-019": {
+    "filename": "sample_19_meeting_minutes.pdf",
+    "hybrid_text_layer": true,
+    "pages": [
+      {
+        "page_summary": "Visual meeting minutes page for Campus Innovation Building containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Mechanical Meeting Minutes - Zone 4",
+          "document_type": "Meeting Minutes",
+          "document_number": "W23-MEE-019",
+          "revision": "R2",
+          "project_name": "Campus Innovation Building",
+          "discipline": "Mechanical",
+          "date": "2026-08-19",
+          "status": "Revised",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R2",
+                "2026-08-19",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all mechanical work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R2 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "REVISED",
+            "status": "revised",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R2",
+            "date": "2026-08-19",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R2",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "REVISED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R2",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  },
+  "W23-020": {
+    "filename": "sample_20_inspection_report.pdf",
+    "hybrid_text_layer": true,
+    "pages": [
+      {
+        "page_summary": "Visual inspection report page for Sustainable Site Infrastructure containing a title block, revision table, stamp, notes, and annotations.",
+        "title_block": {
+          "document_title": "Electrical Inspection Report - Zone 5",
+          "document_type": "Inspection Report",
+          "document_number": "W23-INS-020",
+          "revision": "R3",
+          "project_name": "Sustainable Site Infrastructure",
+          "discipline": "Electrical",
+          "date": "2026-08-20",
+          "status": "Accepted",
+          "confidence": 0.99,
+          "evidence": "Bottom-right title block and red approval stamp on the right side of the page."
+        },
+        "tables": [
+          {
+            "name": "Revision Table",
+            "headers": [
+              "REV",
+              "DATE",
+              "DESCRIPTION"
+            ],
+            "rows": [
+              [
+                "R3",
+                "2026-08-20",
+                "Current issue"
+              ],
+              [
+                "R0",
+                "2026-07-01",
+                "Initial issue"
+              ],
+              [
+                "-",
+                "-",
+                "-"
+              ]
+            ],
+            "confidence": 0.98,
+            "evidence": "Upper-right grid table labelled REVISION TABLE."
+          }
+        ],
+        "drawing_notes": [
+          {
+            "text": "1. Coordinate all electrical work with the latest approved specification. 2. Verify dimensions on site before construction. 3. Revision R3 cloud is shown in red.",
+            "confidence": 0.97,
+            "evidence": "Yellow DRAWING NOTES panel along the bottom-left of the page."
+          }
+        ],
+        "stamps": [
+          {
+            "text": "ACCEPTED",
+            "status": "accepted",
+            "confidence": 0.99,
+            "evidence": "Large red bordered stamp at the middle-right of the page."
+          }
+        ],
+        "revision_information": [
+          {
+            "revision": "R3",
+            "date": "2026-08-20",
+            "description": "Current issue",
+            "confidence": 0.98,
+            "evidence": "First data row in the upper-right revision table."
+          }
+        ],
+        "symbols_and_annotations": [
+          {
+            "symbol": "Circle A callout",
+            "meaning": "Grid or detail reference",
+            "confidence": 0.96,
+            "evidence": "Red circle containing A in the central drawing area and symbol legend."
+          },
+          {
+            "symbol": "Red revision cloud",
+            "meaning": "Highlights changes for revision R3",
+            "confidence": 0.95,
+            "evidence": "Red cloud-like loops and leader line in the upper central drawing."
+          }
+        ],
+        "visual_only_findings": [
+          {
+            "field": "approval_stamp",
+            "value": "ACCEPTED",
+            "reason_text_extraction_misses_it": "The stamp is raster artwork with no PDF text layer.",
+            "confidence": 0.99,
+            "evidence": "Red stamp at middle-right."
+          },
+          {
+            "field": "revision_cloud",
+            "value": "R3",
+            "reason_text_extraction_misses_it": "The revision cloud is a visual shape and color annotation.",
+            "confidence": 0.95,
+            "evidence": "Red cloud and leader in the drawing area."
+          },
+          {
+            "field": "symbol_callout",
+            "value": "Circle A",
+            "reason_text_extraction_misses_it": "The callout meaning depends on shape and placement.",
+            "confidence": 0.96,
+            "evidence": "Central drawing and symbol legend."
+          }
+        ],
+        "overall_confidence": 0.98
+      }
+    ]
+  }
+}

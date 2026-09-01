@@ -1,0 +1,61 @@
+Week 23 - Multimodal Document Intelligence Demo
+========================================================================
+Provider requested: fixture
+Test documents/pages: 20
+
+[01] sample_01_drawing.pdf                  text=0/6 visual=6/6 confidence=0.98
+     title=Architectural Drawing - Zone 1 | rev=R0 | stamp=APPROVED
+[02] sample_02_specification.pdf            text=0/6 visual=6/6 confidence=0.98
+     title=Civil Specification - Zone 2 | rev=R1 | stamp=REVIEWED
+[03] sample_03_rfi.pdf                      text=0/6 visual=6/6 confidence=0.98
+     title=Structural RFI - Zone 3 | rev=R2 | stamp=FOR CONSTRUCTION
+[04] sample_04_meeting_minutes.pdf          text=0/6 visual=6/6 confidence=0.98
+     title=Mechanical Meeting Minutes - Zone 4 | rev=R3 | stamp=REVISED
+[05] sample_05_inspection_report.pdf        text=0/6 visual=6/6 confidence=0.98
+     title=Electrical Inspection Report - Zone 5 | rev=R0 | stamp=ACCEPTED
+[06] sample_06_drawing.pdf                  text=0/6 visual=6/6 confidence=0.98
+     title=Architectural Drawing - Zone 1 | rev=R1 | stamp=APPROVED
+[07] sample_07_specification.pdf            text=0/6 visual=6/6 confidence=0.98
+     title=Civil Specification - Zone 2 | rev=R2 | stamp=REVIEWED
+[08] sample_08_rfi.pdf                      text=0/6 visual=6/6 confidence=0.98
+     title=Structural RFI - Zone 3 | rev=R3 | stamp=FOR CONSTRUCTION
+[09] sample_09_meeting_minutes.pdf          text=0/6 visual=6/6 confidence=0.98
+     title=Mechanical Meeting Minutes - Zone 4 | rev=R0 | stamp=REVISED
+[10] sample_10_inspection_report.pdf        text=0/6 visual=6/6 confidence=0.98
+     title=Electrical Inspection Report - Zone 5 | rev=R1 | stamp=ACCEPTED
+[11] sample_11_drawing.pdf                  text=1/6 visual=6/6 confidence=0.98
+     title=Architectural Drawing - Zone 1 | rev=R2 | stamp=APPROVED
+[12] sample_12_specification.pdf            text=1/6 visual=6/6 confidence=0.98
+     title=Civil Specification - Zone 2 | rev=R3 | stamp=REVIEWED
+[13] sample_13_rfi.pdf                      text=1/6 visual=6/6 confidence=0.98
+     title=Structural RFI - Zone 3 | rev=R0 | stamp=FOR CONSTRUCTION
+[14] sample_14_meeting_minutes.pdf          text=1/6 visual=6/6 confidence=0.98
+     title=Mechanical Meeting Minutes - Zone 4 | rev=R1 | stamp=REVISED
+[15] sample_15_inspection_report.pdf        text=1/6 visual=6/6 confidence=0.98
+     title=Electrical Inspection Report - Zone 5 | rev=R2 | stamp=ACCEPTED
+[16] sample_16_drawing.pdf                  text=1/6 visual=6/6 confidence=0.98
+     title=Architectural Drawing - Zone 1 | rev=R3 | stamp=APPROVED
+[17] sample_17_specification.pdf            text=1/6 visual=6/6 confidence=0.98
+     title=Civil Specification - Zone 2 | rev=R0 | stamp=REVIEWED
+[18] sample_18_rfi.pdf                      text=1/6 visual=6/6 confidence=0.98
+     title=Structural RFI - Zone 3 | rev=R1 | stamp=FOR CONSTRUCTION
+[19] sample_19_meeting_minutes.pdf          text=1/6 visual=6/6 confidence=0.98
+     title=Mechanical Meeting Minutes - Zone 4 | rev=R2 | stamp=REVISED
+[20] sample_20_inspection_report.pdf        text=1/6 visual=6/6 confidence=0.98
+     title=Electrical Inspection Report - Zone 5 | rev=R3 | stamp=ACCEPTED
+
+Comparison Summary
+========================================================================
+Text-only shared-field recall: 8.3%
+Multimodal shared-field recall: 100.0%
+Multimodal visual-category recall: 100.0%
+Pages where visual understanding added information: 20/20
+Visual-only findings: 60
+Average multimodal confidence: 0.98
+
+Week 23 Demo Complete
+- PDF page rendering: working
+- Vision-capable provider interface: working
+- Structured JSON with page, confidence, and evidence: working
+- Text-only versus multimodal comparison: working
+- Minimum 20 test pages: working

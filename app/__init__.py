@@ -1,1 +1,0 @@
-"""Document Control Assistant package."""

@@ -1,38 +1,105 @@
-# Week 22 – Production-Ready AI Document Control Assistant
+# Week 23 - Multimodal Document Intelligence
 
 ## Overview
 
-This project is the final version of the AI Document Control Assistant developed for construction document management. It integrates all previous modules into one production-ready application.
+This project is a standalone multimodal document intelligence prototype for construction PDF documents. It renders PDF pages as images, analyzes the visual page content with a vision-capable AI model, compares the result with normal PDF text extraction, and returns structured JSON with confidence, page number, and evidence.
 
 ## Features
 
-* User authentication and basic user management
-* PDF and DOCX document upload
-* Document classification
-* Metadata extraction
-* Intelligent document search
-* Semantic search
-* Document review and validation
-* Compliance checking
-* Document relationship graph
-* Conversational AI assistant with source citations
-* Analytics and reporting
-* Docker deployment
+- Accept PDF uploads
+- Convert selected PDF pages to PNG images
+- Analyze pages using a vision-capable AI model
+- Extract title blocks
+- Extract tables
+- Extract drawing notes
+- Detect approval and review stamps
+- Extract revision information
+- Detect symbols and visual annotations
+- Compare text-only extraction with multimodal extraction
+- Identify information missed by the PDF text layer
+- Return structured JSON with confidence and evidence
+- Include 20 synthetic construction test PDF pages
 
-## Technology
+## Vision Providers
 
-* Python
-* FastAPI
-* SQLite
-* Docker
-* Docker Compose
+### OpenAI vision provider
 
-## Docker Deployment
+The production path uses an OpenAI vision-capable model through the Responses API.
 
-Build and run:
+Set these values in `.env`:
+
+```text
+OPENAI_API_KEY=your-key-here
+OPENAI_VISION_MODEL=gpt-4.1-mini
+```
+
+The model name is configurable.
+
+### Offline fixture provider
+
+The repository also includes a deterministic fixture provider for the bundled 20 synthetic test PDFs. This is used for repeatable automated tests and offline demonstration only. It is not a replacement for a real vision model.
+
+## Structured Output
+
+Each analyzed page returns:
+
+- Page number
+- Rendered image information
+- Text-only extraction result
+- Multimodal extraction result
+- Title-block fields
+- Tables
+- Notes
+- Stamps
+- Revisions
+- Symbols and annotations
+- Confidence scores
+- Evidence descriptions
+- Visual-only findings
+- Text-only versus multimodal comparison
+
+## API Endpoints
+
+- `POST /multimodal/analyze`
+- `POST /multimodal/compare`
+- `GET /multimodal/capabilities`
+- `GET /multimodal/accuracy-report`
+- `GET /multimodal/test-documents`
+
+## Install the Week 23 Update
+
+From the extracted Week 23 package, run:
 
 ```bash
-docker compose up --build
+python3 install_week23.py ~/Desktop/document-control-assistant
+```
+
+Then enter the project:
+
+```bash
+cd ~/Desktop/document-control-assistant
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+## Run the Standalone Service
+
+```bash
+python -m uvicorn app.multimodal_standalone:app --reload --port 8001
+```
+
+Open:
+
+```text
+http://127.0.0.1:8001/docs
+```
+
+## Run Inside the Main Platform
+
+The installer adds the Week 23 router to the main FastAPI application.
+
+```bash
+python -m uvicorn app.main:app --reload
 ```
 
 Open:
@@ -41,29 +108,72 @@ Open:
 http://127.0.0.1:8000/docs
 ```
 
-## Testing
+## Demonstration
 
-Run:
+Offline repeatable demonstration using all 20 pages:
+
+```bash
+python demo_week23.py --provider fixture --limit 20
+```
+
+Real vision-model demonstration:
+
+```bash
+python demo_week23.py --provider openai --limit 3
+```
+
+The real model command requires `OPENAI_API_KEY`.
+
+## Testing
 
 ```bash
 pytest
 ```
 
-Expected result:
+The Week 23 test file verifies:
+
+- Minimum 20 PDF pages
+- PDF-to-image conversion
+- Text-only baseline behavior
+- Structured visual extraction
+- Confidence and evidence
+- Text-versus-multimodal comparison
+- API route registration
+
+## Accuracy Report
+
+The included benchmark demonstrates:
+
+- 20 PDF test pages
+- Image-only and hybrid PDF pages
+- Text-only field recall
+- Multimodal field recall
+- Visual-category extraction
+- Cases where stamps, symbols, revision clouds, and title blocks are missed by text extraction
+
+See:
 
 ```text
-28 passed
+accuracy_report_week23.json
+docs/ACCURACY_AND_LIMITATIONS_WEEK23.md
 ```
+
+## Important Limitation
+
+The bundled fixture benchmark verifies the pipeline, data structure, and comparison logic. Production vision-model accuracy must be measured separately using real project documents and the configured vision model.
 
 ## Deliverables
 
-* Production-ready application
-* Docker deployment
-* User guide
-* Architecture documentation
-* Final presentation
-* End-to-end demonstration
+- Working multimodal PDF processing service
+- Structured extraction API
+- 20 test PDF pages
+- Text-only versus multimodal comparison
+- Accuracy report
+- Limitations report
+- Working demonstration
 
 ## Author
 
 Omar Zuarub
+
+United Arab Emirates University
