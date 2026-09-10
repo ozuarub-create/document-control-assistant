@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <style>
+      .box{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:14;ry:14}
+      .title{font:700 26px Arial,sans-serif;fill:#0f172a}
+      .text{font:18px Arial,sans-serif;fill:#334155}
+      .small{font:16px Arial,sans-serif;fill:#475569}
+      .arrow{stroke:#2563eb;stroke-width:3;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+  </defs>
+  <text x="600" y="45" text-anchor="middle" class="title">Week 24 - Document Workflow Agent Architecture</text>
+  <rect x="70" y="100" width="260" height="95" class="box"/><text x="200" y="138" text-anchor="middle" class="text">Uploaded Document</text><text x="200" y="168" text-anchor="middle" class="small">+ Task / Objective</text>
+  <rect x="470" y="100" width="260" height="95" class="box"/><text x="600" y="138" text-anchor="middle" class="text">Workflow Agent API</text><text x="600" y="168" text-anchor="middle" class="small">POST /workflow-agent/run</text>
+  <rect x="870" y="100" width="260" height="95" class="box"/><text x="1000" y="138" text-anchor="middle" class="text">Planner</text><text x="1000" y="168" text-anchor="middle" class="small">Select only needed tools</text>
+  <path d="M330 148 L470 148" class="arrow"/><path d="M730 148 L870 148" class="arrow"/>
+  <rect x="120" y="285" width="960" height="150" class="box"/>
+  <text x="600" y="320" text-anchor="middle" class="text">Agent Tool Registry</text>
+  <text x="600" y="355" text-anchor="middle" class="small">Classify | Metadata | Knowledge Search | Completeness</text>
+  <text x="600" y="385" text-anchor="middle" class="small">Previous Revisions | Summary | Review Comments | Next Action</text>
+  <path d="M1000 195 L1000 250 L600 250 L600 285" class="arrow"/>
+  <rect x="160" y="535" width="260" height="100" class="box"/><text x="290" y="575" text-anchor="middle" class="text">Shared Agent Memory</text><text x="290" y="605" text-anchor="middle" class="small">Intermediate results</text>
+  <rect x="470" y="535" width="260" height="100" class="box"/><text x="600" y="575" text-anchor="middle" class="text">Execution / Audit Log</text><text x="600" y="605" text-anchor="middle" class="small">Decision, tool, status, result</text>
+  <rect x="780" y="535" width="260" height="100" class="box"/><text x="910" y="575" text-anchor="middle" class="text">Final Workflow Output</text><text x="910" y="605" text-anchor="middle" class="small">Findings + recommended action</text>
+  <path d="M600 435 L600 485 L290 485 L290 535" class="arrow"/><path d="M420 585 L470 585" class="arrow"/><path d="M730 585 L780 585" class="arrow"/>
+  <text x="600" y="700" text-anchor="middle" class="small">Planner and tools are separated so orchestration remains selective, modular, testable, and auditable.</text>
+</svg>

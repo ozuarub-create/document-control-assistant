@@ -1,0 +1,6 @@
+Document Title: Mechanical Plant Room Layout
+Document Number: DWG-M-220
+Revision: R0
+Date: 2026-09-05
+Status: For Review
+Drawing showing equipment arrangement and access zones.

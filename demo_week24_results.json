@@ -1,0 +1,1162 @@
+[
+  {
+    "agent_run_id": "e28783e0-19e9-473d-930e-3e1776356204",
+    "created_at": "2026-09-10T10:31:48.014509+00:00",
+    "document": "scenario_01_drawing_r2.txt",
+    "task": "Review this drawing, check previous revisions, and recommend the next action",
+    "planner": "RuleBasedPlanner",
+    "available_tools": [
+      "classify_document",
+      "extract_metadata",
+      "search_knowledge_base",
+      "check_completeness",
+      "detect_previous_revisions",
+      "generate_summary",
+      "generate_review_comments",
+      "recommend_next_action"
+    ],
+    "tools_selected": [
+      "classify_document",
+      "extract_metadata",
+      "detect_previous_revisions",
+      "check_completeness",
+      "generate_review_comments",
+      "recommend_next_action"
+    ],
+    "tool_count": 6,
+    "execution_log": [
+      {
+        "step": 1,
+        "tool": "classify_document",
+        "reason": "Document type is needed to choose downstream validation and routing.",
+        "status": "completed",
+        "result": {
+          "document_type": "drawing",
+          "confidence": 0.96,
+          "evidence": "keyword_score=3"
+        },
+        "timestamp": "2026-09-10T10:31:48.013866+00:00"
+      },
+      {
+        "step": 2,
+        "tool": "extract_metadata",
+        "reason": "Core identifiers and revision metadata support document-control decisions.",
+        "status": "completed",
+        "result": {
+          "metadata": {
+            "title": "Ground Floor Architectural Layout",
+            "document_number": "DWG-A-101",
+            "revision": "R2",
+            "date": "2026-09-05",
+            "status": "For Construction"
+          },
+          "confidence": 0.92,
+          "evidence": "regex_and_layout_text"
+        },
+        "timestamp": "2026-09-10T10:31:48.013907+00:00"
+      },
+      {
+        "step": 3,
+        "tool": "detect_previous_revisions",
+        "reason": "Task or document indicates revision history may affect the next action.",
+        "status": "completed",
+        "result": {
+          "current_revision": "R2",
+          "previous_revisions": [
+            {
+              "document_number": "DWG-A-101",
+              "revision": "R0",
+              "title": "Ground Floor Architectural Layout",
+              "status": "Superseded"
+            },
+            {
+              "document_number": "DWG-A-101",
+              "revision": "R1",
+              "title": "Ground Floor Architectural Layout",
+              "status": "Superseded"
+            }
+          ],
+          "count": 2,
+          "confidence": 0.95
+        },
+        "timestamp": "2026-09-10T10:31:48.014465+00:00"
+      },
+      {
+        "step": 4,
+        "tool": "check_completeness",
+        "reason": "Workflow/review task requires a completeness gate.",
+        "status": "completed",
+        "result": {
+          "complete": true,
+          "required_fields": [
+            "document_number",
+            "revision",
+            "title",
+            "date"
+          ],
+          "missing_fields": [],
+          "confidence": 0.96
+        },
+        "timestamp": "2026-09-10T10:31:48.014480+00:00"
+      },
+      {
+        "step": 5,
+        "tool": "generate_review_comments",
+        "reason": "Task requests review findings or approval support.",
+        "status": "completed",
+        "result": {
+          "comments": [
+            "Confirm that the issued-for-construction drawing has the required approval/signature before release.",
+            "Review changes against the detected previous revision before approval."
+          ],
+          "count": 2,
+          "confidence": 0.86
+        },
+        "timestamp": "2026-09-10T10:31:48.014486+00:00"
+      },
+      {
+        "step": 6,
+        "tool": "recommend_next_action",
+        "reason": "Task requires a recommended workflow action.",
+        "status": "completed",
+        "result": {
+          "recommended_action": "route_for_revision_comparison_and_technical_review",
+          "reason": "A previous revision was detected. 2 review comment(s) generated.",
+          "confidence": 0.9
+        },
+        "timestamp": "2026-09-10T10:31:48.014491+00:00"
+      }
+    ],
+    "final": {
+      "document_type": "drawing",
+      "metadata": {
+        "title": "Ground Floor Architectural Layout",
+        "document_number": "DWG-A-101",
+        "revision": "R2",
+        "date": "2026-09-05",
+        "status": "For Construction"
+      },
+      "summary": null,
+      "review_comments": [
+        "Confirm that the issued-for-construction drawing has the required approval/signature before release.",
+        "Review changes against the detected previous revision before approval."
+      ],
+      "recommended_next_action": {
+        "recommended_action": "route_for_revision_comparison_and_technical_review",
+        "reason": "A previous revision was detected. 2 review comment(s) generated.",
+        "confidence": 0.9
+      }
+    }
+  },
+  {
+    "agent_run_id": "da39ebbc-7d5f-44c2-bfa8-b967162650d9",
+    "created_at": "2026-09-10T10:31:48.014960+00:00",
+    "document": "scenario_02_open_rfi.txt",
+    "task": "Review this RFI and recommend the next workflow action",
+    "planner": "RuleBasedPlanner",
+    "available_tools": [
+      "classify_document",
+      "extract_metadata",
+      "search_knowledge_base",
+      "check_completeness",
+      "detect_previous_revisions",
+      "generate_summary",
+      "generate_review_comments",
+      "recommend_next_action"
+    ],
+    "tools_selected": [
+      "classify_document",
+      "extract_metadata",
+      "check_completeness",
+      "generate_review_comments",
+      "recommend_next_action"
+    ],
+    "tool_count": 5,
+    "execution_log": [
+      {
+        "step": 1,
+        "tool": "classify_document",
+        "reason": "Document type is needed to choose downstream validation and routing.",
+        "status": "completed",
+        "result": {
+          "document_type": "rfi",
+          "confidence": 0.96,
+          "evidence": "keyword_score=3"
+        },
+        "timestamp": "2026-09-10T10:31:48.014906+00:00"
+      },
+      {
+        "step": 2,
+        "tool": "extract_metadata",
+        "reason": "Core identifiers and revision metadata support document-control decisions.",
+        "status": "completed",
+        "result": {
+          "metadata": {
+            "title": "Ground Floor Concrete Detail Clarification",
+            "document_number": "RFI-015",
+            "revision": null,
+            "date": "2026-09-04",
+            "status": "Open"
+          },
+          "confidence": 0.92,
+          "evidence": "regex_and_layout_text"
+        },
+        "timestamp": "2026-09-10T10:31:48.014923+00:00"
+      },
+      {
+        "step": 3,
+        "tool": "check_completeness",
+        "reason": "Workflow/review task requires a completeness gate.",
+        "status": "completed",
+        "result": {
+          "complete": true,
+          "required_fields": [
+            "document_number",
+            "title",
+            "date",
+            "status"
+          ],
+          "missing_fields": [],
+          "confidence": 0.96
+        },
+        "timestamp": "2026-09-10T10:31:48.014941+00:00"
+      },
+      {
+        "step": 4,
+        "tool": "generate_review_comments",
+        "reason": "Task requests review findings or approval support.",
+        "status": "completed",
+        "result": {
+          "comments": [
+            "RFI remains open; obtain and record the formal response before closure."
+          ],
+          "count": 1,
+          "confidence": 0.86
+        },
+        "timestamp": "2026-09-10T10:31:48.014945+00:00"
+      },
+      {
+        "step": 5,
+        "tool": "recommend_next_action",
+        "reason": "Task requires a recommended workflow action.",
+        "status": "completed",
+        "result": {
+          "recommended_action": "route_to_responsible_engineer_for_response",
+          "reason": "The RFI is open and requires a response. 1 review comment(s) generated.",
+          "confidence": 0.9
+        },
+        "timestamp": "2026-09-10T10:31:48.014949+00:00"
+      }
+    ],
+    "final": {
+      "document_type": "rfi",
+      "metadata": {
+        "title": "Ground Floor Concrete Detail Clarification",
+        "document_number": "RFI-015",
+        "revision": null,
+        "date": "2026-09-04",
+        "status": "Open"
+      },
+      "summary": null,
+      "review_comments": [
+        "RFI remains open; obtain and record the formal response before closure."
+      ],
+      "recommended_next_action": {
+        "recommended_action": "route_to_responsible_engineer_for_response",
+        "reason": "The RFI is open and requires a response. 1 review comment(s) generated.",
+        "confidence": 0.9
+      }
+    }
+  },
+  {
+    "agent_run_id": "be735b15-54eb-4c6b-83a9-379972de4780",
+    "created_at": "2026-09-10T10:31:48.015184+00:00",
+    "document": "scenario_03_incomplete_submittal.txt",
+    "task": "Check completeness and recommend next action",
+    "planner": "RuleBasedPlanner",
+    "available_tools": [
+      "classify_document",
+      "extract_metadata",
+      "search_knowledge_base",
+      "check_completeness",
+      "detect_previous_revisions",
+      "generate_summary",
+      "generate_review_comments",
+      "recommend_next_action"
+    ],
+    "tools_selected": [
+      "classify_document",
+      "extract_metadata",
+      "detect_previous_revisions",
+      "check_completeness",
+      "recommend_next_action"
+    ],
+    "tool_count": 5,
+    "execution_log": [
+      {
+        "step": 1,
+        "tool": "classify_document",
+        "reason": "Document type is needed to choose downstream validation and routing.",
+        "status": "completed",
+        "result": {
+          "document_type": "material_submittal",
+          "confidence": 0.88,
+          "evidence": "keyword_score=2"
+        },
+        "timestamp": "2026-09-10T10:31:48.015140+00:00"
+      },
+      {
+        "step": 2,
+        "tool": "extract_metadata",
+        "reason": "Core identifiers and revision metadata support document-control decisions.",
+        "status": "completed",
+        "result": {
+          "metadata": {
+            "title": "Firestop Sealant Material Submittal",
+            "document_number": "MAT-041",
+            "revision": null,
+            "date": null,
+            "status": "Submitted"
+          },
+          "confidence": 0.92,
+          "evidence": "regex_and_layout_text"
+        },
+        "timestamp": "2026-09-10T10:31:48.015152+00:00"
+      },
+      {
+        "step": 3,
+        "tool": "detect_previous_revisions",
+        "reason": "Task or document indicates revision history may affect the next action.",
+        "status": "completed",
+        "result": {
+          "current_revision": null,
+          "previous_revisions": [],
+          "count": 0,
+          "confidence": 0.95
+        },
+        "timestamp": "2026-09-10T10:31:48.015168+00:00"
+      },
+      {
+        "step": 4,
+        "tool": "check_completeness",
+        "reason": "Workflow/review task requires a completeness gate.",
+        "status": "completed",
+        "result": {
+          "complete": false,
+          "required_fields": [
+            "document_number",
+            "revision",
+            "title",
+            "status"
+          ],
+          "missing_fields": [
+            "revision"
+          ],
+          "confidence": 0.96
+        },
+        "timestamp": "2026-09-10T10:31:48.015173+00:00"
+      },
+      {
+        "step": 5,
+        "tool": "recommend_next_action",
+        "reason": "Task requires a recommended workflow action.",
+        "status": "completed",
+        "result": {
+          "recommended_action": "return_for_information_completion",
+          "reason": "Required metadata is missing.",
+          "confidence": 0.9
+        },
+        "timestamp": "2026-09-10T10:31:48.015177+00:00"
+      }
+    ],
+    "final": {
+      "document_type": "material_submittal",
+      "metadata": {
+        "title": "Firestop Sealant Material Submittal",
+        "document_number": "MAT-041",
+        "revision": null,
+        "date": null,
+        "status": "Submitted"
+      },
+      "summary": null,
+      "review_comments": null,
+      "recommended_next_action": {
+        "recommended_action": "return_for_information_completion",
+        "reason": "Required metadata is missing.",
+        "confidence": 0.9
+      }
+    }
+  },
+  {
+    "agent_run_id": "c1127b2c-2d88-4595-aade-dfa97c2df522",
+    "created_at": "2026-09-10T10:31:48.015457+00:00",
+    "document": "scenario_04_specification.txt",
+    "task": "Search related knowledge and summarize this specification",
+    "planner": "RuleBasedPlanner",
+    "available_tools": [
+      "classify_document",
+      "extract_metadata",
+      "search_knowledge_base",
+      "check_completeness",
+      "detect_previous_revisions",
+      "generate_summary",
+      "generate_review_comments",
+      "recommend_next_action"
+    ],
+    "tools_selected": [
+      "classify_document",
+      "extract_metadata",
+      "detect_previous_revisions",
+      "search_knowledge_base",
+      "generate_summary"
+    ],
+    "tool_count": 5,
+    "execution_log": [
+      {
+        "step": 1,
+        "tool": "classify_document",
+        "reason": "Document type is needed to choose downstream validation and routing.",
+        "status": "completed",
+        "result": {
+          "document_type": "specification",
+          "confidence": 0.99,
+          "evidence": "keyword_score=4"
+        },
+        "timestamp": "2026-09-10T10:31:48.015342+00:00"
+      },
+      {
+        "step": 2,
+        "tool": "extract_metadata",
+        "reason": "Core identifiers and revision metadata support document-control decisions.",
+        "status": "completed",
+        "result": {
+          "metadata": {
+            "title": "Cast-in-Place Concrete Specification",
+            "document_number": "SPEC-03-30-00",
+            "revision": "R2",
+            "date": "2026-09-01",
+            "status": "Issued for Review"
+          },
+          "confidence": 0.92,
+          "evidence": "regex_and_layout_text"
+        },
+        "timestamp": "2026-09-10T10:31:48.015354+00:00"
+      },
+      {
+        "step": 3,
+        "tool": "detect_previous_revisions",
+        "reason": "Task or document indicates revision history may affect the next action.",
+        "status": "completed",
+        "result": {
+          "current_revision": "R2",
+          "previous_revisions": [
+            {
+              "document_number": "SPEC-03-30-00",
+              "revision": "R1",
+              "title": "Cast-in-Place Concrete Specification",
+              "status": "Approved"
+            }
+          ],
+          "count": 1,
+          "confidence": 0.95
+        },
+        "timestamp": "2026-09-10T10:31:48.015367+00:00"
+      },
+      {
+        "step": 4,
+        "tool": "search_knowledge_base",
+        "reason": "Task asks for related project knowledge or references.",
+        "status": "completed",
+        "result": {
+          "results": [
+            {
+              "document_number": "SPEC-03-30-00",
+              "revision": "R1",
+              "title": "Cast-in-Place Concrete Specification",
+              "status": "Approved",
+              "match_score": 5
+            },
+            {
+              "document_number": "RFI-015",
+              "revision": "0",
+              "title": "Ground Floor Concrete Detail Clarification",
+              "status": "Closed",
+              "match_score": 1
+            },
+            {
+              "document_number": "MS-014",
+              "revision": "R0",
+              "title": "Concrete Pour Method Statement",
+              "status": "Approved",
+              "match_score": 1
+            }
+          ],
+          "count": 3,
+          "confidence": 0.88
+        },
+        "timestamp": "2026-09-10T10:31:48.015372+00:00"
+      },
+      {
+        "step": 5,
+        "tool": "generate_summary",
+        "reason": "Task explicitly requests a concise document summary.",
+        "status": "completed",
+        "result": {
+          "summary": "Document Title: Cast-in-Place Concrete Specification Document Number: SPEC-03-30-00 Revision: R2 Date: 2026-09-01 Status: Issued for Review Technical Specification Section 03. Requirements cover concrete materials, curing, testing, and acceptance.",
+          "confidence": 0.84
+        },
+        "timestamp": "2026-09-10T10:31:48.015425+00:00"
+      }
+    ],
+    "final": {
+      "document_type": "specification",
+      "metadata": {
+        "title": "Cast-in-Place Concrete Specification",
+        "document_number": "SPEC-03-30-00",
+        "revision": "R2",
+        "date": "2026-09-01",
+        "status": "Issued for Review"
+      },
+      "summary": "Document Title: Cast-in-Place Concrete Specification Document Number: SPEC-03-30-00 Revision: R2 Date: 2026-09-01 Status: Issued for Review Technical Specification Section 03. Requirements cover concrete materials, curing, testing, and acceptance.",
+      "review_comments": null,
+      "recommended_next_action": null
+    }
+  },
+  {
+    "agent_run_id": "446b86ff-9952-4edb-a024-02b74a6a92d3",
+    "created_at": "2026-09-10T10:31:48.015894+00:00",
+    "document": "scenario_05_meeting_minutes.txt",
+    "task": "Summarize this document",
+    "planner": "RuleBasedPlanner",
+    "available_tools": [
+      "classify_document",
+      "extract_metadata",
+      "search_knowledge_base",
+      "check_completeness",
+      "detect_previous_revisions",
+      "generate_summary",
+      "generate_review_comments",
+      "recommend_next_action"
+    ],
+    "tools_selected": [
+      "classify_document",
+      "extract_metadata",
+      "generate_summary"
+    ],
+    "tool_count": 3,
+    "execution_log": [
+      {
+        "step": 1,
+        "tool": "classify_document",
+        "reason": "Document type is needed to choose downstream validation and routing.",
+        "status": "completed",
+        "result": {
+          "document_type": "meeting_minutes",
+          "confidence": 0.88,
+          "evidence": "keyword_score=2"
+        },
+        "timestamp": "2026-09-10T10:31:48.015678+00:00"
+      },
+      {
+        "step": 2,
+        "tool": "extract_metadata",
+        "reason": "Core identifiers and revision metadata support document-control decisions.",
+        "status": "completed",
+        "result": {
+          "metadata": {
+            "title": "Weekly Coordination Meeting Minutes",
+            "document_number": "MOM-024",
+            "revision": null,
+            "date": "2026-09-06",
+            "status": "Issued"
+          },
+          "confidence": 0.92,
+          "evidence": "regex_and_layout_text"
+        },
+        "timestamp": "2026-09-10T10:31:48.015756+00:00"
+      },
+      {
+        "step": 3,
+        "tool": "generate_summary",
+        "reason": "Task explicitly requests a concise document summary.",
+        "status": "completed",
+        "result": {
+          "summary": "Document Title: Weekly Coordination Meeting Minutes Document Number: MOM-024 Date: 2026-09-06 Status: Issued Meeting Minutes: Action item - contractor to update shop drawing by 2026-09-12.",
+          "confidence": 0.84
+        },
+        "timestamp": "2026-09-10T10:31:48.015816+00:00"
+      }
+    ],
+    "final": {
+      "document_type": "meeting_minutes",
+      "metadata": {
+        "title": "Weekly Coordination Meeting Minutes",
+        "document_number": "MOM-024",
+        "revision": null,
+        "date": "2026-09-06",
+        "status": "Issued"
+      },
+      "summary": "Document Title: Weekly Coordination Meeting Minutes Document Number: MOM-024 Date: 2026-09-06 Status: Issued Meeting Minutes: Action item - contractor to update shop drawing by 2026-09-12.",
+      "review_comments": null,
+      "recommended_next_action": null
+    }
+  },
+  {
+    "agent_run_id": "6091ad64-4afa-45f6-990f-2f0566e152f2",
+    "created_at": "2026-09-10T10:31:48.016133+00:00",
+    "document": "scenario_06_inspection.txt",
+    "task": "Generate review comments and recommend next action",
+    "planner": "RuleBasedPlanner",
+    "available_tools": [
+      "classify_document",
+      "extract_metadata",
+      "search_knowledge_base",
+      "check_completeness",
+      "detect_previous_revisions",
+      "generate_summary",
+      "generate_review_comments",
+      "recommend_next_action"
+    ],
+    "tools_selected": [
+      "classify_document",
+      "extract_metadata",
+      "check_completeness",
+      "generate_review_comments",
+      "recommend_next_action"
+    ],
+    "tool_count": 5,
+    "execution_log": [
+      {
+        "step": 1,
+        "tool": "classify_document",
+        "reason": "Document type is needed to choose downstream validation and routing.",
+        "status": "completed",
+        "result": {
+          "document_type": "inspection_report",
+          "confidence": 0.88,
+          "evidence": "keyword_score=2"
+        },
+        "timestamp": "2026-09-10T10:31:48.016079+00:00"
+      },
+      {
+        "step": 2,
+        "tool": "extract_metadata",
+        "reason": "Core identifiers and revision metadata support document-control decisions.",
+        "status": "completed",
+        "result": {
+          "metadata": {
+            "title": "Reinforcement Inspection Report",
+            "document_number": "IR-208",
+            "revision": null,
+            "date": "2026-09-06",
+            "status": "Accepted with Comments"
+          },
+          "confidence": 0.92,
+          "evidence": "regex_and_layout_text"
+        },
+        "timestamp": "2026-09-10T10:31:48.016093+00:00"
+      },
+      {
+        "step": 3,
+        "tool": "check_completeness",
+        "reason": "Workflow/review task requires a completeness gate.",
+        "status": "completed",
+        "result": {
+          "complete": true,
+          "required_fields": [
+            "document_number",
+            "title",
+            "date",
+            "status"
+          ],
+          "missing_fields": [],
+          "confidence": 0.96
+        },
+        "timestamp": "2026-09-10T10:31:48.016112+00:00"
+      },
+      {
+        "step": 4,
+        "tool": "generate_review_comments",
+        "reason": "Task requests review findings or approval support.",
+        "status": "completed",
+        "result": {
+          "comments": [
+            "No critical review issue detected by the automated checks; proceed with discipline review."
+          ],
+          "count": 1,
+          "confidence": 0.86
+        },
+        "timestamp": "2026-09-10T10:31:48.016118+00:00"
+      },
+      {
+        "step": 5,
+        "tool": "recommend_next_action",
+        "reason": "Task requires a recommended workflow action.",
+        "status": "completed",
+        "result": {
+          "recommended_action": "route_for_document_control_review",
+          "reason": "A general document-control review is appropriate. 1 review comment(s) generated.",
+          "confidence": 0.9
+        },
+        "timestamp": "2026-09-10T10:31:48.016122+00:00"
+      }
+    ],
+    "final": {
+      "document_type": "inspection_report",
+      "metadata": {
+        "title": "Reinforcement Inspection Report",
+        "document_number": "IR-208",
+        "revision": null,
+        "date": "2026-09-06",
+        "status": "Accepted with Comments"
+      },
+      "summary": null,
+      "review_comments": [
+        "No critical review issue detected by the automated checks; proceed with discipline review."
+      ],
+      "recommended_next_action": {
+        "recommended_action": "route_for_document_control_review",
+        "reason": "A general document-control review is appropriate. 1 review comment(s) generated.",
+        "confidence": 0.9
+      }
+    }
+  },
+  {
+    "agent_run_id": "16467f17-d247-4bb8-924a-07f83ccde511",
+    "created_at": "2026-09-10T10:31:48.016334+00:00",
+    "document": "scenario_07_method_statement.txt",
+    "task": "Review for approval and recommend next action",
+    "planner": "RuleBasedPlanner",
+    "available_tools": [
+      "classify_document",
+      "extract_metadata",
+      "search_knowledge_base",
+      "check_completeness",
+      "detect_previous_revisions",
+      "generate_summary",
+      "generate_review_comments",
+      "recommend_next_action"
+    ],
+    "tools_selected": [
+      "classify_document",
+      "extract_metadata",
+      "detect_previous_revisions",
+      "check_completeness",
+      "generate_review_comments",
+      "recommend_next_action"
+    ],
+    "tool_count": 6,
+    "execution_log": [
+      {
+        "step": 1,
+        "tool": "classify_document",
+        "reason": "Document type is needed to choose downstream validation and routing.",
+        "status": "completed",
+        "result": {
+          "document_type": "method_statement",
+          "confidence": 0.8,
+          "evidence": "keyword_score=1"
+        },
+        "timestamp": "2026-09-10T10:31:48.016292+00:00"
+      },
+      {
+        "step": 2,
+        "tool": "extract_metadata",
+        "reason": "Core identifiers and revision metadata support document-control decisions.",
+        "status": "completed",
+        "result": {
+          "metadata": {
+            "title": "Concrete Pour Method Statement",
+            "document_number": "MS-014",
+            "revision": "R1",
+            "date": "2026-09-02",
+            "status": "Submitted for Approval"
+          },
+          "confidence": 0.92,
+          "evidence": "regex_and_layout_text"
+        },
+        "timestamp": "2026-09-10T10:31:48.016303+00:00"
+      },
+      {
+        "step": 3,
+        "tool": "detect_previous_revisions",
+        "reason": "Task or document indicates revision history may affect the next action.",
+        "status": "completed",
+        "result": {
+          "current_revision": "R1",
+          "previous_revisions": [
+            {
+              "document_number": "MS-014",
+              "revision": "R0",
+              "title": "Concrete Pour Method Statement",
+              "status": "Approved"
+            }
+          ],
+          "count": 1,
+          "confidence": 0.95
+        },
+        "timestamp": "2026-09-10T10:31:48.016315+00:00"
+      },
+      {
+        "step": 4,
+        "tool": "check_completeness",
+        "reason": "Workflow/review task requires a completeness gate.",
+        "status": "completed",
+        "result": {
+          "complete": true,
+          "required_fields": [
+            "document_number",
+            "revision",
+            "title"
+          ],
+          "missing_fields": [],
+          "confidence": 0.96
+        },
+        "timestamp": "2026-09-10T10:31:48.016320+00:00"
+      },
+      {
+        "step": 5,
+        "tool": "generate_review_comments",
+        "reason": "Task requests review findings or approval support.",
+        "status": "completed",
+        "result": {
+          "comments": [
+            "Review changes against the detected previous revision before approval."
+          ],
+          "count": 1,
+          "confidence": 0.86
+        },
+        "timestamp": "2026-09-10T10:31:48.016323+00:00"
+      },
+      {
+        "step": 6,
+        "tool": "recommend_next_action",
+        "reason": "Task requires a recommended workflow action.",
+        "status": "completed",
+        "result": {
+          "recommended_action": "route_for_revision_comparison_and_technical_review",
+          "reason": "A previous revision was detected. 1 review comment(s) generated.",
+          "confidence": 0.9
+        },
+        "timestamp": "2026-09-10T10:31:48.016326+00:00"
+      }
+    ],
+    "final": {
+      "document_type": "method_statement",
+      "metadata": {
+        "title": "Concrete Pour Method Statement",
+        "document_number": "MS-014",
+        "revision": "R1",
+        "date": "2026-09-02",
+        "status": "Submitted for Approval"
+      },
+      "summary": null,
+      "review_comments": [
+        "Review changes against the detected previous revision before approval."
+      ],
+      "recommended_next_action": {
+        "recommended_action": "route_for_revision_comparison_and_technical_review",
+        "reason": "A previous revision was detected. 1 review comment(s) generated.",
+        "confidence": 0.9
+      }
+    }
+  },
+  {
+    "agent_run_id": "57ea68af-ae28-4e26-b9fe-3c787294c5f0",
+    "created_at": "2026-09-10T10:31:48.016508+00:00",
+    "document": "scenario_08_material_submittal.txt",
+    "task": "Find previous revision and recommend next action",
+    "planner": "RuleBasedPlanner",
+    "available_tools": [
+      "classify_document",
+      "extract_metadata",
+      "search_knowledge_base",
+      "check_completeness",
+      "detect_previous_revisions",
+      "generate_summary",
+      "generate_review_comments",
+      "recommend_next_action"
+    ],
+    "tools_selected": [
+      "classify_document",
+      "extract_metadata",
+      "detect_previous_revisions",
+      "check_completeness",
+      "recommend_next_action"
+    ],
+    "tool_count": 5,
+    "execution_log": [
+      {
+        "step": 1,
+        "tool": "classify_document",
+        "reason": "Document type is needed to choose downstream validation and routing.",
+        "status": "completed",
+        "result": {
+          "document_type": "material_submittal",
+          "confidence": 0.88,
+          "evidence": "keyword_score=2"
+        },
+        "timestamp": "2026-09-10T10:31:48.016471+00:00"
+      },
+      {
+        "step": 2,
+        "tool": "extract_metadata",
+        "reason": "Core identifiers and revision metadata support document-control decisions.",
+        "status": "completed",
+        "result": {
+          "metadata": {
+            "title": "Waterproofing Membrane Material Submittal",
+            "document_number": "MAT-032",
+            "revision": "R2",
+            "date": "2026-09-03",
+            "status": "Submitted for Approval"
+          },
+          "confidence": 0.92,
+          "evidence": "regex_and_layout_text"
+        },
+        "timestamp": "2026-09-10T10:31:48.016482+00:00"
+      },
+      {
+        "step": 3,
+        "tool": "detect_previous_revisions",
+        "reason": "Task or document indicates revision history may affect the next action.",
+        "status": "completed",
+        "result": {
+          "current_revision": "R2",
+          "previous_revisions": [
+            {
+              "document_number": "MAT-032",
+              "revision": "R1",
+              "title": "Waterproofing Membrane Material Submittal",
+              "status": "Approved"
+            }
+          ],
+          "count": 1,
+          "confidence": 0.95
+        },
+        "timestamp": "2026-09-10T10:31:48.016495+00:00"
+      },
+      {
+        "step": 4,
+        "tool": "check_completeness",
+        "reason": "Workflow/review task requires a completeness gate.",
+        "status": "completed",
+        "result": {
+          "complete": true,
+          "required_fields": [
+            "document_number",
+            "revision",
+            "title",
+            "status"
+          ],
+          "missing_fields": [],
+          "confidence": 0.96
+        },
+        "timestamp": "2026-09-10T10:31:48.016499+00:00"
+      },
+      {
+        "step": 5,
+        "tool": "recommend_next_action",
+        "reason": "Task requires a recommended workflow action.",
+        "status": "completed",
+        "result": {
+          "recommended_action": "route_for_revision_comparison_and_technical_review",
+          "reason": "A previous revision was detected.",
+          "confidence": 0.9
+        },
+        "timestamp": "2026-09-10T10:31:48.016502+00:00"
+      }
+    ],
+    "final": {
+      "document_type": "material_submittal",
+      "metadata": {
+        "title": "Waterproofing Membrane Material Submittal",
+        "document_number": "MAT-032",
+        "revision": "R2",
+        "date": "2026-09-03",
+        "status": "Submitted for Approval"
+      },
+      "summary": null,
+      "review_comments": null,
+      "recommended_next_action": {
+        "recommended_action": "route_for_revision_comparison_and_technical_review",
+        "reason": "A previous revision was detected.",
+        "confidence": 0.9
+      }
+    }
+  },
+  {
+    "agent_run_id": "84d88e6b-b635-4cd8-a278-66ffeb555d62",
+    "created_at": "2026-09-10T10:31:48.016655+00:00",
+    "document": "scenario_09_drawing_r0.txt",
+    "task": "Classify and extract metadata",
+    "planner": "RuleBasedPlanner",
+    "available_tools": [
+      "classify_document",
+      "extract_metadata",
+      "search_knowledge_base",
+      "check_completeness",
+      "detect_previous_revisions",
+      "generate_summary",
+      "generate_review_comments",
+      "recommend_next_action"
+    ],
+    "tools_selected": [
+      "classify_document",
+      "extract_metadata",
+      "detect_previous_revisions"
+    ],
+    "tool_count": 3,
+    "execution_log": [
+      {
+        "step": 1,
+        "tool": "classify_document",
+        "reason": "Document type is needed to choose downstream validation and routing.",
+        "status": "completed",
+        "result": {
+          "document_type": "drawing",
+          "confidence": 0.99,
+          "evidence": "keyword_score=4"
+        },
+        "timestamp": "2026-09-10T10:31:48.016628+00:00"
+      },
+      {
+        "step": 2,
+        "tool": "extract_metadata",
+        "reason": "Core identifiers and revision metadata support document-control decisions.",
+        "status": "completed",
+        "result": {
+          "metadata": {
+            "title": "Mechanical Plant Room Layout",
+            "document_number": "DWG-M-220",
+            "revision": "R0",
+            "date": "2026-09-05",
+            "status": "For Review"
+          },
+          "confidence": 0.92,
+          "evidence": "regex_and_layout_text"
+        },
+        "timestamp": "2026-09-10T10:31:48.016637+00:00"
+      },
+      {
+        "step": 3,
+        "tool": "detect_previous_revisions",
+        "reason": "Task or document indicates revision history may affect the next action.",
+        "status": "completed",
+        "result": {
+          "current_revision": "R0",
+          "previous_revisions": [],
+          "count": 0,
+          "confidence": 0.95
+        },
+        "timestamp": "2026-09-10T10:31:48.016648+00:00"
+      }
+    ],
+    "final": {
+      "document_type": "drawing",
+      "metadata": {
+        "title": "Mechanical Plant Room Layout",
+        "document_number": "DWG-M-220",
+        "revision": "R0",
+        "date": "2026-09-05",
+        "status": "For Review"
+      },
+      "summary": null,
+      "review_comments": null,
+      "recommended_next_action": null
+    }
+  },
+  {
+    "agent_run_id": "22da657d-5853-4cf9-bebf-db6b62a72d4e",
+    "created_at": "2026-09-10T10:31:48.016822+00:00",
+    "document": "scenario_10_rfi_closed.txt",
+    "task": "Summarize this RFI",
+    "planner": "RuleBasedPlanner",
+    "available_tools": [
+      "classify_document",
+      "extract_metadata",
+      "search_knowledge_base",
+      "check_completeness",
+      "detect_previous_revisions",
+      "generate_summary",
+      "generate_review_comments",
+      "recommend_next_action"
+    ],
+    "tools_selected": [
+      "classify_document",
+      "extract_metadata",
+      "detect_previous_revisions",
+      "generate_summary"
+    ],
+    "tool_count": 4,
+    "execution_log": [
+      {
+        "step": 1,
+        "tool": "classify_document",
+        "reason": "Document type is needed to choose downstream validation and routing.",
+        "status": "completed",
+        "result": {
+          "document_type": "rfi",
+          "confidence": 0.88,
+          "evidence": "keyword_score=2"
+        },
+        "timestamp": "2026-09-10T10:31:48.016784+00:00"
+      },
+      {
+        "step": 2,
+        "tool": "extract_metadata",
+        "reason": "Core identifiers and revision metadata support document-control decisions.",
+        "status": "completed",
+        "result": {
+          "metadata": {
+            "title": "Ceiling Coordination Clarification",
+            "document_number": "RFI-028",
+            "revision": null,
+            "date": "2026-09-07",
+            "status": "Closed"
+          },
+          "confidence": 0.92,
+          "evidence": "regex_and_layout_text"
+        },
+        "timestamp": "2026-09-10T10:31:48.016794+00:00"
+      },
+      {
+        "step": 3,
+        "tool": "detect_previous_revisions",
+        "reason": "Task or document indicates revision history may affect the next action.",
+        "status": "completed",
+        "result": {
+          "current_revision": null,
+          "previous_revisions": [],
+          "count": 0,
+          "confidence": 0.95
+        },
+        "timestamp": "2026-09-10T10:31:48.016807+00:00"
+      },
+      {
+        "step": 4,
+        "tool": "generate_summary",
+        "reason": "Task explicitly requests a concise document summary.",
+        "status": "completed",
+        "result": {
+          "summary": "Document Title: Ceiling Coordination Clarification Document Number: RFI-028 Date: 2026-09-07 Status: Closed RFI response confirms revised ceiling level and coordination requirement.",
+          "confidence": 0.84
+        },
+        "timestamp": "2026-09-10T10:31:48.016811+00:00"
+      }
+    ],
+    "final": {
+      "document_type": "rfi",
+      "metadata": {
+        "title": "Ceiling Coordination Clarification",
+        "document_number": "RFI-028",
+        "revision": null,
+        "date": "2026-09-07",
+        "status": "Closed"
+      },
+      "summary": "Document Title: Ceiling Coordination Clarification Document Number: RFI-028 Date: 2026-09-07 Status: Closed RFI response confirms revised ceiling level and coordination requirement.",
+      "review_comments": null,
+      "recommended_next_action": null
+    }
+  }
+]

@@ -1,0 +1,6 @@
+Document Title: Ground Floor Architectural Layout
+Document Number: DWG-A-101
+Revision: R2
+Date: 2026-09-05
+Status: For Construction
+Drawing notes: Coordinate wall openings with structural drawings. Verify dimensions on site before construction.

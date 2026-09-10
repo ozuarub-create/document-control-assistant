@@ -1,0 +1,6 @@
+Document Title: Cast-in-Place Concrete Specification
+Document Number: SPEC-03-30-00
+Revision: R2
+Date: 2026-09-01
+Status: Issued for Review
+Technical Specification Section 03. Requirements cover concrete materials, curing, testing, and acceptance.

@@ -1,0 +1,7 @@
+{
+  "scenarios": 10,
+  "available_tools": 8,
+  "selective_runs": 10,
+  "all_runs_logged": true,
+  "result_file": "demo_week24_results.json"
+}
