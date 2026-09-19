@@ -1,0 +1,14 @@
+[
+ {"id":"q01","question":"What is the latest revision of drawing A-101?","expected":{"answer":"R2","source_ids":["drawing_A101_R2"],"metadata":{"drawing_number":"A-101","revision":"R2"},"classification":"drawing"}},
+ {"id":"q02","question":"Who is responsible for RFI-015?","expected":{"answer":"Gulf Build Contractors","source_ids":["rfi_015","mom_007"],"metadata":{"rfi":"RFI-015"},"classification":"rfi"}},
+ {"id":"q03","question":"What action is due after the coordination meeting?","expected":{"answer":"Update drawing DWG-A-101 following the RFI response","source_ids":["mom_007"],"metadata":{"status":"open"},"classification":"meeting_minutes"}},
+ {"id":"q04","question":"What is the status of material submittal MAT-022?","expected":{"answer":"Approved","source_ids":["mat_022"],"metadata":{"submittal":"MAT-022","status":"Approved"},"classification":"material_submittal"}},
+ {"id":"q05","question":"Classify the uploaded inspection report.","expected":{"answer":"Inspection report","source_ids":["inspection_09"],"metadata":{"zone":"5"},"classification":"inspection_report"}},
+ {"id":"q06","question":"Which specification section covers concrete?","expected":{"answer":"Section 03 30 00","source_ids":["spec_033000"],"metadata":{"section":"03 30 00"},"classification":"specification"}},
+ {"id":"q07","question":"What is the approved project budget?","expected":{"answer":"Insufficient information","source_ids":[],"metadata":{},"classification":"unknown"}},
+ {"id":"q08","question":"What revision supersedes R1 for drawing M-201?","expected":{"answer":"R2","source_ids":["M201_R2","M201_R1"],"metadata":{"drawing_number":"M-201","revision":"R2"},"classification":"drawing"}},
+ {"id":"q09","question":"What is the RFI-021 response status?","expected":{"answer":"Closed","source_ids":["rfi_021"],"metadata":{"rfi":"RFI-021","status":"Closed"},"classification":"rfi"}},
+ {"id":"q10","question":"Summarize the key result of inspection 12.","expected":{"answer":"Inspection passed with minor comments","source_ids":["inspection_12"],"metadata":{"inspection":"12"},"classification":"inspection_report"}},
+ {"id":"q11","question":"What is drawing C-301 titled?","expected":{"answer":"Site Utilities Layout","source_ids":["C301"],"metadata":{"drawing_number":"C-301"},"classification":"drawing"}},
+ {"id":"q12","question":"What is the due date in RFI-015?","expected":{"answer":"2026-07-15","source_ids":["rfi_015","mom_007"],"metadata":{"due_date":"2026-07-15"},"classification":"rfi"}}
+]

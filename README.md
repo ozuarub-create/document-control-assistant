@@ -1,83 +1,42 @@
-# Week 24 - Document Workflow Agent
-
-## Overview
-
-Week 24 adds an agentic document-control orchestration layer. The system does not blindly execute every capability. Instead, a planner inspects the requested task and document context, selects only the tools required, executes them in sequence, records every decision, and returns a recommended workflow outcome.
+# Week 25 – AI Evaluation and Benchmarking
 
 ## Goal
+Build a standalone evaluation framework that measures AI quality rather than assuming it.
 
-Build a standalone Document Workflow Agent that can analyse an uploaded document, determine what needs to happen next, and execute the appropriate document-control tools.
+## Capabilities
+- Benchmark dataset with realistic construction-document scenarios
+- Retrieval accuracy
+- Answer correctness
+- Citation accuracy
+- Hallucination rate
+- Metadata extraction accuracy
+- Classification accuracy
+- Response latency
+- Token usage and estimated cost
+- Comparison of at least two configurations
+- Historical result storage
+- Generated comparison report
+- FastAPI evaluation endpoints
 
-## Available Agent Tools
-
-1. `classify_document`
-2. `extract_metadata`
-3. `search_knowledge_base`
-4. `check_completeness`
-5. `detect_previous_revisions`
-6. `generate_summary`
-7. `generate_review_comments`
-8. `recommend_next_action`
-
-## Agent Orchestration
-
-The planner always establishes document type and metadata, then selectively adds downstream tools according to task intent. A summary-only request does not run review or routing tools. A revision task adds revision detection. A review/approval task adds completeness checks, review comments, and next-action recommendation.
-
-Every run records a structured execution log containing step number, selected tool, decision reason, status, timestamp, and result.
-
-## API
-
-Standalone service:
-
+## Run
 ```bash
-uvicorn app.workflow_agent_standalone:app --reload --port 8024
-```
-
-Swagger UI:
-
-```text
-http://127.0.0.1:8024/docs
-```
-
-Endpoints:
-
-- `GET /workflow-agent/capabilities`
-- `POST /workflow-agent/run`
-- `GET /workflow-agent/history`
-- `GET /health`
-
-The main project can also include `app.workflow_agent_api.router` in its existing FastAPI application.
-
-## Planner Modes
-
-- `fixture`: deterministic offline planner used for repeatable testing and demonstration.
-- `openai`: optional model-backed planner using `OPENAI_API_KEY`.
-- `auto`: uses the model-backed planner when a key is available; otherwise uses the deterministic planner.
-
-## Demonstration
-
-```bash
-python demo_week24.py
-```
-
-The demo runs 10 realistic project scenarios and proves that different tasks select different tool sequences.
-
-## Testing
-
-```bash
+python demo_week25.py
 pytest
 ```
 
-## Deliverables
+## API
+```bash
+python -m uvicorn app.evaluation_api:app --reload
+```
+Open `http://127.0.0.1:8000/docs`.
 
-- Standalone agent orchestration service
-- 8 available AI tools/functions
-- Agent execution history and logging
-- API for submitting documents/tasks
-- 10 realistic test scenarios
-- Architecture diagram and technical documentation
-- Working demonstration
+## Deliverables
+- Automated evaluation framework
+- Benchmark dataset
+- Model/prompt comparison capability
+- Evaluation report
+- Historical results
+- Metrics and methodology documentation
 
 ## Author
-
 Omar Zuarub
