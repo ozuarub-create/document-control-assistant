@@ -1,42 +1,34 @@
-# Week 25 – AI Evaluation and Benchmarking
+# Week 26 – Centralized AI Gateway
 
 ## Goal
-Build a standalone evaluation framework that measures AI quality rather than assuming it.
+Build a standalone AI Gateway that gives applications one standardized interface for multiple AI models/providers.
 
-## Capabilities
-- Benchmark dataset with realistic construction-document scenarios
-- Retrieval accuracy
-- Answer correctness
-- Citation accuracy
-- Hallucination rate
-- Metadata extraction accuracy
-- Classification accuracy
-- Response latency
-- Token usage and estimated cost
-- Comparison of at least two configurations
-- Historical result storage
-- Generated comparison report
-- FastAPI evaluation endpoints
+## Features
+- Unified AI request API
+- Config-driven multi-model/provider support
+- Task-based routing
+- API-key authentication
+- Rate limiting
+- Request and usage logging
+- Token and cost tracking
+- Error handling
+- Retry/fallback logic
+- Quality/cost/latency-aware routing compatible with Week 25 evaluation results
+- FastAPI documentation
+- Docker deployment
 
-## Run
+## Demo
 ```bash
-python demo_week25.py
+python demo_week26.py
+```
+
+## Test
+```bash
 pytest
 ```
 
 ## API
 ```bash
-python -m uvicorn app.evaluation_api:app --reload
+uvicorn app.gateway_api:app --reload
 ```
 Open `http://127.0.0.1:8000/docs`.
-
-## Deliverables
-- Automated evaluation framework
-- Benchmark dataset
-- Model/prompt comparison capability
-- Evaluation report
-- Historical results
-- Metrics and methodology documentation
-
-## Author
-Omar Zuarub

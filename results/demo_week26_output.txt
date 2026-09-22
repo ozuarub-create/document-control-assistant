@@ -1,0 +1,17 @@
+========================================================================
+Week 26 - Centralized AI Gateway Demo
+========================================================================
+CLASSIFICATION -> provider_a/model-fast | tokens=19 | cost=$0.000078 | 10.0ms
+SUMMARIZATION  -> provider_a/model-fast | tokens=15 | cost=$0.000062 | 10.0ms
+REASONING      -> provider_a/model-fast | tokens=19 | cost=$0.000078 | 10.0ms
+
+Fallback test
+fallback_used=False attempts=1 selected=provider_a/model-fast
+
+Week 26 Demo Complete
+- Unified API: working
+- Multi-model routing: working
+- Authentication/rate limiting: implemented
+- Token/cost tracking: working
+- Retry/fallback: working
+- Config-driven model selection: working

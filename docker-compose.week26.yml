@@ -1,0 +1,12 @@
+services:
+  ai-gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      AI_GATEWAY_API_KEY: demo-key
+      AI_GATEWAY_RATE_LIMIT: 20
+    volumes:
+      - ./results:/app/results

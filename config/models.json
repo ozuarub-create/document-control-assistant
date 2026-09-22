@@ -1,0 +1,7 @@
+{
+  "routing_weights": {"quality": 0.6, "cost": 0.25, "latency": 0.15},
+  "providers": [
+    {"name":"provider_a","model":"model-fast","quality":0.88,"latency_ms":120,"input_cost_per_1k":0.002,"output_cost_per_1k":0.006,"enabled":true,"priority":1},
+    {"name":"provider_b","model":"model-quality","quality":0.97,"latency_ms":210,"input_cost_per_1k":0.004,"output_cost_per_1k":0.012,"enabled":true,"priority":2}
+  ]
+}
