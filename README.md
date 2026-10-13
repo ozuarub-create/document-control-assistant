@@ -1,42 +1,34 @@
-# Week 27 - Model Context Protocol (MCP) Document Server
+# Week 28 - Human-in-the-Loop AI Approval Workflow
 
 ## Goal
+Build an enterprise-style approval framework where AI can recommend actions while sensitive or uncertain actions require human review.
 
-Standalone MCP-style server exposing secure document-management tools to an AI assistant.
+## Features
+- Task/document intake
+- Proposed action and confidence handling
+- Configurable confidence thresholds
+- Automatic processing for high-confidence low-risk actions
+- Human review for medium/low confidence
+- Mandatory review for high-risk actions
+- Approve / reject / modify decisions
+- Approved-action execution
+- Complete audit trail
+- REST API
+- 10+ automated test scenarios
 
-## Functional Tools
-
-1. Search documents
-2. Retrieve document metadata
-3. Retrieve document content
-4. Search knowledge base
-5. Compare document revisions
-6. Retrieve related documents
-7. Run document validation
-8. Generate document summary
-
-## Technical Features
-
-- Clear tool schemas
-- Input validation
-- API-key access-control concept
-- Structured error handling
-- Tool-call logging
-- Repository-backed business data
-- MCP-compatible client routing demonstration
-- 10+ automated scenarios
-
-## Run
-
+## Demo
 ```bash
-python demo_mcp.py
-pytest tests/test_week27_mcp_server.py
+python demo_week28.py
 ```
 
-## Architecture
+## Tests
+```bash
+pytest
+```
 
-See `docs/MCP_ARCHITECTURE.md`.
+## API
+```bash
+uvicorn app.approval_api:app --reload
+```
 
-## Client Guide
-
-See `docs/MCP_CLIENT_GUIDE.md`.
+Open `http://127.0.0.1:8000/docs` for interactive API documentation.
