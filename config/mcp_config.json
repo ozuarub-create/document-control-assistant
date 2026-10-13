@@ -1,0 +1,1 @@
+{"server_name":"document-management-mcp","version":"1.0.0","auth":{"mode":"api_key"},"logging":{"enabled":true,"path":"results/mcp_tool_calls.jsonl"},"data_root":"mcp_test_documents"}

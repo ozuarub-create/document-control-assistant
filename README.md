@@ -1,34 +1,42 @@
-# Week 26 – Centralized AI Gateway
+# Week 27 - Model Context Protocol (MCP) Document Server
 
 ## Goal
-Build a standalone AI Gateway that gives applications one standardized interface for multiple AI models/providers.
 
-## Features
-- Unified AI request API
-- Config-driven multi-model/provider support
-- Task-based routing
-- API-key authentication
-- Rate limiting
-- Request and usage logging
-- Token and cost tracking
-- Error handling
-- Retry/fallback logic
-- Quality/cost/latency-aware routing compatible with Week 25 evaluation results
-- FastAPI documentation
-- Docker deployment
+Standalone MCP-style server exposing secure document-management tools to an AI assistant.
 
-## Demo
+## Functional Tools
+
+1. Search documents
+2. Retrieve document metadata
+3. Retrieve document content
+4. Search knowledge base
+5. Compare document revisions
+6. Retrieve related documents
+7. Run document validation
+8. Generate document summary
+
+## Technical Features
+
+- Clear tool schemas
+- Input validation
+- API-key access-control concept
+- Structured error handling
+- Tool-call logging
+- Repository-backed business data
+- MCP-compatible client routing demonstration
+- 10+ automated scenarios
+
+## Run
+
 ```bash
-python demo_week26.py
+python demo_mcp.py
+pytest tests/test_week27_mcp_server.py
 ```
 
-## Test
-```bash
-pytest
-```
+## Architecture
 
-## API
-```bash
-uvicorn app.gateway_api:app --reload
-```
-Open `http://127.0.0.1:8000/docs`.
+See `docs/MCP_ARCHITECTURE.md`.
+
+## Client Guide
+
+See `docs/MCP_CLIENT_GUIDE.md`.

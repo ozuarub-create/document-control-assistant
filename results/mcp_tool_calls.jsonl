@@ -1,0 +1,38 @@
+{"timestamp": "2026-10-13T10:52:07.246484+00:00", "tool": "search_documents", "args": {"query": "drawing"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:07.247148+00:00", "tool": "get_document_metadata", "args": {"doc_id": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:07.247647+00:00", "tool": "get_document_content", "args": {"doc_id": "specification_01"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:07.248249+00:00", "tool": "search_knowledge_base", "args": {"query": "revision approval"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:07.248791+00:00", "tool": "compare_document_revisions", "args": {"doc_id_a": "drawing_a_rev01", "doc_id_b": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:07.249272+00:00", "tool": "get_related_documents", "args": {"doc_id": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:07.249721+00:00", "tool": "validate_document", "args": {"doc_id": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:07.250136+00:00", "tool": "generate_document_summary", "args": {"doc_id": "specification_01"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:07.250506+00:00", "tool": "search_documents", "args": {"query": "drawing"}, "ok": false, "detail": "Invalid or missing MCP API key"}
+{"timestamp": "2026-10-13T10:52:07.250903+00:00", "tool": "search_documents", "args": {}, "ok": false, "detail": "Missing required arguments: query"}
+{"timestamp": "2026-10-13T10:52:08.506948+00:00", "tool": "search_documents", "args": {"query": "drawing"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:08.507064+00:00", "tool": "get_document_metadata", "args": {"doc_id": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:08.507128+00:00", "tool": "get_document_content", "args": {"doc_id": "specification_01"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:08.507189+00:00", "tool": "search_knowledge_base", "args": {"query": "revision approval"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:08.507292+00:00", "tool": "compare_document_revisions", "args": {"doc_id_a": "drawing_a_rev01", "doc_id_b": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:08.507384+00:00", "tool": "get_related_documents", "args": {"doc_id": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:08.507432+00:00", "tool": "validate_document", "args": {"doc_id": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:08.507479+00:00", "tool": "generate_document_summary", "args": {"doc_id": "specification_01"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:52:08.507585+00:00", "tool": "compare_document_revisions", "args": {"doc_id_a": "drawing_a_rev01", "doc_id_b": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:12.198747+00:00", "tool": "search_documents", "args": {"query": "drawing"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:12.199163+00:00", "tool": "get_document_metadata", "args": {"doc_id": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:12.199272+00:00", "tool": "get_document_content", "args": {"doc_id": "specification_01"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:12.199373+00:00", "tool": "search_knowledge_base", "args": {"query": "revision approval"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:12.199506+00:00", "tool": "compare_document_revisions", "args": {"doc_id_a": "drawing_a_rev01", "doc_id_b": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:12.199631+00:00", "tool": "get_related_documents", "args": {"doc_id": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:12.199699+00:00", "tool": "validate_document", "args": {"doc_id": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:12.199767+00:00", "tool": "generate_document_summary", "args": {"doc_id": "specification_01"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:12.199901+00:00", "tool": "compare_document_revisions", "args": {"doc_id_a": "drawing_a_rev01", "doc_id_b": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:54.140793+00:00", "tool": "search_documents", "args": {"query": "drawing"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:54.141065+00:00", "tool": "get_document_metadata", "args": {"doc_id": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:54.141299+00:00", "tool": "get_document_content", "args": {"doc_id": "specification_01"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:54.141540+00:00", "tool": "search_knowledge_base", "args": {"query": "revision approval"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:54.141824+00:00", "tool": "compare_document_revisions", "args": {"doc_id_a": "drawing_a_rev01", "doc_id_b": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:54.142104+00:00", "tool": "get_related_documents", "args": {"doc_id": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:54.142333+00:00", "tool": "validate_document", "args": {"doc_id": "drawing_a_rev02"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:54.142565+00:00", "tool": "generate_document_summary", "args": {"doc_id": "specification_01"}, "ok": true, "detail": ""}
+{"timestamp": "2026-10-13T10:58:54.142764+00:00", "tool": "search_documents", "args": {"query": "drawing"}, "ok": false, "detail": "Invalid or missing MCP API key"}
+{"timestamp": "2026-10-13T10:58:54.142963+00:00", "tool": "search_documents", "args": {}, "ok": false, "detail": "Missing required arguments: query"}

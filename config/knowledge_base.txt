@@ -1,0 +1,5 @@
+Approved revisions must be used as the baseline for formal comparison.
+Documents under review must not be treated as construction-approved information.
+Revision comparisons should identify changed technical values, notes, status, and related references.
+Validation requires document ID, title, type, revision, status, and content.
+Access to document tools should be authenticated and tool activity should be logged.
