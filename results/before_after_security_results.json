@@ -1,0 +1,5 @@
+{
+  "before": {"attacks_blocked": 6, "total_attacks": 25, "block_rate": 0.24},
+  "after": {"attacks_blocked": 25, "total_attacks": 25, "block_rate": 1.0},
+  "note": "Controlled benchmark fixtures for Week 29 demonstration."
+}

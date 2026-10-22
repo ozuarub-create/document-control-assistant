@@ -1,34 +1,34 @@
-# Week 28 - Human-in-the-Loop AI Approval Workflow
+# Week 29 - AI Application Security Layer
 
-## Goal
-Build an enterprise-style approval framework where AI can recommend actions while sensitive or uncertain actions require human review.
+Standalone security layer protecting AI/document workflows against unauthorized access, prompt injection, unsafe tool execution, sensitive-data leakage, and malicious inputs.
 
 ## Features
-- Task/document intake
-- Proposed action and confidence handling
-- Configurable confidence thresholds
-- Automatic processing for high-confidence low-risk actions
-- Human review for medium/low confidence
-- Mandatory review for high-risk actions
-- Approve / reject / modify decisions
-- Approved-action execution
-- Complete audit trail
-- REST API
-- 10+ automated test scenarios
 
-## Demo
-```bash
-python demo_week28.py
-```
+- RBAC permissions
+- Document-level access control
+- Tool-level permissions
+- Input validation
+- Output validation/redaction
+- Prompt-injection detection and mitigation
+- Audit logging
+- 25 adversarial attack fixtures
+- Before/after security benchmark
+- FastAPI endpoint
 
-## Tests
+## Run
+
 ```bash
+python -m pip install -r requirements_week29.txt
+python demo_week29.py
 pytest
 ```
 
 ## API
+
+Run:
+
 ```bash
-uvicorn app.approval_api:app --reload
+uvicorn app.security_api:app --reload
 ```
 
-Open `http://127.0.0.1:8000/docs` for interactive API documentation.
+Open `/docs` for Swagger API documentation.

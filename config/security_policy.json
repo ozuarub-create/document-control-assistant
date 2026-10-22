@@ -1,0 +1,7 @@
+{
+  "max_input_chars": 20000,
+  "roles": ["admin", "reviewer", "user"],
+  "high_risk_tools": ["delete_document", "register_document"],
+  "prompt_injection_action": "block",
+  "sensitive_output_action": "redact"
+}

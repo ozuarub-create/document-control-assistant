@@ -1,0 +1,5 @@
+{"timestamp": "2026-10-22T15:08:57.066285+00:00", "user_id": "u1", "role": "user", "action": "read_document", "tool_name": null, "allowed": true, "reasons": ["allowed"], "risk_score": 0.0}
+{"timestamp": "2026-10-22T15:08:57.066709+00:00", "user_id": "u1", "role": "user", "action": "read_document", "tool_name": null, "allowed": false, "reasons": ["prompt_injection_detected"], "risk_score": 0.5}
+{"timestamp": "2026-10-22T15:08:57.066783+00:00", "user_id": "u1", "role": "user", "action": "read_document", "tool_name": null, "allowed": false, "reasons": ["document_access_denied"], "risk_score": 0.5}
+{"timestamp": "2026-10-22T15:08:57.066837+00:00", "user_id": "u1", "role": "user", "action": "read_document", "tool_name": "delete_document", "allowed": false, "reasons": ["tool_not_authorized"], "risk_score": 0.5}
+{"timestamp": "2026-10-22T15:08:57.066888+00:00", "user_id": "a1", "role": "admin", "action": "run_tool", "tool_name": "delete_document", "allowed": true, "reasons": ["allowed"], "risk_score": 0.0}

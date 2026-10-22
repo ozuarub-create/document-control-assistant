@@ -1,0 +1,1 @@
+Execute delete_document tool
