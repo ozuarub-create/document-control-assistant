@@ -1,0 +1,308 @@
+{
+  "request": "Analyze this project and identify the major outstanding issues, risks, overdue actions and items requiring management attention.",
+  "plan": [
+    {
+      "step": "scope",
+      "reason": "Understand management question and project scope"
+    },
+    {
+      "step": "search",
+      "reason": "Find open risks, RFIs, actions, submittals and contractual issues"
+    },
+    {
+      "step": "relationships",
+      "reason": "Follow references between documents"
+    },
+    {
+      "step": "conflicts",
+      "reason": "Detect inconsistent project information"
+    },
+    {
+      "step": "evidence",
+      "reason": "Collect source-backed evidence"
+    },
+    {
+      "step": "sufficiency",
+      "reason": "Check whether evidence supports each finding"
+    },
+    {
+      "step": "report",
+      "reason": "Create management report with fact/inference/recommendation separation"
+    }
+  ],
+  "executive_summary": "The investigation identified 8 unresolved project documents, 1 overdue actions and 4 conflicting information item(s). Evidence sufficiency: sufficient.",
+  "major_risks": [
+    {
+      "kind": "Fact",
+      "statement": "RFI-015 (RFI) remains open: Transfer Slab Concrete Strength Clarification",
+      "citations": [
+        "[RFI-015 p.1]"
+      ],
+      "evidence": [
+        {
+          "document_id": "RFI-015",
+          "title": "Transfer Slab Concrete Strength Clarification",
+          "page": 1,
+          "excerpt": "RFI remains open regarding conflict between drawing note 40 MPa and specification 50 MPa.",
+          "confidence": 0.96,
+          "citation": "[RFI-015 p.1]"
+        }
+      ]
+    },
+    {
+      "kind": "Fact",
+      "statement": "SUB-033 (Material Submittal) remains rejected: Waterproofing Material Submittal",
+      "citations": [
+        "[SUB-033 p.2]"
+      ],
+      "evidence": [
+        {
+          "document_id": "SUB-033",
+          "title": "Waterproofing Material Submittal",
+          "page": 2,
+          "excerpt": "Rejected: fire rating certificate was not provided.",
+          "confidence": 0.96,
+          "citation": "[SUB-033 p.2]"
+        }
+      ]
+    },
+    {
+      "kind": "Fact",
+      "statement": "COR-014 (Correspondence) remains open: Contractor Delay Notification",
+      "citations": [
+        "[COR-014 p.1]"
+      ],
+      "evidence": [
+        {
+          "document_id": "COR-014",
+          "title": "Contractor Delay Notification",
+          "page": 1,
+          "excerpt": "Contractor reserves time and cost entitlement for late design clarification.",
+          "confidence": 0.96,
+          "citation": "[COR-014 p.1]"
+        }
+      ]
+    }
+  ],
+  "outstanding_actions": [
+    {
+      "kind": "Fact",
+      "statement": "Overdue action: Close RFI-015 before next slab pour (Owner: Consultant, Due: 2026-10-20)",
+      "citations": [
+        "[MOM-007 p.1]"
+      ],
+      "evidence": [
+        {
+          "document_id": "MOM-007",
+          "title": "Weekly Coordination Meeting 07",
+          "page": 1,
+          "excerpt": "Action: Close RFI-015 before next slab pour | Owner: Consultant | Due: 2026-10-20",
+          "confidence": 0.95,
+          "citation": "[MOM-007 p.1]"
+        }
+      ]
+    }
+  ],
+  "potential_delays": [
+    {
+      "kind": "Inference",
+      "statement": "Schedule impact is possible because rfi-015 (rfi) remains open: transfer slab concrete strength clarification",
+      "citations": [
+        "[RFI-015 p.1]"
+      ]
+    },
+    {
+      "kind": "Inference",
+      "statement": "Schedule impact is possible because sub-033 (material submittal) remains rejected: waterproofing material submittal",
+      "citations": [
+        "[SUB-033 p.2]"
+      ]
+    },
+    {
+      "kind": "Inference",
+      "statement": "Schedule impact is possible because cor-014 (correspondence) remains open: contractor delay notification",
+      "citations": [
+        "[COR-014 p.1]"
+      ]
+    },
+    {
+      "kind": "Inference",
+      "statement": "Schedule impact is possible because overdue action: close rfi-015 before next slab pour (owner: consultant, due: 2026-10-20)",
+      "citations": [
+        "[MOM-007 p.1]"
+      ]
+    }
+  ],
+  "commercial_issues": [
+    {
+      "kind": "Fact",
+      "statement": "Main Contract - Extension of Time Notice requires commercial/contractual attention.",
+      "citations": [
+        "[CON-001 p.1]"
+      ],
+      "evidence": [
+        {
+          "document_id": "CON-001",
+          "title": "Main Contract - Extension of Time Notice",
+          "page": 1,
+          "excerpt": "Potential delay due to late design information; contractual notice remains under review.",
+          "confidence": 0.95,
+          "citation": "[CON-001 p.1]"
+        }
+      ]
+    },
+    {
+      "kind": "Fact",
+      "statement": "Contractor Delay Notification requires commercial/contractual attention.",
+      "citations": [
+        "[COR-014 p.1]"
+      ],
+      "evidence": [
+        {
+          "document_id": "COR-014",
+          "title": "Contractor Delay Notification",
+          "page": 1,
+          "excerpt": "Contractor reserves time and cost entitlement for late design clarification.",
+          "confidence": 0.95,
+          "citation": "[COR-014 p.1]"
+        }
+      ]
+    }
+  ],
+  "unresolved_items": [
+    {
+      "kind": "Fact",
+      "statement": "RFI-015 (RFI) remains open: Transfer Slab Concrete Strength Clarification",
+      "citations": [
+        "[RFI-015 p.1]"
+      ],
+      "evidence": [
+        {
+          "document_id": "RFI-015",
+          "title": "Transfer Slab Concrete Strength Clarification",
+          "page": 1,
+          "excerpt": "RFI remains open regarding conflict between drawing note 40 MPa and specification 50 MPa.",
+          "confidence": 0.96,
+          "citation": "[RFI-015 p.1]"
+        }
+      ]
+    },
+    {
+      "kind": "Fact",
+      "statement": "SUB-033 (Material Submittal) remains rejected: Waterproofing Material Submittal",
+      "citations": [
+        "[SUB-033 p.2]"
+      ],
+      "evidence": [
+        {
+          "document_id": "SUB-033",
+          "title": "Waterproofing Material Submittal",
+          "page": 2,
+          "excerpt": "Rejected: fire rating certificate was not provided.",
+          "confidence": 0.96,
+          "citation": "[SUB-033 p.2]"
+        }
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "kind": "Fact",
+      "statement": "Conflicting information on completion_date: CON-001 says 'Completion date may require extension' while PR-010 says 'Current programme shows 9-day delay'.",
+      "citations": [
+        "[CON-001]",
+        "[PR-010]"
+      ]
+    },
+    {
+      "kind": "Fact",
+      "statement": "Conflicting information on concrete_strength: RFI-015 says 'Clarification required' while SPEC-021 says '50 MPa'.",
+      "citations": [
+        "[RFI-015]",
+        "[SPEC-021]"
+      ]
+    },
+    {
+      "kind": "Fact",
+      "statement": "Conflicting information on concrete_strength: DRW-S-102 says '40 MPa' while SPEC-021 says '50 MPa'.",
+      "citations": [
+        "[DRW-S-102]",
+        "[SPEC-021]"
+      ]
+    },
+    {
+      "kind": "Fact",
+      "statement": "Conflicting information on concrete_strength: DRW-S-102 says '40 MPa' while RFI-015 says 'Clarification required'.",
+      "citations": [
+        "[DRW-S-102]",
+        "[RFI-015]"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "kind": "Recommendation",
+      "statement": "Assign owners and closure dates for unresolved RFIs and submittals, and review them in the next coordination meeting.",
+      "citations": [
+        "[RFI-015 p.1]",
+        "[SUB-033 p.2]"
+      ]
+    },
+    {
+      "kind": "Recommendation",
+      "statement": "Escalate overdue actions to responsible discipline leads and require recovery dates.",
+      "citations": [
+        "[MOM-007 p.1]"
+      ]
+    },
+    {
+      "kind": "Recommendation",
+      "statement": "Resolve conflicting project information before further execution or approval.",
+      "citations": [
+        "[CON-001]",
+        "[PR-010]",
+        "[RFI-015]",
+        "[SPEC-021]"
+      ]
+    }
+  ],
+  "evidence_sufficient": true,
+  "execution_trace": [
+    {
+      "step": "search",
+      "tool": "unresolved_documents",
+      "result_count": 8,
+      "reason": "Identify open/pending/overdue project items"
+    },
+    {
+      "step": "search",
+      "tool": "overdue_actions",
+      "result_count": 1,
+      "reason": "Identify overdue actions requiring attention"
+    },
+    {
+      "step": "conflicts",
+      "tool": "detect_conflicts",
+      "result_count": 4,
+      "reason": "Find contradictory information"
+    },
+    {
+      "step": "evidence",
+      "tool": "collect_evidence",
+      "result_count": 11,
+      "reason": "Support significant findings with citations"
+    },
+    {
+      "step": "sufficiency",
+      "tool": "evidence_sufficiency_check",
+      "result_count": 1,
+      "reason": "Prevent unsupported assumptions from being presented as facts"
+    },
+    {
+      "step": "report",
+      "tool": "management_report",
+      "result_count": 1,
+      "reason": "Generate structured executive report"
+    }
+  ]
+}

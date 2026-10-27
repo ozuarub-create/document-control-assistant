@@ -1,0 +1,7 @@
+{
+  "require_citation_for_fact": true,
+  "minimum_evidence_confidence": 0.75,
+  "require_sufficiency_check": true,
+  "max_relationship_depth": 2,
+  "report_sections": ["executive_summary","major_risks","outstanding_actions","potential_delays","commercial_issues","unresolved_items","conflicts","recommendations"]
+}

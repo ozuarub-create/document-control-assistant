@@ -1,34 +1,74 @@
-# Week 29 - AI Application Security Layer
+# Week 30 - Project Intelligence Agent
 
-Standalone security layer protecting AI/document workflows against unauthorized access, prompt injection, unsafe tool execution, sensitive-data leakage, and malicious inputs.
+## Overview
+A standalone AI Project Intelligence Agent that investigates a simulated construction project, follows document relationships, gathers evidence, detects conflicts, and produces an evidence-backed management report.
 
-## Features
+## Capabilities
+- Multi-step investigation planning
+- Document search and status analysis
+- Relationship traversal between project documents
+- Evidence and source citations
+- Conflict detection
+- Evidence sufficiency checks
+- Structured findings
+- Fact / Inference / Recommendation separation
+- Executive management report
+- Complete execution trace
+- Evaluation dataset and accuracy-oriented tests
 
-- RBAC permissions
-- Document-level access control
-- Tool-level permissions
-- Input validation
-- Output validation/redaction
-- Prompt-injection detection and mitigation
-- Audit logging
-- 25 adversarial attack fixtures
-- Before/after security benchmark
-- FastAPI endpoint
+## Simulated Project Dataset
+Includes realistic examples of:
+- Contract
+- Specification
+- RFI
+- Drawing
+- Meeting Minutes
+- Material Submittal
+- Inspection Report
+- Progress Report
+- Correspondence
+- Shop Drawing
 
-## Run
+## Executive Report Sections
+- Executive summary
+- Major risks
+- Outstanding actions
+- Potential delays
+- Contractual / commercial issues
+- Unresolved RFIs / submittals
+- Conflicting information
+- Recommended management actions
+- Evidence citations
 
+## Run Demo
 ```bash
-python -m pip install -r requirements_week29.txt
-python demo_week29.py
+python demo_week30.py
+```
+
+## Run Tests
+```bash
 pytest
 ```
 
-## API
-
-Run:
-
+## Run API
 ```bash
-uvicorn app.security_api:app --reload
+python -m uvicorn app.project_intelligence_api:app --reload
+```
+Open:
+```text
+http://127.0.0.1:8000/docs
 ```
 
-Open `/docs` for Swagger API documentation.
+## Deliverables
+- Working Project Intelligence Agent
+- Realistic simulated project dataset
+- Multi-step orchestration
+- Evidence/citation engine
+- Complete execution trace
+- Evaluation dataset
+- Architecture documentation
+- Technical documentation
+- 15-minute demo guide
+
+## Author
+Omar Zuarub

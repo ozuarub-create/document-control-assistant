@@ -1,0 +1,12 @@
+[
+  {"id":1,"question":"Identify unresolved RFIs","expected_document":"RFI-015"},
+  {"id":2,"question":"Identify rejected submittals","expected_document":"SUB-033"},
+  {"id":3,"question":"Identify overdue actions","expected_document":"MOM-007"},
+  {"id":4,"question":"Find evidence of schedule delay","expected_document":"PR-010"},
+  {"id":5,"question":"Find commercial risk","expected_document":"COR-014"},
+  {"id":6,"question":"Find contract issue","expected_document":"CON-001"},
+  {"id":7,"question":"Find conflicting concrete strength information","expected_document":"DRW-S-102"},
+  {"id":8,"question":"Find related specification","expected_document":"SPEC-021"},
+  {"id":9,"question":"Find pending inspection","expected_document":"IR-019"},
+  {"id":10,"question":"Find pending shop drawing","expected_document":"SUB-041"}
+]
